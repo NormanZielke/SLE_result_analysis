@@ -1,0 +1,9 @@
+name;region;type;balanced
+r120640428428-electricity;r120640428428;bus;True
+r120640428428-heat_low_decentral;r120640428428;bus;True
+r120640428428-heat_low_central;r120640428428;bus;True
+r120640428428-heat_high;r120640428428;bus;True
+r120640428428-residual_waste;r120640428428;bus;True
+r120640428428-biomass_solid;r120640428428;bus;True
+r120640428428-biomass_gas;r120640428428;bus;True
+r120640428428-h2;r120640428428;bus;True

@@ -1,0 +1,2 @@
+name;bus;capacity;capacity_cost;capacity_potential;carrier;expandable;marginal_cost;output_parameters;profile;region;tech;type
+r120640428428-heat_low_decentral-solarthermal_plant;r120640428428-heat_low_decentral;0.0;48641.64065072932;39.678;heat_low_decentral;true;0.0;{};r120640428428-heat_low_decentral-solarthermal_plant-profile;r120640428428;solarthermal_plant;volatile

@@ -1,0 +1,551 @@
+digraph {
+	"r120640428428-electricity" [color=lightgrey fixedsize=shape fontsize=10 height=0.3 shape=rectangle style=filled tooltip="r120640428428-electricity" width=4.1]
+	"r120640428428-biomass_gas" [color=lightgrey fixedsize=shape fontsize=10 height=0.3 shape=rectangle style=filled tooltip="r120640428428-biomass_gas" width=4.1]
+	"r120640428428-heat_high" [color=lightgrey fixedsize=shape fontsize=10 height=0.3 shape=rectangle style=filled tooltip="r120640428428-heat_high" width=4.1]
+	"r120640428
+428-biomas
+s_gas-bpch
+p_heat_hig
+h" [color="#7BF1A8" fontsize=10 shape=rectangle]
+	"r120640428428-heat_low_central" [color=lightgrey fixedsize=shape fontsize=10 height=0.3 shape=rectangle style=filled tooltip="r120640428428-heat_low_central" width=4.1]
+	"r120640428
+428-biomas
+s_gas-bpch
+p_heat_low
+_central" [color="#7BF1A8" fontsize=10 shape=rectangle]
+	"r120640428428-heat_low_decentral" [color=lightgrey fixedsize=shape fontsize=10 height=0.3 shape=rectangle style=filled tooltip="r120640428428-heat_low_decentral" width=4.1]
+	"r120640428
+428-biomas
+s_gas-bpch
+p_heat_low
+_decentral" [color="#7BF1A8" fontsize=10 shape=rectangle]
+	"r120640428
+428-biomas
+s_gas-comm
+odity" [color="#A4ADFB" fontsize=10 shape=invtrapezium]
+	"r120640428428-biomass_solid" [color=lightgrey fixedsize=shape fontsize=10 height=0.3 shape=rectangle style=filled tooltip="r120640428428-biomass_solid" width=4.1]
+	"r120640428
+428-biomas
+s_solid-bo
+iler_heat_
+high" [color="#7BF1A8" fontsize=10 shape=rectangle]
+	"r120640428
+428-biomas
+s_solid-bp
+chp_heat_h
+igh" [color="#7BF1A8" fontsize=10 shape=rectangle]
+	"r120640428
+428-biomas
+s_solid-bp
+chp_heat_l
+ow_central" [color="#7BF1A8" fontsize=10 shape=rectangle]
+	"r120640428
+428-biomas
+s_solid-bp
+chp_heat_l
+ow_decentr
+al" [color="#7BF1A8" fontsize=10 shape=rectangle]
+	"r120640428
+428-biomas
+s_solid-co
+mmodity" [color="#A4ADFB" fontsize=10 shape=invtrapezium]
+	"r120640428428-residual_waste" [color=lightgrey fixedsize=shape fontsize=10 height=0.3 shape=rectangle style=filled tooltip="r120640428428-residual_waste" width=4.1]
+	"r120640428428-h2" [color=lightgrey fixedsize=shape fontsize=10 height=0.3 shape=rectangle style=filled tooltip="r120640428428-h2" width=4.1]
+	"r120640428
+428-electr
+icity-boil
+er_heat_hi
+gh" [color="#7BF1A8" fontsize=10 shape=rectangle]
+	"r120640428
+428-electr
+icity-dema
+nd_cts" [color="#FFD6E0" fontsize=10 shape=trapezium]
+	"r120640428
+428-electr
+icity-dema
+nd_hh" [color="#FFD6E0" fontsize=10 shape=trapezium]
+	"r120640428
+428-electr
+icity-dema
+nd_ind" [color="#FFD6E0" fontsize=10 shape=trapezium]
+	"r120640428
+428-electr
+icity-dema
+nd_mob" [color="#FFD6E0" fontsize=10 shape=trapezium]
+	"r120640428
+428-electr
+icity-elec
+trolyzer" [color="#7BF1A8" fontsize=10 shape=rectangle]
+	"r120640428
+428-electr
+icity-expo
+rt" [color="#FFD6E0" fontsize=10 shape=trapezium]
+	"r120640428
+428-electr
+icity-heat
+pump_centr
+al" [color="#7BF1A8" fontsize=10 shape=rectangle]
+	"r120640428
+428-electr
+icity-heat
+pump_decen
+tral" [color="#7BF1A8" fontsize=10 shape=rectangle]
+	"r120640428
+428-electr
+icity-heat
+pump_heat_
+high" [color="#7BF1A8" fontsize=10 shape=rectangle]
+	"r120640428
+428-electr
+icity-impo
+rt" [color="#A4ADFB" fontsize=10 shape=invtrapezium]
+	"r120640428
+428-electr
+icity-larg
+e_battery_
+storage" [color="#90F1EF" fontsize=10 shape=rectangle style=rounded]
+	"r120640428
+428-electr
+icity-pv_a
+gri_horizo
+ntal" [color="#A4ADFB" fontsize=10 shape=invtrapezium]
+	"r120640428
+428-electr
+icity-pv_a
+gri_vertic
+al" [color="#A4ADFB" fontsize=10 shape=invtrapezium]
+	"r120640428
+428-electr
+icity-pv_g
+round" [color="#A4ADFB" fontsize=10 shape=invtrapezium]
+	"r120640428
+428-electr
+icity-pv_r
+ooftop" [color="#A4ADFB" fontsize=10 shape=invtrapezium]
+	"r120640428
+428-electr
+icity-smal
+l_battery_
+storage" [color="#90F1EF" fontsize=10 shape=rectangle style=rounded]
+	"r120640428
+428-electr
+icity-wind" [color="#A4ADFB" fontsize=10 shape=invtrapezium]
+	"r120640428
+428-h2-boi
+ler_heat_h
+igh" [color="#7BF1A8" fontsize=10 shape=rectangle]
+	"r120640428
+428-h2-bpc
+hp_heat_hi
+gh" [color="#7BF1A8" fontsize=10 shape=rectangle]
+	"r120640428
+428-h2-com
+modity" [color="#A4ADFB" fontsize=10 shape=invtrapezium]
+	"r120640428
+428-h2-exp
+ort" [color="#FFD6E0" fontsize=10 shape=trapezium]
+	"r120640428
+428-heat_h
+igh-demand
+_ind" [color="#FFD6E0" fontsize=10 shape=trapezium]
+	"r120640428
+428-heat_l
+ow_central
+-demand_ct
+s" [color="#FFD6E0" fontsize=10 shape=trapezium]
+	"r120640428
+428-heat_l
+ow_central
+-demand_hh" [color="#FFD6E0" fontsize=10 shape=trapezium]
+	"r120640428
+428-heat_l
+ow_central
+-demand_in
+d" [color="#FFD6E0" fontsize=10 shape=trapezium]
+	"r120640428
+428-heat_l
+ow_central
+-storage" [color="#90F1EF" fontsize=10 shape=rectangle style=rounded]
+	"r120640428
+428-heat_l
+ow_decentr
+al-demand_
+cts" [color="#FFD6E0" fontsize=10 shape=trapezium]
+	"r120640428
+428-heat_l
+ow_decentr
+al-demand_
+hh" [color="#FFD6E0" fontsize=10 shape=trapezium]
+	"r120640428
+428-heat_l
+ow_decentr
+al-demand_
+ind" [color="#FFD6E0" fontsize=10 shape=trapezium]
+	"r120640428
+428-heat_l
+ow_decentr
+al-solarth
+ermal_plan
+t" [color="#A4ADFB" fontsize=10 shape=invtrapezium]
+	"r120640428
+428-heat_l
+ow_decentr
+al-storage" [color="#90F1EF" fontsize=10 shape=rectangle style=rounded]
+	"r120640428
+428-residu
+al_waste-b
+pchp_heat_
+high" [color="#7BF1A8" fontsize=10 shape=rectangle]
+	"r120640428
+428-residu
+al_waste-b
+pchp_heat_
+low_centra
+l" [color="#7BF1A8" fontsize=10 shape=rectangle]
+	"r120640428
+428-residu
+al_waste-c
+ommodity" [color="#A4ADFB" fontsize=10 shape=invtrapezium]
+	"r120640428
+428-biomas
+s_gas-bpch
+p_heat_low
+_decentral" -> "r120640428428-electricity"
+	"r120640428
+428-residu
+al_waste-b
+pchp_heat_
+high" -> "r120640428428-electricity"
+	"r120640428
+428-h2-bpc
+hp_heat_hi
+gh" -> "r120640428428-electricity"
+	"r120640428
+428-biomas
+s_solid-bp
+chp_heat_h
+igh" -> "r120640428428-electricity"
+	"r120640428
+428-electr
+icity-larg
+e_battery_
+storage" -> "r120640428428-electricity"
+	"r120640428
+428-electr
+icity-pv_a
+gri_horizo
+ntal" -> "r120640428428-electricity"
+	"r120640428
+428-residu
+al_waste-b
+pchp_heat_
+low_centra
+l" -> "r120640428428-electricity"
+	"r120640428
+428-biomas
+s_gas-bpch
+p_heat_hig
+h" -> "r120640428428-electricity"
+	"r120640428
+428-biomas
+s_gas-bpch
+p_heat_low
+_central" -> "r120640428428-electricity"
+	"r120640428
+428-electr
+icity-pv_a
+gri_vertic
+al" -> "r120640428428-electricity"
+	"r120640428
+428-biomas
+s_solid-bp
+chp_heat_l
+ow_central" -> "r120640428428-electricity"
+	"r120640428
+428-electr
+icity-pv_r
+ooftop" -> "r120640428428-electricity"
+	"r120640428
+428-biomas
+s_solid-bp
+chp_heat_l
+ow_decentr
+al" -> "r120640428428-electricity"
+	"r120640428
+428-electr
+icity-pv_g
+round" -> "r120640428428-electricity"
+	"r120640428
+428-electr
+icity-wind" -> "r120640428428-electricity"
+	"r120640428
+428-electr
+icity-smal
+l_battery_
+storage" -> "r120640428428-electricity"
+	"r120640428
+428-electr
+icity-impo
+rt" -> "r120640428428-electricity"
+	"r120640428428-electricity" -> "r120640428
+428-electr
+icity-boil
+er_heat_hi
+gh"
+	"r120640428428-electricity" -> "r120640428
+428-electr
+icity-dema
+nd_cts"
+	"r120640428428-electricity" -> "r120640428
+428-electr
+icity-dema
+nd_hh"
+	"r120640428428-electricity" -> "r120640428
+428-electr
+icity-dema
+nd_ind"
+	"r120640428428-electricity" -> "r120640428
+428-electr
+icity-dema
+nd_mob"
+	"r120640428428-electricity" -> "r120640428
+428-electr
+icity-elec
+trolyzer"
+	"r120640428428-electricity" -> "r120640428
+428-electr
+icity-expo
+rt"
+	"r120640428428-electricity" -> "r120640428
+428-electr
+icity-heat
+pump_centr
+al"
+	"r120640428428-electricity" -> "r120640428
+428-electr
+icity-heat
+pump_decen
+tral"
+	"r120640428428-electricity" -> "r120640428
+428-electr
+icity-heat
+pump_heat_
+high"
+	"r120640428428-electricity" -> "r120640428
+428-electr
+icity-larg
+e_battery_
+storage"
+	"r120640428428-electricity" -> "r120640428
+428-electr
+icity-smal
+l_battery_
+storage"
+	"r120640428
+428-biomas
+s_gas-comm
+odity" -> "r120640428428-biomass_gas"
+	"r120640428428-biomass_gas" -> "r120640428
+428-biomas
+s_gas-bpch
+p_heat_hig
+h"
+	"r120640428428-biomass_gas" -> "r120640428
+428-biomas
+s_gas-bpch
+p_heat_low
+_central"
+	"r120640428428-biomass_gas" -> "r120640428
+428-biomas
+s_gas-bpch
+p_heat_low
+_decentral"
+	"r120640428
+428-electr
+icity-heat
+pump_heat_
+high" -> "r120640428428-heat_high"
+	"r120640428
+428-residu
+al_waste-b
+pchp_heat_
+high" -> "r120640428428-heat_high"
+	"r120640428
+428-h2-bpc
+hp_heat_hi
+gh" -> "r120640428428-heat_high"
+	"r120640428
+428-biomas
+s_solid-bp
+chp_heat_h
+igh" -> "r120640428428-heat_high"
+	"r120640428
+428-electr
+icity-boil
+er_heat_hi
+gh" -> "r120640428428-heat_high"
+	"r120640428
+428-biomas
+s_solid-bo
+iler_heat_
+high" -> "r120640428428-heat_high"
+	"r120640428
+428-h2-boi
+ler_heat_h
+igh" -> "r120640428428-heat_high"
+	"r120640428
+428-biomas
+s_gas-bpch
+p_heat_hig
+h" -> "r120640428428-heat_high"
+	"r120640428428-heat_high" -> "r120640428
+428-heat_h
+igh-demand
+_ind"
+	"r120640428
+428-heat_l
+ow_central
+-storage" -> "r120640428428-heat_low_central"
+	"r120640428
+428-biomas
+s_gas-bpch
+p_heat_low
+_central" -> "r120640428428-heat_low_central"
+	"r120640428
+428-electr
+icity-heat
+pump_centr
+al" -> "r120640428428-heat_low_central"
+	"r120640428
+428-biomas
+s_solid-bp
+chp_heat_l
+ow_central" -> "r120640428428-heat_low_central"
+	"r120640428
+428-residu
+al_waste-b
+pchp_heat_
+low_centra
+l" -> "r120640428428-heat_low_central"
+	"r120640428428-heat_low_central" -> "r120640428
+428-heat_l
+ow_central
+-demand_ct
+s"
+	"r120640428428-heat_low_central" -> "r120640428
+428-heat_l
+ow_central
+-demand_hh"
+	"r120640428428-heat_low_central" -> "r120640428
+428-heat_l
+ow_central
+-demand_in
+d"
+	"r120640428428-heat_low_central" -> "r120640428
+428-heat_l
+ow_central
+-storage"
+	"r120640428
+428-biomas
+s_gas-bpch
+p_heat_low
+_decentral" -> "r120640428428-heat_low_decentral"
+	"r120640428
+428-biomas
+s_solid-bp
+chp_heat_l
+ow_decentr
+al" -> "r120640428428-heat_low_decentral"
+	"r120640428
+428-heat_l
+ow_decentr
+al-storage" -> "r120640428428-heat_low_decentral"
+	"r120640428
+428-heat_l
+ow_decentr
+al-solarth
+ermal_plan
+t" -> "r120640428428-heat_low_decentral"
+	"r120640428
+428-electr
+icity-heat
+pump_decen
+tral" -> "r120640428428-heat_low_decentral"
+	"r120640428428-heat_low_decentral" -> "r120640428
+428-heat_l
+ow_decentr
+al-demand_
+cts"
+	"r120640428428-heat_low_decentral" -> "r120640428
+428-heat_l
+ow_decentr
+al-demand_
+hh"
+	"r120640428428-heat_low_decentral" -> "r120640428
+428-heat_l
+ow_decentr
+al-demand_
+ind"
+	"r120640428428-heat_low_decentral" -> "r120640428
+428-heat_l
+ow_decentr
+al-storage"
+	"r120640428
+428-biomas
+s_solid-co
+mmodity" -> "r120640428428-biomass_solid"
+	"r120640428428-biomass_solid" -> "r120640428
+428-biomas
+s_solid-bo
+iler_heat_
+high"
+	"r120640428428-biomass_solid" -> "r120640428
+428-biomas
+s_solid-bp
+chp_heat_h
+igh"
+	"r120640428428-biomass_solid" -> "r120640428
+428-biomas
+s_solid-bp
+chp_heat_l
+ow_central"
+	"r120640428428-biomass_solid" -> "r120640428
+428-biomas
+s_solid-bp
+chp_heat_l
+ow_decentr
+al"
+	"r120640428
+428-residu
+al_waste-c
+ommodity" -> "r120640428428-residual_waste"
+	"r120640428428-residual_waste" -> "r120640428
+428-residu
+al_waste-b
+pchp_heat_
+high"
+	"r120640428428-residual_waste" -> "r120640428
+428-residu
+al_waste-b
+pchp_heat_
+low_centra
+l"
+	"r120640428
+428-electr
+icity-elec
+trolyzer" -> "r120640428428-h2"
+	"r120640428
+428-h2-com
+modity" -> "r120640428428-h2"
+	"r120640428428-h2" -> "r120640428
+428-h2-boi
+ler_heat_h
+igh"
+	"r120640428428-h2" -> "r120640428
+428-h2-bpc
+hp_heat_hi
+gh"
+	"r120640428428-h2" -> "r120640428
+428-h2-exp
+ort"
+}

@@ -1,0 +1,2 @@
+name;amount;bus;carrier;profile;region;tech;type
+r120640428428-heat_low_decentral-demand_ind;1135.22713589634;r120640428428-heat_low_decentral;heat_low_decentral;r120640428428-heat_low_decentral-demand_ind-profile;r120640428428;demand_ind;load

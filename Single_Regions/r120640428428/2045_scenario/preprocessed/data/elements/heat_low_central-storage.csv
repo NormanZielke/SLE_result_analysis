@@ -1,0 +1,2 @@
+name;bus;capacity;capacity_cost;capacity_potential;carrier;efficiency;expandable;input_parameters;loss_rate;marginal_cost;output_parameters;region;storage_capacity;storage_capacity_cost;storage_capacity_potential;tech;type
+r120640428428-heat_low_central-storage;r120640428428-heat_low_central;0.0;9.105052348932444;;heat_low_central;0.98;true;"{""variable_costs"": 0.1}";0.1;0.0;{};r120640428428;0.0;169.5120786050405;;storage;storage
