@@ -1,6 +1,9 @@
 import pandas as pd
 import numpy as np
+
+#from calc_results import capacities_opt
 from class_region import region
+
 args = {
     "region":[
         "r120640428428",
@@ -16,4 +19,6 @@ region_folder = f'Single_Regions/{region_id}/2045_scenario/postprocessed/scalars
 
 region_1 = region(csv_folder = region_folder, region_id = region_id)
 
-print(region_1.scalars)
+capacities_opt_region_1 =  region_1.capacities_opt()
+
+region_1.cap_opt_bar()
