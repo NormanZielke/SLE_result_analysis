@@ -4,7 +4,8 @@ from calc_results import(
     capacities_opt,
     cap_opt_bar,
     dispatch_bar,
-    techs_none
+    techs_none,
+    import_pie
 
 )
 
@@ -35,3 +36,4 @@ class region:
     cap_opt_bar = cap_opt_bar
     dispatch_bar = dispatch_bar
     techs_none = techs_none
+    import_pie = import_pie

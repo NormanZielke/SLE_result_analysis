@@ -23,3 +23,5 @@ region_1.cap_opt_bar()
 region_1.techs_none()
 
 region_1.dispatch_bar()
+
+region_1.import_pie()

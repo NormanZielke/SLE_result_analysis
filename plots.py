@@ -64,3 +64,30 @@ def barplot_e(df, unit="MWh", title="Kapazitäten", filename=None):
 
     plt.show()
 
+
+def plot_pie(df, title=None, unit="GWh", filename=None):
+
+    labels = df.index.tolist()
+    values = df["var_value"].tolist()
+    total = sum(values)
+
+
+    # Prozentwerte für Beschriftung berechnen
+    autopct = lambda pct: f"{pct:.1f}%\n({pct / 100 * total:.1f} {unit})"
+
+    fig, ax = plt.subplots(figsize=(8, 6))
+    wedges, texts, autotexts = ax.pie(
+        values, labels=labels, autopct=autopct, startangle=90
+    )
+
+    ax.set_title(title)
+    ax.axis("equal")  # Kreis statt Oval
+
+    if filename:
+        folder = os.path.dirname(filename)
+        if folder:
+            os.makedirs(folder, exist_ok=True)
+        plt.savefig(filename, dpi=300)
+
+    plt.show()
+

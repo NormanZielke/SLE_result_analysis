@@ -1,6 +1,7 @@
 from plots import(
     barplot_c,
-    barplot_e
+    barplot_e,
+    plot_pie,
 )
 import os
 
@@ -56,6 +57,26 @@ def dispatch_bar(region):
     filename = os.path.join("results", region_id, f"dispatch_elec_{region_id}.png")
 
     barplot_e(df_dispatch_elec,
+              unit = "GWh",
               title= f"Stromversorgung je Technologie {region.region_id}",
               filename = filename
               )
+
+def import_pie(region):
+    df_dispatch_elec = dispatch_elec(region)
+    # df Eigenerzeugung
+    df_gen_elec = df_dispatch_elec[~df_dispatch_elec["name"].str.contains("electricity-import")]
+    # df für Kreisdiagramm
+    strom_eigenversorgung = df_gen_elec.var_value.sum() * 1e-3
+    strom_import = df_dispatch_elec[df_dispatch_elec["name"] == "electricity-import"].var_value.sum() * 1e-3
+    df_summary = pd.DataFrame({
+        "var_value": [strom_eigenversorgung, strom_import]
+    }, index=["Eigenerzeugung aus EE", "Strom_Import"])
+
+    # Direction for bar-plot
+    region_id = region.region_id
+    filename = os.path.join("results", region_id, f"pie_import_{region_id}.png")
+
+    plot_pie(df_summary,
+             title= f"Eigenerzeugung/Stromimporte {region.region_id}",
+             filename = filename)
