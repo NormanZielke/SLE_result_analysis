@@ -32,7 +32,7 @@ def techs_none(region):
 
     df_none = pd.DataFrame(techs_none, columns=[f"techs_none_{region_id}"])
 
-    output_path = os.path.join("results", region_id, f"nicht_verwendete_technologien_{region_id}.csv")
+    output_path = os.path.join("results", region_id, f"{region_id}_nicht_verwendete_technologien.csv")
     df_none.to_csv(output_path, index=True)
 
 
@@ -41,7 +41,7 @@ def cap_opt_bar(region):
     df_cap_opt = capacities_opt(region)
     # Direction for bar-plot
     region_id = region.region_id
-    filename = os.path.join("results", region_id, f"capacities_opt_{region_id}.png")
+    filename = os.path.join("results", region_id, f"{region_id}_capacities_opt.png")
 
     barplot_c(df_cap_opt,
               title = f"Optimierte Kapazitäten {region.region_id}",
@@ -54,7 +54,7 @@ def dispatch_bar(region):
     df_dispatch_elec.var_value *= 1e-3
     # Direction for bar-plot
     region_id = region.region_id
-    filename = os.path.join("results", region_id, f"dispatch_elec_{region_id}.png")
+    filename = os.path.join("results", region_id, f"{region_id}_dispatch_elec.png")
 
     barplot_e(df_dispatch_elec,
               unit = "GWh",
@@ -75,7 +75,7 @@ def import_pie(region):
 
     # Direction for bar-plot
     region_id = region.region_id
-    filename = os.path.join("results", region_id, f"pie_import_{region_id}.png")
+    filename = os.path.join("results", region_id, f"{region_id}_pie_import.png")
 
     plot_pie(labels = df_summary.index.tolist(),
              values = df_summary["var_value"].tolist(),
@@ -90,12 +90,13 @@ def generation_pie_electricty(region):
 
     # Direction for bar-plot
     region_id = region.region_id
-    filename = os.path.join("results", region_id, f"pie_electricty_{region_id}.png")
+    filename1 = os.path.join("results", region_id, f"{region_id}_electricty_bar.png")
+    filename = os.path.join("results", region_id, f"{region_id}_electricty_pie.png")
 
     barplot_e(df_gen_elec,
               unit = "GWh",
               title= f"Anteil pro Technologie an Stromerzeugung {region.region_id}",
-              filename = filename
+              filename = filename1
               )
 
     #plot_pie(labels = df_gen_elec.name.tolist(),
