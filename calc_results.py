@@ -77,6 +77,30 @@ def import_pie(region):
     region_id = region.region_id
     filename = os.path.join("results", region_id, f"pie_import_{region_id}.png")
 
-    plot_pie(df_summary,
+    plot_pie(labels = df_summary.index.tolist(),
+             values = df_summary["var_value"].tolist(),
              title= f"Eigenerzeugung/Stromimporte {region.region_id}",
              filename = filename)
+
+def generation_pie_electricty(region):
+    df_dispatch_elec = dispatch_elec(region)
+    # df Eigenerzeugung
+    df_gen_elec = df_dispatch_elec[~df_dispatch_elec["name"].str.contains("electricity-import")].copy()
+    df_gen_elec.var_value *= 1e-3
+
+    # Direction for bar-plot
+    region_id = region.region_id
+    filename = os.path.join("results", region_id, f"pie_electricty_{region_id}.png")
+
+    barplot_e(df_gen_elec,
+              unit = "GWh",
+              title= f"Anteil pro Technologie an Stromerzeugung {region.region_id}",
+              filename = filename
+              )
+
+    #plot_pie(labels = df_gen_elec.name.tolist(),
+    #         values = df_gen_elec.var_value.tolist(),
+    #         title = f"Anteil pro Technologie an Stromerzeugung {region.region_id}",
+    #         filename = filename
+    #         )
+

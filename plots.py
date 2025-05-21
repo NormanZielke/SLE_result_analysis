@@ -65,10 +65,10 @@ def barplot_e(df, unit="MWh", title="Kapazitäten", filename=None):
     plt.show()
 
 
-def plot_pie(df, title=None, unit="GWh", filename=None):
+def plot_pie( labels, values, title=None, unit="GWh", filename=None):
 
-    labels = df.index.tolist()
-    values = df["var_value"].tolist()
+    labels = labels
+    values = values
     total = sum(values)
 
 
