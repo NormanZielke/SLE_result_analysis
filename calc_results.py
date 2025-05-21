@@ -153,3 +153,24 @@ def generation_heat_low_central(region):
                filename = filename
              )
 
+
+def generation_heat_low_decentral(region):
+    df_dispatch_heat_low_decentral = region.scalars[region.scalars.var_name == "flow_out_heat_low_decentral"]
+    df_dispatch_heat_low_decentral = df_dispatch_heat_low_decentral[df_dispatch_heat_low_decentral.var_value != 0]
+
+    # Directions to save data
+    region_id = region.region_id
+    filename1 = os.path.join("results", region_id, f"{region_id}_heat_low_decentral_bar.png")
+    filename = os.path.join("results", region_id, f"{region_id}_heat_low_decentral_pie.png")
+
+    barplot_e(df_dispatch_heat_low_decentral,
+              unit="MWh_th",
+              title=f"Anteil pro Technologie an heat_low_decentral {region.region_id}",
+              filename=filename1)
+
+    plot_pie_2(labels = df_dispatch_heat_low_decentral.name.tolist(),
+               values = df_dispatch_heat_low_decentral.var_value.tolist(),
+               unit = "MWh_th",
+               title = f"Anteil pro Technologie an heat_low_decentral {region.region_id}",
+               filename = filename
+             )

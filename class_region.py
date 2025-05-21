@@ -8,8 +8,8 @@ from calc_results import(
     import_pie,
     generation_pie_electricty,
     generation_heat_high,
-    generation_heat_low_central
-
+    generation_heat_low_central,
+    generation_heat_low_decentral
 )
 
 def read_csv_auto_sep(path):
@@ -50,3 +50,5 @@ class region:
     generation_heat_high = generation_heat_high
 
     generation_heat_low_central = generation_heat_low_central
+
+    generation_heat_low_decentral = generation_heat_low_decentral

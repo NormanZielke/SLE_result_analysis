@@ -32,3 +32,5 @@ region_1.generation_pie_electricity()
 region_1.generation_heat_high()
 
 region_1.generation_heat_low_central()
+
+region_1.generation_heat_low_decentral()
