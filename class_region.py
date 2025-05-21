@@ -4,6 +4,7 @@ from calc_results import(
     capacities_opt,
     cap_opt_bar,
     dispatch_bar,
+    techs_none
 
 )
 
@@ -33,4 +34,4 @@ class region:
     capacities_opt = capacities_opt
     cap_opt_bar = cap_opt_bar
     dispatch_bar = dispatch_bar
-    #plot_dir = plot_dir
+    techs_none = techs_none

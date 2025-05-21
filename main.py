@@ -20,4 +20,6 @@ region_1 = region(args, csv_folder = region_folder, region_id = region_id)
 
 region_1.cap_opt_bar()
 
+region_1.techs_none()
+
 region_1.dispatch_bar()
