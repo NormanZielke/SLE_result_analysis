@@ -7,7 +7,8 @@ from calc_results import(
     techs_none,
     import_pie,
     generation_pie_electricty,
-    generation_heat_high
+    generation_heat_high,
+    generation_heat_low_central
 
 )
 
@@ -47,3 +48,5 @@ class region:
     generation_pie_electricity = generation_pie_electricty
 
     generation_heat_high = generation_heat_high
+
+    generation_heat_low_central = generation_heat_low_central

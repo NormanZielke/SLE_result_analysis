@@ -132,5 +132,24 @@ def generation_heat_high(region):
              )
 
 
+def generation_heat_low_central(region):
+    df_dispatch_heat_low_central = region.scalars[region.scalars.var_name == "flow_out_heat_low_central"]
+    df_dispatch_heat_low_central = df_dispatch_heat_low_central[df_dispatch_heat_low_central.var_value != 0]
 
+    # Directions to save data
+    region_id = region.region_id
+    filename1 = os.path.join("results", region_id, f"{region_id}_heat_low_central_bar.png")
+    filename = os.path.join("results", region_id, f"{region_id}_heat_low_central_pie.png")
+
+    barplot_e(df_dispatch_heat_low_central,
+              unit="MWh_th",
+              title=f"Anteil pro Technologie an heat_low_central {region.region_id}",
+              filename=filename1)
+
+    plot_pie_2(labels = df_dispatch_heat_low_central.name.tolist(),
+               values = df_dispatch_heat_low_central.var_value.tolist(),
+               unit = "MWh_th",
+               title = f"Anteil pro Technologie an heat_low_central {region.region_id}",
+               filename = filename
+             )
 
