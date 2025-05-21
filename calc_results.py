@@ -1,8 +1,11 @@
 from plots import(
-    barplot_c
+    barplot_c,
+    barplot_e
 )
+import os
 
 import pandas as pd
+
 
 
 def capacities_opt(region):
@@ -11,9 +14,34 @@ def capacities_opt(region):
 
     return df_cap_opt
 
-def cap_opt_bar(region):
-    df_cap_opt = capacities_opt(region)
 
+def dispatch_elec(region):
+    df_dispatch_elec = region.scalars[region.scalars.var_name == "flow_out_electricity"]
+    df_dispatch_elec = df_dispatch_elec[df_dispatch_elec.var_value != 0]
+
+    return df_dispatch_elec
+
+
+def plot_dir(self):
+    return os.path.join("plots", self.region_id)
+
+
+def cap_opt_bar(region):
+
+    df_cap_opt = capacities_opt(region)
+    region_id = region.region_id
+    filename = os.path.join("plots", region_id, f"capacities_opt_{region_id}.png")
     barplot_c(df_cap_opt,
-              title = "Optimierte Kapazitäten",
-              filename = "capacities_opt.png")
+              title = f"Optimierte Kapazitäten {region.region_id}",
+              filename = filename)
+
+def dispatch_bar(region):
+
+    df_dispatch_elec = dispatch_elec(region)
+    df_dispatch_elec.var_value *= 1e-3
+    region_id = region.region_id
+    filename = os.path.join("plots", region_id, f"dispatch_elec_{region_id}.png")
+    barplot_e(df_dispatch_elec,
+              title= f"Stromversorgung je Technologie {region.region_id}",
+              filename = filename
+              )

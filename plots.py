@@ -26,8 +26,10 @@ def barplot_c(df, unit="MW", title="Kapazitäten", filename=None):
     plt.tight_layout()
 
     if filename:
-        os.makedirs("plots", exist_ok=True)
-        plt.savefig(os.path.join("plots", filename), dpi=300)
+        folder = os.path.dirname(filename)
+        if folder:
+            os.makedirs(folder, exist_ok=True)
+        plt.savefig(filename, dpi=300)
 
     plt.show()
 
@@ -55,8 +57,10 @@ def barplot_e(df, unit="MWh", title="Kapazitäten", filename=None):
     plt.tight_layout()
 
     if filename:
-        os.makedirs("plots", exist_ok=True)
-        plt.savefig(os.path.join("plots", filename), dpi=300)
+        folder = os.path.dirname(filename)
+        if folder:
+            os.makedirs(folder, exist_ok=True)
+        plt.savefig(filename, dpi=300)
 
     plt.show()
 
