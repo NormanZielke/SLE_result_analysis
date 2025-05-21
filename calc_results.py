@@ -2,6 +2,7 @@ from plots import(
     barplot_c,
     barplot_e,
     plot_pie,
+    plot_pie_2,
 )
 import os
 
@@ -99,9 +100,8 @@ def generation_pie_electricty(region):
               filename = filename1
               )
 
-    #plot_pie(labels = df_gen_elec.name.tolist(),
-    #         values = df_gen_elec.var_value.tolist(),
-    #         title = f"Anteil pro Technologie an Stromerzeugung {region.region_id}",
-    #         filename = filename
-    #         )
-
+    plot_pie_2(labels = df_gen_elec.name.tolist(),
+             values = df_gen_elec.var_value.tolist(),
+             title = f"Anteil pro Technologie an Stromerzeugung {region.region_id}",
+             filename = filename
+             )

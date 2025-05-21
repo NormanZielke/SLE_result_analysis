@@ -91,3 +91,32 @@ def plot_pie( labels, values, title=None, unit="GWh", filename=None):
 
     plt.show()
 
+
+import matplotlib.pyplot as plt
+import os
+
+
+def plot_pie_2(labels, values, title=None, unit="GWh", filename=None):
+    total = sum(values)
+
+    # Prozentwerte berechnen für die Legende
+    percentages = [v / total * 100 for v in values]
+    legend_labels = [f"{label}: {pct:.1f}% ({v:.1f} {unit})" for label, pct, v in zip(labels, percentages, values)]
+
+    fig, ax = plt.subplots(figsize=(8, 6))
+    wedges, _ = ax.pie(values, startangle=90)
+
+    ax.set_title(title)
+    ax.axis("equal")  # Kreis statt Oval
+
+    # Legende statt Labels im Kreis
+    ax.legend(wedges, legend_labels, loc="center left", bbox_to_anchor=(1, 0.5), fontsize="small")
+
+    if filename:
+        folder = os.path.dirname(filename)
+        if folder:
+            os.makedirs(folder, exist_ok=True)
+        plt.savefig(filename, dpi=300, bbox_inches="tight")
+
+    plt.show()
+
