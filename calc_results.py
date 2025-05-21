@@ -63,6 +63,7 @@ def dispatch_bar(region):
               filename = filename
               )
 
+
 def import_pie(region):
     df_dispatch_elec = dispatch_elec(region)
     # df Eigenerzeugung
@@ -83,13 +84,14 @@ def import_pie(region):
              title= f"Eigenerzeugung/Stromimporte {region.region_id}",
              filename = filename)
 
+
 def generation_pie_electricty(region):
     df_dispatch_elec = dispatch_elec(region)
     # df Eigenerzeugung
     df_gen_elec = df_dispatch_elec[~df_dispatch_elec["name"].str.contains("electricity-import")].copy()
     df_gen_elec.var_value *= 1e-3
 
-    # Direction for bar-plot
+    # Directions to save data
     region_id = region.region_id
     filename1 = os.path.join("results", region_id, f"{region_id}_electricty_bar.png")
     filename = os.path.join("results", region_id, f"{region_id}_electricty_pie.png")
@@ -105,3 +107,30 @@ def generation_pie_electricty(region):
              title = f"Anteil pro Technologie an Stromerzeugung {region.region_id}",
              filename = filename
              )
+
+
+def generation_heat_high(region):
+    df_dispatch_heat_high = region.scalars[region.scalars.var_name == "flow_out_heat_high"]
+    df_dispatch_heat_high = df_dispatch_heat_high[df_dispatch_heat_high.var_value != 0]
+
+    # Directions to save data
+    region_id = region.region_id
+    filename1 = os.path.join("results", region_id, f"{region_id}_heat_high_bar.png")
+    filename = os.path.join("results", region_id, f"{region_id}_heat_high_pie.png")
+
+    barplot_e(df_dispatch_heat_high,
+              unit="MWh_th",
+              title= f"Anteil pro Technologie an heat_high {region.region_id}",
+              filename=filename1
+              )
+
+    plot_pie_2(labels = df_dispatch_heat_high.name.tolist(),
+               values = df_dispatch_heat_high.var_value.tolist(),
+               unit = "MWh_th",
+               title = f"Anteil pro Technologie an heat_high {region.region_id}",
+               filename = filename
+             )
+
+
+
+

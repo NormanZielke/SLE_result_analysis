@@ -28,3 +28,5 @@ region_1.dispatch_bar()
 region_1.import_pie()
 
 region_1.generation_pie_electricity()
+
+region_1.generation_heat_high()

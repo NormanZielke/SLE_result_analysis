@@ -6,7 +6,8 @@ from calc_results import(
     dispatch_bar,
     techs_none,
     import_pie,
-    generation_pie_electricty
+    generation_pie_electricty,
+    generation_heat_high
 
 )
 
@@ -34,8 +35,15 @@ class region:
     # Add functions
 
     capacities_opt = capacities_opt
+
     cap_opt_bar = cap_opt_bar
+
     dispatch_bar = dispatch_bar
+
     techs_none = techs_none
+
     import_pie = import_pie
+
     generation_pie_electricity = generation_pie_electricty
+
+    generation_heat_high = generation_heat_high
