@@ -66,7 +66,6 @@ def barplot_e(df, unit="MWh", title="Kapazitäten", filename=None):
 
 
 def plot_pie( labels, values, title=None, unit="GWh", filename=None):
-
     labels = labels
     values = values
     total = sum(values)

@@ -85,7 +85,7 @@ def import_pie(region):
              filename = filename)
 
 
-def generation_pie_electricty(region):
+def generation_pie_electricity(region):
     df_dispatch_elec = dispatch_elec(region)
     # df Eigenerzeugung
     df_gen_elec = df_dispatch_elec[~df_dispatch_elec["name"].str.contains("electricity-import")].copy()
