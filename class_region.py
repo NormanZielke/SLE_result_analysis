@@ -1,4 +1,5 @@
 import pandas as pd
+import os
 
 from calc_results import(
     capacities_opt,
@@ -26,14 +27,22 @@ def read_csv_auto_sep(path):
     return pd.read_csv(path, sep=sep)
 
 class region:
-    def __init__(self,args, csv_folder=None, region_id=None):
-        #self.region_id = region_id
+    def __init__(self,args, csv_folder=None, region_id=None, from_combined_file=False):
         df_scalars = read_csv_auto_sep(csv_folder)
-        if region_id:
-            self.region_id = region_id
+        self.region_id = region_id
+        self.from_combined_file = from_combined_file
+
+        if from_combined_file:
+            df_scalars = df_scalars[df_scalars["name"].str.startswith(f"{region_id}-")].copy()
             df_scalars["name"] = df_scalars["name"].str.replace(f"{region_id}-", "", regex=False)
+        else:
+            df_scalars["name"] = df_scalars["name"].str.replace(f"{region_id}-", "", regex=False)
+
         self.scalars = df_scalars
 
+    def get_results_path(self, filename):
+        base_folder = "01_ALL_REGIONS" if self.from_combined_file else "Single_Regions"
+        return os.path.join("results", base_folder, self.region_id, filename)
 
 
     # Add functions

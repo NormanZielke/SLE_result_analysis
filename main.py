@@ -16,9 +16,11 @@ args = {
 
 region_id = "r120670201201"
 
-region_folder = f'input_data/Single_Regions/{region_id}/2045_scenario/postprocessed/scalars.csv'
+#region_folder = f'input_data/Single_Regions/{region_id}/2045_scenario/postprocessed/scalars.csv'
 
-region_1 = region(args, csv_folder = region_folder, region_id = region_id)
+region_folder = f'input_data/01_ALL_REGIONS/2045_scenario/postprocessed/scalars.csv'
+
+region_1 = region(args, csv_folder = region_folder, region_id = region_id, from_combined_file= True)
 
 region_1.cap_opt_bar()
 
@@ -37,4 +39,5 @@ region_1.generation_heat_low_central()
 region_1.generation_heat_low_decentral()
 
 # === all regions ===
+
 
