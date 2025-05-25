@@ -14,30 +14,42 @@ args = {
 
 # === sinlge region ===
 
-region_id = "r120670201201"
+#region_id = "r120670201201"
 
 #region_folder = f'input_data/Single_Regions/{region_id}/2045_scenario/postprocessed/scalars.csv'
 
-region_folder = f'input_data/01_ALL_REGIONS/2045_scenario/postprocessed/scalars.csv'
+#region_folder = f'input_data/01_ALL_REGIONS/2045_scenario/postprocessed/scalars.csv'
 
-region_1 = region(args, csv_folder = region_folder, region_id = region_id, from_combined_file= True)
+def calculate_single_regions(args, region_id, all_regions=False):
 
-region_1.cap_opt_bar()
+    if all_regions:
+        region_folder = f'input_data/01_ALL_REGIONS/2045_scenario/postprocessed/scalars.csv'
+    else:
+        region_folder = f'input_data/Single_Regions/{region_id}/2045_scenario/postprocessed/scalars.csv'
 
-region_1.techs_none()
+    region_1 = region(args, csv_folder = region_folder, region_id = region_id, from_combined_file= all_regions)
 
-region_1.dispatch_bar()
+    region_1.cap_opt_bar()
 
-region_1.import_pie()
+    region_1.techs_none()
 
-region_1.generation_pie_electricity()
+    region_1.dispatch_bar()
 
-region_1.generation_heat_high()
+    region_1.import_pie()
 
-region_1.generation_heat_low_central()
+    region_1.generation_pie_electricity()
 
-region_1.generation_heat_low_decentral()
+    region_1.generation_heat_high()
 
-# === all regions ===
+    region_1.generation_heat_low_central()
 
+    region_1.generation_heat_low_decentral()
 
+if __name__ == "__main__":
+    #calcualte results from single-solutions
+    for region_id in args["region_id"]:
+        calculate_single_regions(args, region_id, all_regions=False)
+
+    # calcualte results from combined-solution
+    for region_id in args["region_id"]:
+        calculate_single_regions(args, region_id, all_regions=True)
