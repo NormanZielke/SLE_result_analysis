@@ -5,10 +5,10 @@ from plots import(
     plot_pie_2,
 )
 import os
-
 import pandas as pd
 
-
+def get_results_path(region_id, filename):
+    return os.path.join("results", "Single_Regions", region_id, filename)
 
 def capacities_opt(region):
     df_capacities = region.scalars[region.scalars["var_name"].str.startswith("invest_out")]
@@ -33,7 +33,7 @@ def techs_none(region):
 
     df_none = pd.DataFrame(techs_none, columns=[f"techs_none_{region_id}"])
 
-    output_path = os.path.join("results", region_id, f"{region_id}_nicht_verwendete_technologien.csv")
+    output_path = get_results_path(region_id, f"{region_id}_nicht_verwendete_technologien.csv")
     df_none.to_csv(output_path, index=True)
 
 
@@ -42,7 +42,7 @@ def cap_opt_bar(region):
     df_cap_opt = capacities_opt(region)
     # Direction for bar-plot
     region_id = region.region_id
-    filename = os.path.join("results", region_id, f"{region_id}_capacities_opt.png")
+    filename = get_results_path(region_id, f"{region_id}_capacities_opt.png")
 
     barplot_c(df_cap_opt,
               title = f"Optimierte Kapazitäten {region.region_id}",
@@ -55,7 +55,7 @@ def dispatch_bar(region):
     df_dispatch_elec.var_value *= 1e-3
     # Direction for bar-plot
     region_id = region.region_id
-    filename = os.path.join("results", region_id, f"{region_id}_dispatch_elec.png")
+    filename = get_results_path(region_id, f"{region_id}_dispatch_elec.png")
 
     barplot_e(df_dispatch_elec,
               unit = "GWh",
@@ -77,7 +77,7 @@ def import_pie(region):
 
     # Direction for bar-plot
     region_id = region.region_id
-    filename = os.path.join("results", region_id, f"{region_id}_pie_import.png")
+    filename = get_results_path(region_id, f"{region_id}_pie_import.png")
 
     plot_pie(labels = df_summary.index.tolist(),
              values = df_summary["var_value"].tolist(),
@@ -93,8 +93,8 @@ def generation_pie_electricty(region):
 
     # Directions to save data
     region_id = region.region_id
-    filename1 = os.path.join("results", region_id, f"{region_id}_electricty_bar.png")
-    filename = os.path.join("results", region_id, f"{region_id}_electricty_pie.png")
+    filename1 = get_results_path(region_id,f"{region_id}_electricty_bar.png")
+    filename = get_results_path(region_id, f"{region_id}_electricty_pie.png")
 
     barplot_e(df_gen_elec,
               unit = "GWh",
@@ -115,8 +115,8 @@ def generation_heat_high(region):
 
     # Directions to save data
     region_id = region.region_id
-    filename1 = os.path.join("results", region_id, f"{region_id}_heat_high_bar.png")
-    filename = os.path.join("results", region_id, f"{region_id}_heat_high_pie.png")
+    filename1 = get_results_path(region_id, f"{region_id}_heat_high_bar.png")
+    filename = get_results_path(region_id, f"{region_id}_heat_high_pie.png")
 
     barplot_e(df_dispatch_heat_high,
               unit="MWh_th",
@@ -138,8 +138,8 @@ def generation_heat_low_central(region):
 
     # Directions to save data
     region_id = region.region_id
-    filename1 = os.path.join("results", region_id, f"{region_id}_heat_low_central_bar.png")
-    filename = os.path.join("results", region_id, f"{region_id}_heat_low_central_pie.png")
+    filename1 = get_results_path(region_id, f"{region_id}_heat_low_central_bar.png")
+    filename = get_results_path(region_id, f"{region_id}_heat_low_central_pie.png")
 
     barplot_e(df_dispatch_heat_low_central,
               unit="MWh_th",
@@ -160,8 +160,8 @@ def generation_heat_low_decentral(region):
 
     # Directions to save data
     region_id = region.region_id
-    filename1 = os.path.join("results", region_id, f"{region_id}_heat_low_decentral_bar.png")
-    filename = os.path.join("results", region_id, f"{region_id}_heat_low_decentral_pie.png")
+    filename1 = get_results_path(region_id, f"{region_id}_heat_low_decentral_bar.png")
+    filename = get_results_path(region_id, f"{region_id}_heat_low_decentral_pie.png")
 
     barplot_e(df_dispatch_heat_low_decentral,
               unit="MWh_th",

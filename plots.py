@@ -92,10 +92,6 @@ def plot_pie( labels, values, title=None, unit="GWh", filename=None):
     plt.show()
 
 
-import matplotlib.pyplot as plt
-import os
-
-
 def plot_pie_2(labels, values, title=None, unit="GWh", filename=None):
     total = sum(values)
 
