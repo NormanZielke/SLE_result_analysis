@@ -6,7 +6,7 @@ plt.style.use('bmh')
 
 
 def barplot_c(df, unit="MW", title="Kapazitäten", filename=None):
-    fig, ax = plt.subplots(figsize=(12, 6))
+    fig, ax = plt.subplots(figsize=(12, 8))
     ax.bar(df["name"], df["var_value"])
     ax.set_ylabel(unit)
     ax.set_xlabel("Technologie / Komponente")
@@ -31,13 +31,14 @@ def barplot_c(df, unit="MW", title="Kapazitäten", filename=None):
             os.makedirs(folder, exist_ok=True)
         plt.savefig(filename, dpi=300)
 
-    plt.show()
+    #plt.show()
+    plt.close()
 
 
 def barplot_e(df, unit="MWh", title="Kapazitäten", filename=None):
     total = df["var_value"].sum()
 
-    fig, ax = plt.subplots(figsize=(12, 9))
+    fig, ax = plt.subplots(figsize=(12, 10))
     bars = ax.bar(df["name"], df["var_value"])
 
     ax.set_ylabel(unit)
@@ -62,7 +63,8 @@ def barplot_e(df, unit="MWh", title="Kapazitäten", filename=None):
             os.makedirs(folder, exist_ok=True)
         plt.savefig(filename, dpi=300)
 
-    plt.show()
+    #plt.show()
+    plt.close()
 
 
 def plot_pie( labels, values, title=None, unit="GWh", filename=None):
@@ -88,7 +90,8 @@ def plot_pie( labels, values, title=None, unit="GWh", filename=None):
             os.makedirs(folder, exist_ok=True)
         plt.savefig(filename, dpi=300)
 
-    plt.show()
+    #plt.show()
+    plt.close()
 
 
 def plot_pie_2(labels, values, title=None, unit="GWh", filename=None):
@@ -113,5 +116,6 @@ def plot_pie_2(labels, values, title=None, unit="GWh", filename=None):
             os.makedirs(folder, exist_ok=True)
         plt.savefig(filename, dpi=300, bbox_inches="tight")
 
-    plt.show()
+    #plt.show()
+    plt.close()
 

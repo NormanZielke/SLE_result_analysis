@@ -1,5 +1,6 @@
 import pandas as pd
 import os
+import yaml
 
 from calc_results import(
     capacities_opt,
@@ -26,6 +27,15 @@ def read_csv_auto_sep(path):
 
     return pd.read_csv(path, sep=sep)
 
+def load_label_mapping(yaml_path="de.yml"):
+    with open(yaml_path, "r", encoding="utf-8") as f:
+        mapping = yaml.safe_load(f)
+    return mapping
+
+def apply_label_mapping(df, mapping, column="name"):
+    df[column] = df[column].map(mapping).fillna(df[column])
+    return df
+
 class region:
     def __init__(self,args, csv_folder=None, region_id=None, from_combined_file=False):
         df_scalars = read_csv_auto_sep(csv_folder)
@@ -38,6 +48,10 @@ class region:
         else:
             df_scalars["name"] = df_scalars["name"].str.replace(f"{region_id}-", "", regex=False)
 
+        # 🔁 Lade Mapping und wende es an
+        mapping = load_label_mapping("de.yml")
+        df_scalars = apply_label_mapping(df_scalars, mapping)
+
         self.scalars = df_scalars
 
     def get_results_path(self, filename):
@@ -48,19 +62,11 @@ class region:
     # Add functions
 
     capacities_opt = capacities_opt
-
     cap_opt_bar = cap_opt_bar
-
     dispatch_bar = dispatch_bar
-
     techs_none = techs_none
-
     import_pie = import_pie
-
     generation_pie_electricity = generation_pie_electricity
-
     generation_heat_high = generation_heat_high
-
     generation_heat_low_central = generation_heat_low_central
-
     generation_heat_low_decentral = generation_heat_low_decentral

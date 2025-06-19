@@ -1,5 +1,6 @@
 import os
 import pandas as pd
+import yaml
 from class_region import read_csv_auto_sep
 
 from calc_results import (
@@ -13,6 +14,15 @@ from calc_results import (
     generation_heat_low_central,
     generation_heat_low_decentral
 )
+
+def load_label_mapping(yaml_path="de.yml"):
+    with open(yaml_path, "r", encoding="utf-8") as f:
+        mapping = yaml.safe_load(f)
+    return mapping
+
+def apply_label_mapping(df, mapping, column="name"):
+    df[column] = df[column].map(mapping).fillna(df[column])
+    return df
 
 class aggregated_region:
     def __init__(self, region_id, csv_paths, output_folder):
@@ -33,6 +43,10 @@ class aggregated_region:
 
         # Gruppieren nach name UND var_name
         df_grouped = df.groupby(["name", "var_name"], as_index=False)["var_value"].sum()
+
+        # 🔁 Lade Mapping und wende es an
+        mapping = load_label_mapping("de.yml")
+        df_grouped = apply_label_mapping(df_grouped, mapping)
 
         self.scalars = df_grouped
 

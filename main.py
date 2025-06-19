@@ -75,4 +75,5 @@ if __name__ == "__main__":
     # calcualte results from combined-solution
     for region_id in args["region_id"]:
         calculate_single_regions(args, region_id, all_regions=True)
+    # calculate aggregated results
     calculate_aggregated_results()

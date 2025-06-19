@@ -67,10 +67,10 @@ def dispatch_bar(region):
 def import_pie(region):
     df_dispatch_elec = dispatch_elec(region)
     # df Eigenerzeugung
-    df_gen_elec = df_dispatch_elec[~df_dispatch_elec["name"].str.contains("electricity-import")]
+    df_gen_elec = df_dispatch_elec[~df_dispatch_elec["name"].str.contains("Stromimport")]
     # df für Kreisdiagramm
     strom_eigenversorgung = df_gen_elec.var_value.sum() * 1e-3
-    strom_import = df_dispatch_elec[df_dispatch_elec["name"] == "electricity-import"].var_value.sum() * 1e-3
+    strom_import = df_dispatch_elec[df_dispatch_elec["name"] == "Stromimport"].var_value.sum() * 1e-3
     df_summary = pd.DataFrame({
         "var_value": [strom_eigenversorgung, strom_import]
     }, index=["Eigenerzeugung aus EE", "Strom_Import"])
@@ -88,7 +88,7 @@ def import_pie(region):
 def generation_pie_electricity(region):
     df_dispatch_elec = dispatch_elec(region)
     # df Eigenerzeugung
-    df_gen_elec = df_dispatch_elec[~df_dispatch_elec["name"].str.contains("electricity-import")].copy()
+    df_gen_elec = df_dispatch_elec[~df_dispatch_elec["name"].str.contains("Stromimport")].copy()
     df_gen_elec.var_value *= 1e-3
 
     # Directions to save data
