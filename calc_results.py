@@ -38,30 +38,42 @@ def techs_none(region):
 
 
 def cap_opt_bar(region):
-
     df_cap_opt = capacities_opt(region)
-    # Direction for bar-plot
-    region_id = region.region_id
-    filename = region.get_results_path(filename= f"{region_id}_capacities_opt.png")
+
+    key = region.region_id
+    default_label = key
+    name_map = getattr(region, "region_name_map", {})
+    region_label = name_map.get(key, default_label)
+
+    filename = region.get_results_path(filename=f"{key}_capacities_opt.png")
 
     barplot_c(df_cap_opt,
-              title = f"Optimierte Kapazitäten {region.region_id}",
-              filename = filename)
+              title=f"Optimierte Kapazitäten {region_label}",
+              filename=filename)
 
 
 def dispatch_bar(region):
-
     df_dispatch_elec = dispatch_elec(region)
     df_dispatch_elec.var_value *= 1e-3
-    # Direction for bar-plot
-    region_id = region.region_id
-    filename = region.get_results_path(filename= f"{region_id}_dispatch_elec.png")
+
+    key = region.region_id
+    default_label = key
+    name_map = getattr(region, "region_name_map", {})
+    region_label = name_map.get(key, default_label)
+
+    filename1 = region.get_results_path(filename=f"{key}_dispatch_elec_bar.png")
+    filename = region.get_results_path(filename=f"{key}_dispatch_elec_pie.png")
+
 
     barplot_e(df_dispatch_elec,
-              unit = "GWh",
-              title= f"Stromversorgung je Technologie {region.region_id}",
-              filename = filename
-              )
+              unit="GWh",
+              title=f"Stromversorgung je Technologie {region_label}",
+              filename=filename1)
+
+    plot_pie_2(labels=df_dispatch_elec.name.tolist(),
+               values=df_dispatch_elec.var_value.tolist(),
+               title=f"Anteil pro Technologie an Stromversorgung {region_label}",
+               filename=filename)
 
 
 def import_pie(region):
@@ -71,106 +83,115 @@ def import_pie(region):
     # df für Kreisdiagramm
     strom_eigenversorgung = df_gen_elec.var_value.sum() * 1e-3
     strom_import = df_dispatch_elec[df_dispatch_elec["name"] == "Stromimport"].var_value.sum() * 1e-3
+
     df_summary = pd.DataFrame({
         "var_value": [strom_eigenversorgung, strom_import]
     }, index=["Eigenerzeugung aus EE", "Strom_Import"])
 
-    # Direction for bar-plot
-    region_id = region.region_id
-    filename = region.get_results_path(filename=f"{region_id}_pie_import.png")
+    key = region.region_id
+    default_label = key
+    name_map = getattr(region, "region_name_map", {})
+    region_label = name_map.get(key, default_label)
 
-    plot_pie(labels = df_summary.index.tolist(),
-             values = df_summary["var_value"].tolist(),
-             title= f"Eigenerzeugung/Stromimporte {region.region_id}",
-             filename = filename)
+    filename = region.get_results_path(filename=f"{key}_pie_import.png")
+
+    plot_pie(labels=df_summary.index.tolist(),
+             values=df_summary["var_value"].tolist(),
+             title=f"Eigenerzeugung/Stromimporte {region_label}",
+             filename=filename)
 
 
 def generation_pie_electricity(region):
     df_dispatch_elec = dispatch_elec(region)
-    # df Eigenerzeugung
     df_gen_elec = df_dispatch_elec[~df_dispatch_elec["name"].str.contains("Stromimport")].copy()
     df_gen_elec.var_value *= 1e-3
 
-    # Directions to save data
-    region_id = region.region_id
-    filename1 = region.get_results_path(filename=f"{region_id}_electricty_bar.png")
-    filename = region.get_results_path(filename= f"{region_id}_electricty_pie.png")
+    key = region.region_id
+    default_label = key
+    name_map = getattr(region, "region_name_map", {})
+    region_label = name_map.get(key, default_label)
+
+    filename1 = region.get_results_path(filename=f"{key}_electricty_bar.png")
+    filename = region.get_results_path(filename=f"{key}_electricty_pie.png")
 
     barplot_e(df_gen_elec,
-              unit = "GWh",
-              title= f"Anteil pro Technologie an Stromerzeugung {region.region_id}",
-              filename = filename1
-              )
+              unit="GWh",
+              title=f"Anteil pro Technologie an Stromerzeugung {region_label}",
+              filename=filename1)
 
-    plot_pie_2(labels = df_gen_elec.name.tolist(),
-             values = df_gen_elec.var_value.tolist(),
-             title = f"Anteil pro Technologie an Stromerzeugung {region.region_id}",
-             filename = filename
-             )
+    plot_pie_2(labels=df_gen_elec.name.tolist(),
+               values=df_gen_elec.var_value.tolist(),
+               title=f"Anteil pro Technologie an Stromerzeugung {region_label}",
+               filename=filename)
 
 
 def generation_heat_high(region):
     df_dispatch_heat_high = region.scalars[region.scalars.var_name == "flow_out_heat_high"]
     df_dispatch_heat_high = df_dispatch_heat_high[df_dispatch_heat_high.var_value != 0]
 
-    # Directions to save data
-    region_id = region.region_id
-    filename1 = region.get_results_path(filename= f"{region_id}_heat_high_bar.png")
-    filename = region.get_results_path(filename= f"{region_id}_heat_high_pie.png")
+    key = region.region_id
+    default_label = key
+    name_map = getattr(region, "region_name_map", {})
+    region_label = name_map.get(key, default_label)
+
+    filename1 = region.get_results_path(filename=f"{key}_heat_high_bar.png")
+    filename = region.get_results_path(filename=f"{key}_heat_high_pie.png")
 
     barplot_e(df_dispatch_heat_high,
               unit="MWh_th",
-              title= f"Anteil pro Technologie an heat_high {region.region_id}",
-              filename=filename1
-              )
+              title=f"Anteil pro Technologie an heat_high {region_label}",
+              filename=filename1)
 
-    plot_pie_2(labels = df_dispatch_heat_high.name.tolist(),
-               values = df_dispatch_heat_high.var_value.tolist(),
-               unit = "MWh_th",
-               title = f"Anteil pro Technologie an heat_high {region.region_id}",
-               filename = filename
-             )
+    plot_pie_2(labels=df_dispatch_heat_high.name.tolist(),
+               values=df_dispatch_heat_high.var_value.tolist(),
+               unit="MWh_th",
+               title=f"Anteil pro Technologie an heat_high {region_label}",
+               filename=filename)
 
 
 def generation_heat_low_central(region):
-    df_dispatch_heat_low_central = region.scalars[region.scalars.var_name == "flow_out_heat_low_central"]
-    df_dispatch_heat_low_central = df_dispatch_heat_low_central[df_dispatch_heat_low_central.var_value != 0]
+    df_dispatch = region.scalars[region.scalars.var_name == "flow_out_heat_low_central"]
+    df_dispatch = df_dispatch[df_dispatch.var_value != 0]
 
-    # Directions to save data
-    region_id = region.region_id
-    filename1 = region.get_results_path(filename= f"{region_id}_heat_low_central_bar.png")
-    filename = region.get_results_path(filename= f"{region_id}_heat_low_central_pie.png")
+    key = region.region_id
+    default_label = key
+    name_map = getattr(region, "region_name_map", {})
+    region_label = name_map.get(key, default_label)
 
-    barplot_e(df_dispatch_heat_low_central,
+    filename1 = region.get_results_path(filename=f"{key}_heat_low_central_bar.png")
+    filename = region.get_results_path(filename=f"{key}_heat_low_central_pie.png")
+
+    barplot_e(df_dispatch,
               unit="MWh_th",
-              title=f"Anteil pro Technologie an heat_low_central {region.region_id}",
+              title=f"Anteil pro Technologie an heat_low_central {region_label}",
               filename=filename1)
 
-    plot_pie_2(labels = df_dispatch_heat_low_central.name.tolist(),
-               values = df_dispatch_heat_low_central.var_value.tolist(),
-               unit = "MWh_th",
-               title = f"Anteil pro Technologie an heat_low_central {region.region_id}",
-               filename = filename
-             )
+    plot_pie_2(labels=df_dispatch.name.tolist(),
+               values=df_dispatch.var_value.tolist(),
+               unit="MWh_th",
+               title=f"Anteil pro Technologie an heat_low_central {region_label}",
+               filename=filename)
 
 
 def generation_heat_low_decentral(region):
-    df_dispatch_heat_low_decentral = region.scalars[region.scalars.var_name == "flow_out_heat_low_decentral"]
-    df_dispatch_heat_low_decentral = df_dispatch_heat_low_decentral[df_dispatch_heat_low_decentral.var_value != 0]
+    df_dispatch = region.scalars[region.scalars.var_name == "flow_out_heat_low_decentral"]
+    df_dispatch = df_dispatch[df_dispatch.var_value != 0]
 
-    # Directions to save data
-    region_id = region.region_id
-    filename1 = region.get_results_path(filename= f"{region_id}_heat_low_decentral_bar.png")
-    filename = region.get_results_path(filename= f"{region_id}_heat_low_decentral_pie.png")
+    key = region.region_id
+    default_label = key
+    name_map = getattr(region, "region_name_map", {})
+    region_label = name_map.get(key, default_label)
 
-    barplot_e(df_dispatch_heat_low_decentral,
+    filename1 = region.get_results_path(filename=f"{key}_heat_low_decentral_bar.png")
+    filename = region.get_results_path(filename=f"{key}_heat_low_decentral_pie.png")
+
+    barplot_e(df_dispatch,
               unit="MWh_th",
-              title=f"Anteil pro Technologie an heat_low_decentral {region.region_id}",
+              title=f"Anteil pro Technologie an heat_low_decentral {region_label}",
               filename=filename1)
 
-    plot_pie_2(labels = df_dispatch_heat_low_decentral.name.tolist(),
-               values = df_dispatch_heat_low_decentral.var_value.tolist(),
-               unit = "MWh_th",
-               title = f"Anteil pro Technologie an heat_low_decentral {region.region_id}",
-               filename = filename
-             )
+    plot_pie_2(labels=df_dispatch.name.tolist(),
+               values=df_dispatch.var_value.tolist(),
+               unit="MWh_th",
+               title=f"Anteil pro Technologie an heat_low_decentral {region_label}",
+               filename=filename)

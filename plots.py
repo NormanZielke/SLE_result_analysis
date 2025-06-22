@@ -97,17 +97,21 @@ def plot_pie( labels, values, title=None, unit="GWh", filename=None):
 def plot_pie_2(labels, values, title=None, unit="GWh", filename=None):
     total = sum(values)
 
+    # 🔁 sortiere nach Werten absteigend
+    sorted_data = sorted(zip(labels, values), key=lambda x: x[1], reverse=True)
+    sorted_labels, sorted_values = zip(*sorted_data)
+
     # Prozentwerte berechnen für die Legende
-    percentages = [v / total * 100 for v in values]
-    legend_labels = [f"{label}: {pct:.1f}% ({v:.1f} {unit})" for label, pct, v in zip(labels, percentages, values)]
+    percentages = [v / total * 100 for v in sorted_values]
+    legend_labels = [f"{label}: {pct:.1f}% ({v:.1f} {unit})" for label, pct, v in zip(sorted_labels, percentages, sorted_values)]
 
     fig, ax = plt.subplots(figsize=(8, 6))
-    wedges, _ = ax.pie(values, startangle=90)
+    wedges, _ = ax.pie(sorted_values, startangle=90)
 
     ax.set_title(title)
     ax.axis("equal")  # Kreis statt Oval
 
-    # Legende statt Labels im Kreis
+    # Legende nach sortierten Werten
     ax.legend(wedges, legend_labels, loc="center left", bbox_to_anchor=(1, 0.5), fontsize="small")
 
     if filename:

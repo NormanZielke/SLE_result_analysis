@@ -1,0 +1,82 @@
+electricity: Strom
+heat_low_decentral: Wärme (niedrig, dezentral)
+heat_low_central: Wärme (niedrig, zentral)
+heat_high: Wärme (hoch)
+residual_waste: Restmüll
+biomass_solid: Feste Biomasse
+biomass_gas: Biogas
+h2: Wasserstoff
+
+# Stromnachfragen
+electricity-demand_hh: Stromnachfrage (Haushalte)
+electricity-demand_cts: Stromnachfrage (Gewerbe, Handel, Dienstleistungen)
+electricity-demand-mob: Stromnachfrage (Mobilität)
+electricity-demand_ind: Stromnachfrage (Industrie)
+
+# Wärme (niedrig) Nachfragen
+heat_low_central-demand_hh: Wärme (niedrig, zentral) Nachfrage (Haushalte)
+heat_low_central_demand_cts: Wärme (niedrig, zentral) Nachfrage (Gewerbe, Handel, Dienstleistungen)
+heat_low_central_demand_ind: Wärme (niedrig, zentral) Nachfrage (Industrie)
+heat_low_decentral-demand_hh: Wärme (niedrig, dezentral) Nachfrage (Haushalte)
+heat_low_decentral_demand_cts: Wärme (niedrig, dezentral) Nachfrage (Gewerbe, Handel, Dienstleistungen)
+heat_low_decentral_demand_ind: Wärme (niedrig, dezentral) Nachfrage (Industrie)
+
+
+# Wärme (hoch) Nachfragen
+heat_high-demand_ind: Wärme (hoch) Nachfrage (Industrie)
+
+# Importe/Exporte
+electricity-import: Stromimport
+electricity-export: Stromexport
+
+# Rohstoffe
+biomass_solid-commodity: Biomasse (fest)
+biomass_gas-commodity: Biogas
+residual_waste-commodity: Restmüll
+h2-commodity: Wasserstoff
+
+# Volatile
+electricity-wind: Wind (onshore)
+electricity-pv_ground: PV (Freifläche)
+electricity-pv_agri_horizontal: PV (Agrarflächen) (hor.)
+electricity-pv_agri_vertical: PV (Agrarflächen) (vert.)
+electricity-pv_rooftop: PV (Dachflächen)
+heat_low_decentral_solarthermal_plant: Solarkollektor (dezentral)
+heat_low_decentral_geothermal_plant: Geothermieanlage (dezentral)
+
+# Umwandlung
+biomass_solid-boiler_heat_high: Biomassekessel (fest, hohe Wärme)
+electricity-boiler_heat_high: Elektrokessel (hohe Wärme)
+h2-boiler_heat_high: Wasserstoffkessel (hohe Wärme)
+electricity-electrolyzer: Elektrolyseur
+
+# Wärmepumpen
+electricity-heatpump_central: Wärmepumpe (niedrig, zentral)
+electricity-heatpump_decentral: Wärmepumpe (niedrig, dezentral)
+electricity-heatpump_heat_high: Wärmepumpe (hoch)
+
+# Entnahme-KWK (Kraft-Wärme-Kopplung)
+biomass_solid-bpchp_heat_low_decentral: Biomasse-KWK (fest, niedrig, dezentral)
+biomass_solid-bpchp_heat_low_central: Biomasse-KWK (fest, niedrig, zentral)
+biomass_solid-bpchp_heat_high: Biomasse-KWK (fest, hoch)
+biomass_gas-pchp_heat_low_decentral: Biogas-KWK (niedrig, dezentral)
+biomass_gas-pchp_heat_low_central: Biogas-KWK (niedrig, zentral)
+biomass_gas-bpchp_heat_high: Biogas-KWK (hoch)
+h2_bpchp_heat_high: Wasserstoff-KWK (hoch)
+residual_waste-bpchp_heat_high: Restmüll-KWK (hoch)
+residual_waste-bpchp_heat_low_central: Restmüll-KWK (niedrig, zentral)
+
+# Gegendruck-KWK
+biomass_solid-bpchp_heat_low_decentral: Biomasse-Gegendruck-KWK (fest, niedrig, dezentral)
+biomass_solid-bpchp_heat_low_central: Biomasse-Gegendruck-KWK (fest, niedrig, zentral)
+biomass_gas-bpchp_heat_low_decentral: Biogas-Gegendruck-KWK (niedrig, dezentral)
+biomass_gas-bpchp_heat_low_central: Biogas-Gegendruck-KWK (niedrig, zentral)
+
+# Speicher
+heat_low_decentral-storage: Wärmespeicher (niedrig, dezentral)
+heat_low_central-storage: Wärmespeicher (niedrig, zentral)
+electricity-large_battery_storage: Batteriespeicher (groß) (Strom)
+electricity-small_battery_storage: Batteriespeicher (klein) (Strom)
+
+# Überschuss
+h2-export: Wasserstoffexport
