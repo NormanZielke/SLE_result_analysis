@@ -7,9 +7,6 @@ from plots import(
 import os
 import pandas as pd
 
-#def get_results_path(region_id, filename):
-#    return os.path.join("results", "Single_Regions", region_id, filename)
-
 def capacities_opt(region):
     df_capacities = region.scalars[region.scalars["var_name"].str.startswith("invest_out")]
     df_cap_opt = df_capacities[df_capacities["var_value"] != 0]
@@ -86,7 +83,7 @@ def import_pie(region):
 
     df_summary = pd.DataFrame({
         "var_value": [strom_eigenversorgung, strom_import]
-    }, index=["Eigenerzeugung aus EE", "Strom_Import"])
+    }, index=["Eigenerzeugung aus EE", "Stromimport"])
 
     key = region.region_id
     default_label = key
@@ -99,30 +96,6 @@ def import_pie(region):
              values=df_summary["var_value"].tolist(),
              title=f"Eigenerzeugung/Stromimporte {region_label}",
              filename=filename)
-
-
-def generation_pie_electricity(region):
-    df_dispatch_elec = dispatch_elec(region)
-    df_gen_elec = df_dispatch_elec[~df_dispatch_elec["name"].str.contains("Stromimport")].copy()
-    df_gen_elec.var_value *= 1e-3
-
-    key = region.region_id
-    default_label = key
-    name_map = getattr(region, "region_name_map", {})
-    region_label = name_map.get(key, default_label)
-
-    filename1 = region.get_results_path(filename=f"{key}_electricty_bar.png")
-    filename = region.get_results_path(filename=f"{key}_electricty_pie.png")
-
-    barplot_e(df_gen_elec,
-              unit="GWh",
-              title=f"Anteil pro Technologie an Stromerzeugung {region_label}",
-              filename=filename1)
-
-    plot_pie_2(labels=df_gen_elec.name.tolist(),
-               values=df_gen_elec.var_value.tolist(),
-               title=f"Anteil pro Technologie an Stromerzeugung {region_label}",
-               filename=filename)
 
 
 def generation_heat_high(region):
@@ -139,13 +112,13 @@ def generation_heat_high(region):
 
     barplot_e(df_dispatch_heat_high,
               unit="MWh_th",
-              title=f"Anteil pro Technologie an heat_high {region_label}",
+              title=f"Wärmeversorgung (hoch) pro Technologie: {region_label}",
               filename=filename1)
 
     plot_pie_2(labels=df_dispatch_heat_high.name.tolist(),
                values=df_dispatch_heat_high.var_value.tolist(),
                unit="MWh_th",
-               title=f"Anteil pro Technologie an heat_high {region_label}",
+               title=f"Anteil an Wärmeversorgung (hoch) pro Technologie: {region_label}",
                filename=filename)
 
 
@@ -163,13 +136,13 @@ def generation_heat_low_central(region):
 
     barplot_e(df_dispatch,
               unit="MWh_th",
-              title=f"Anteil pro Technologie an heat_low_central {region_label}",
+              title=f"Wärmeversorgung (niedrig, zentral) pro Technologie: {region_label}",
               filename=filename1)
 
     plot_pie_2(labels=df_dispatch.name.tolist(),
                values=df_dispatch.var_value.tolist(),
                unit="MWh_th",
-               title=f"Anteil pro Technologie an heat_low_central {region_label}",
+               title=f"Anteil an Wärmeversorgung (niedrig, zentral) pro Technologie: {region_label}",
                filename=filename)
 
 
@@ -187,11 +160,11 @@ def generation_heat_low_decentral(region):
 
     barplot_e(df_dispatch,
               unit="MWh_th",
-              title=f"Anteil pro Technologie an heat_low_decentral {region_label}",
+              title=f"Wärmeversorgung (niedrig, dezentral) pro Technologie: {region_label}",
               filename=filename1)
 
     plot_pie_2(labels=df_dispatch.name.tolist(),
                values=df_dispatch.var_value.tolist(),
                unit="MWh_th",
-               title=f"Anteil pro Technologie an heat_low_decentral {region_label}",
+               title=f"Anteil an Wärmeversorgung (niedrig, dezentral) pro Technologie: {region_label}",
                filename=filename)

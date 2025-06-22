@@ -8,7 +8,6 @@ from calc_results import(
     dispatch_bar,
     techs_none,
     import_pie,
-    generation_pie_electricity,
     generation_heat_high,
     generation_heat_low_central,
     generation_heat_low_decentral
@@ -66,7 +65,6 @@ class region:
     dispatch_bar = dispatch_bar
     techs_none = techs_none
     import_pie = import_pie
-    generation_pie_electricity = generation_pie_electricity
     generation_heat_high = generation_heat_high
     generation_heat_low_central = generation_heat_low_central
     generation_heat_low_decentral = generation_heat_low_decentral
