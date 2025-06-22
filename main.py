@@ -10,8 +10,8 @@ args = {
     "region_id_dict":{
         "r120640428428": "Rüdersdorf",
         "r120640472472": "Strausberg",
-        "r120670124124": "Grünheide",
-        "r120670201201": "Erkner",
+        "r120670124124": "Erkner",
+        "r120670201201": "Grünheide",
     }
 }
 
