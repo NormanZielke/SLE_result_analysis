@@ -8,8 +8,8 @@ import os
 import pandas as pd
 
 def capacities_opt(region):
-    df_capacities = region.scalars[region.scalars["var_name"].str.startswith("invest_out")]
-    df_cap_opt = df_capacities[df_capacities["var_value"] != 0]
+    df_cap_opt = region.scalars[region.scalars["var_name"].str.startswith("invest_out")]
+    df_cap_opt = df_cap_opt[df_cap_opt["var_value"] != 0]
 
     return df_cap_opt
 
@@ -34,7 +34,7 @@ def techs_none(region):
     df_none.to_csv(output_path, index=True)
 
 
-def cap_opt_bar(region):
+def cap_opt_bar_old(region):
     df_cap_opt = capacities_opt(region)
 
     key = region.region_id
@@ -47,6 +47,37 @@ def cap_opt_bar(region):
     barplot_c(df_cap_opt,
               title=f"Optimierte Kapazitäten {region_label}",
               filename=filename)
+
+def cap_opt_bar(region, df_potentials=None):
+    df_cap_opt = capacities_opt(region)
+
+    key = region.region_id
+    default_label = key
+    name_map = getattr(region, "region_name_map", {})
+    region_label = name_map.get(key, default_label)
+
+    df_cap_opt = df_cap_opt.copy()
+
+    if df_potentials is not None:
+        if "region" in df_potentials.columns:
+            pot = df_potentials[df_potentials["region"] == key]
+        else:
+            pot = df_potentials  # aggregierte Variante
+        df_cap_opt = pd.merge(
+            df_cap_opt,
+            pot[["tech", "capacity_potential"]],
+            left_on="name",
+            right_on="tech",
+            how="left"
+        )
+
+    filename = region.get_results_path(filename=f"{key}_capacities_opt.png")
+
+    barplot_c(df_cap_opt,
+              title=f"Optimierte Kapazitäten {region_label}",
+              filename=filename,
+              potential_data=df_cap_opt[["name", "capacity_potential"]] if "capacity_potential" in df_cap_opt else None)
+
 
 
 def dispatch_bar(region):
@@ -168,3 +199,88 @@ def generation_heat_low_decentral(region):
                unit="MWh_th",
                title=f"Anteil an Wärmeversorgung (niedrig, dezentral) pro Technologie: {region_label}",
                filename=filename)
+
+def read_csv_auto_sep(path):
+
+    with open(path, 'r') as f:
+        first_line = f.readline()
+        if ";" in first_line:
+            sep = ";"
+        elif "," in first_line:
+            sep = ","
+        else:
+            raise ValueError("Unbekannter CSV-Separator.")
+
+    return pd.read_csv(path, sep=sep)
+
+def collect_capacity_potentials(base_path):
+    """
+    Liest alle relevanten CSV-Dateien mit Erneuerbaren-Potenzialen ein,
+    extrahiert 'region', 'tech', 'capacity_potential' und wandelt 'tech' per Mapping
+    in gelabelte Technologiebezeichnungen um.
+    """
+    import yaml
+
+    def load_label_mapping(yaml_path="de.yml"):
+        with open(yaml_path, "r", encoding="utf-8") as f:
+            return yaml.safe_load(f)
+
+    def apply_label_mapping(df, mapping, column="name"):
+        df[column] = df[column].map(mapping).fillna(df[column])
+        return df
+
+    technologies = [
+        "electricity-pv_agri_horizontal",
+        "electricity-pv_agri_vertical",
+        "electricity-pv_ground",
+        "electricity-pv_rooftop",
+        "electricity-wind",
+        "heat_low_decentral-solarthermal_plant"
+    ]
+
+    df_list = []
+
+    mapping = load_label_mapping("de.yml")
+
+    for tech in technologies:
+        file_path = os.path.join(base_path, f"{tech}.csv")
+        if not os.path.exists(file_path):
+            print(f"WARNUNG: Datei nicht gefunden: {file_path}")
+            continue
+
+        df = read_csv_auto_sep(file_path)
+        df[["region", "tech"]] = df["name"].str.split("-", n=1, expand=True)
+        df = df.loc[:, ["region", "tech", "capacity_potential"]]
+        df = apply_label_mapping(df, mapping, column="tech")  # 🆕 Mapping anwenden
+        df_list.append(df)
+
+    if not df_list:
+        raise ValueError("Keine Potenzialdaten gefunden. Bitte Dateipfade prüfen.")
+
+    df_all = pd.concat(df_list, ignore_index=True)
+    return df_all
+
+
+def collect_renewable_potentials(base_path="input_data/01_ALL_REGIONS/2045_scenario/preprocessed/data/elements"):
+    """
+    Erstellt zwei Dateien:
+    1. potentials.csv: Potenziale je Region und Technologie
+    2. potentials_overall.csv: Gesamtpotenzial je Technologie
+    """
+    df_potentials_regions = collect_capacity_potentials(base_path)
+
+    # Speichern aller Potenziale pro Region
+    df_potentials_regions.to_csv("results/potentials.csv", index=False)
+    print("✅ Potenziale je Region gespeichert unter: results/potentials.csv")
+
+    # 🔁 Aggregation: summiere nach Technologie
+    df_potentials_overall = (
+        df_potentials_regions
+        .groupby("tech", as_index=False)["capacity_potential"]
+        .sum()
+    )
+
+    df_potentials_overall.to_csv("results/potentials_overall.csv", index=False)
+    print("✅ Gesamtpotenziale gespeichert unter: results/potentials_overall.csv")
+
+    return df_potentials_regions, df_potentials_overall

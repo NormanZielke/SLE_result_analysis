@@ -41,8 +41,8 @@ electricity-pv_ground: PV (Freifläche)
 electricity-pv_agri_horizontal: PV (Agrarflächen) (hor.)
 electricity-pv_agri_vertical: PV (Agrarflächen) (vert.)
 electricity-pv_rooftop: PV (Dachflächen)
-heat_low_decentral_solarthermal_plant: Solarkollektor (dezentral)
-heat_low_decentral_geothermal_plant: Geothermieanlage (dezentral)
+heat_low_decentral-solarthermal_plant: Solarkollektor (dezentral)
+heat_low_decentral-geothermal_plant: Geothermieanlage (dezentral)
 
 # Umwandlung
 biomass_solid-boiler_heat_high: Biomassekessel (fest, hohe Wärme)

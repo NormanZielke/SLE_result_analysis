@@ -5,7 +5,7 @@ import os
 plt.style.use('bmh')
 
 
-def barplot_c(df, unit="MW", title="Kapazitäten", filename=None):
+def barplot_c_old(df, unit="MW", title="Kapazitäten", filename=None):
     fig, ax = plt.subplots(figsize=(12, 8))
     ax.bar(df["name"], df["var_value"])
     ax.set_ylabel(unit)
@@ -33,6 +33,50 @@ def barplot_c(df, unit="MW", title="Kapazitäten", filename=None):
 
     #plt.show()
     plt.close()
+
+def barplot_c(df, unit="MW", title="Kapazitäten", filename=None, potential_data=None):
+    fig, ax = plt.subplots(figsize=(12, 8))
+    bars = ax.bar(df["name"], df["var_value"])
+
+    ax.set_ylabel(unit)
+    ax.set_xlabel("Technologie / Komponente")
+    ax.set_title(title)
+
+    for bar in bars:
+        height = bar.get_height()
+        ax.annotate(f"{height:.2f}",
+                    xy=(bar.get_x() + bar.get_width() / 2, height),
+                    xytext=(0, 3), textcoords="offset points",
+                    ha='center', va='bottom', fontsize=8)
+
+    # 🔴 Potenziale als Punkte
+    potentials_set = False
+    if potential_data is not None:
+        for i, (name, pot) in enumerate(potential_data.itertuples(index=False)):
+            if pd.notna(pot):
+                idx = df.index[df["name"] == name]
+                if not idx.empty:
+                    bar = bars[idx[0]]
+                    ax.plot(bar.get_x() + bar.get_width() / 2, pot,
+                            marker="o", color="red", label="Potenzial" if i == 0 else "", zorder=5)
+                    potentials_set = True
+
+    if potentials_set:
+        ax.legend(["Potenzial"], loc="upper right", fontsize="small")
+
+    plt.xticks(rotation=45, ha="right")
+    #handles, labels = ax.get_legend_handles_labels()
+    #by_label = dict(zip(labels, handles))
+    #ax.legend(by_label.values(), by_label.keys())
+    plt.tight_layout()
+
+    if filename:
+        folder = os.path.dirname(filename)
+        if folder:
+            os.makedirs(folder, exist_ok=True)
+        plt.savefig(filename, dpi=300)
+    plt.close()
+
 
 
 def barplot_e(df, unit="MWh", title="Kapazitäten", filename=None):

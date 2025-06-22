@@ -1,6 +1,9 @@
 
 from class_region import region
 from class_aggregated_region import aggregated_region
+from calc_results import (
+    collect_renewable_potentials,
+    read_csv_auto_sep)
 
 
 args = {
@@ -23,7 +26,7 @@ def calculate_single_regions(args, region_id, all_regions=False):
 
     region_1.region_name_map = args.get("region_id_dict", {})
 
-    region_1.cap_opt_bar()
+    region_1.cap_opt_bar(df_potentials=df_potentials_region)
     region_1.techs_none()
     region_1.dispatch_bar()
     region_1.import_pie()
@@ -40,7 +43,7 @@ def calculate_aggregated_results():
         output_folder="results/01_ALL_REGIONS_aggregated/"
     )
 
-    agg_all.cap_opt_bar()
+    agg_all.cap_opt_bar(df_potentials=df_potentials_overall)
     agg_all.techs_none()
     agg_all.dispatch_bar()
     agg_all.import_pie()
@@ -61,7 +64,7 @@ def calculate_aggregated_results():
         output_folder="results/Single_Region_aggregated/"
     )
 
-    agg_single.cap_opt_bar()
+    agg_single.cap_opt_bar(df_potentials=df_potentials_overall)
     agg_single.techs_none()
     agg_single.dispatch_bar()
     agg_single.import_pie()
@@ -70,7 +73,17 @@ def calculate_aggregated_results():
     agg_single.generation_heat_low_central()
     agg_single.generation_heat_low_decentral()
 
+
+
 if __name__ == "__main__":
+    # collect renewable potentials and create .csv for regions and overall
+    collect_renewable_potentials(
+        base_path="input_data/01_ALL_REGIONS/2045_scenario/preprocessed/data/elements")
+
+    # ✅ Potenziale aus CSV einlesen
+    df_potentials_region = read_csv_auto_sep("results/potentials.csv")
+    df_potentials_overall = read_csv_auto_sep("results/potentials_overall.csv")
+
     # calcualte results from single-solutions
     for region_id in args["region_id_dict"]:
         calculate_single_regions(args, region_id, all_regions=False)
@@ -78,5 +91,6 @@ if __name__ == "__main__":
     # calcualte results from combined-solution
     for region_id in args["region_id_dict"]:
         calculate_single_regions(args, region_id, all_regions=True)
+
     # calculate aggregated results
     calculate_aggregated_results()
