@@ -107,7 +107,7 @@ def dispatch_bar(region):
 def import_pie(region):
     df_dispatch_elec = dispatch_elec(region)
     # df Eigenerzeugung
-    df_gen_elec = df_dispatch_elec[~df_dispatch_elec["name"].str.contains("Stromimport")]
+    df_gen_elec = df_dispatch_elec[~df_dispatch_elec["name"].str.contains("Stromimport|Batteriespeicher", case=False)]
     # df für Kreisdiagramm
     strom_eigenversorgung = df_gen_elec.var_value.sum() * 1e-3
     strom_import = df_dispatch_elec[df_dispatch_elec["name"] == "Stromimport"].var_value.sum() * 1e-3
