@@ -24,9 +24,11 @@ def apply_label_mapping(df, mapping, column="name"):
     return df
 
 class aggregated_region:
-    def __init__(self, region_id, csv_paths, output_folder):
+    def __init__(self,args, region_id, csv_paths, output_folder):
+        self.all_caps = args["all_capacities"]
         self.region_id = region_id
         self.output_folder = output_folder
+
 
         # Einlesen und zusammenführen
         if isinstance(csv_paths, str):

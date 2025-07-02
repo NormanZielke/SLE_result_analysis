@@ -38,6 +38,7 @@ def apply_label_mapping(df, mapping, column="name"):
 class region:
     def __init__(self,args, csv_folder=None, region_id=None, from_combined_file=False):
         df_scalars = read_csv_auto_sep(csv_folder)
+        self.all_caps = args["all_capacities"]
         self.region_id = region_id
         self.from_combined_file = from_combined_file
 

@@ -15,17 +15,18 @@ def capacities_opt_old(region):
 
 def capacities_opt(region):
     df_all = region.scalars[region.scalars["var_name"].str.startswith("invest_out")].copy()
-
-    # filter only components with capacity != 0 # TO DO set option to acitvate or deactivate all components
-    df_cap_opt = df_all[df_all["var_value"] != 0]
+    df_cap = df_all
+    # filter only components with capacity != 0
+    if not region.all_caps:
+        df_cap = df_all[df_all["var_value"] != 0]
 
     # Spezifisch prüfen: fehlt Solarkollektor (dezentral)?
-    if "Solarkollektor (dezentral)" not in df_cap_opt["name"].values:
+    if "Solarkollektor (dezentral)" not in df_cap["name"].values:
         df_solar = df_all[df_all["name"] == "Solarkollektor (dezentral)"]
         if not df_solar.empty:
-            df_cap_opt = pd.concat([df_cap_opt, df_solar], ignore_index=True)
+            df_cap = pd.concat([df_cap, df_solar], ignore_index=True)
 
-    return df_cap_opt
+    return df_cap
 
 
 def dispatch_elec(region):
