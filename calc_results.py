@@ -63,7 +63,7 @@ def cap_opt_bar_old(region):
               title=f"Optimierte Kapazitäten {region_label}",
               filename=filename)
 
-def cap_opt_bar(region, df_potentials=None):
+def cap_opt_bar(region, df_potentials=None, all_regions=False, single_region=False):
     df_cap_opt = capacities_opt(region)
 
     key = region.region_id
@@ -86,16 +86,23 @@ def cap_opt_bar(region, df_potentials=None):
             how="left"
         )
 
+    # plot settings
     filename = region.get_results_path(filename=f"{key}_capacities_opt.png")
+    if all_regions & single_region:
+        title = f"Optimierte Kapazitäten {region_label} im Gemeindeverbund"
+    elif not all_regions & single_region:
+        title = f"Optimierte Kapazitäten {region_label} als Einzelregion"
+    else:
+        title = f"Optimierte Kapazitäten {region_label}"
 
     barplot_c(df_cap_opt,
-              title=f"Optimierte Kapazitäten {region_label}",
+              title=title,
               filename=filename,
               potential_data=df_cap_opt[["name", "capacity_potential"]] if "capacity_potential" in df_cap_opt else None)
 
 
 
-def dispatch_bar(region):
+def dispatch_bar(region, all_regions=False, single_region=False):
     df_dispatch_elec = dispatch_elec(region)
     df_dispatch_elec.var_value *= 1e-3
 
@@ -104,22 +111,33 @@ def dispatch_bar(region):
     name_map = getattr(region, "region_name_map", {})
     region_label = name_map.get(key, default_label)
 
+    # plot settings
     filename1 = region.get_results_path(filename=f"{key}_dispatch_elec_bar.png")
     filename = region.get_results_path(filename=f"{key}_dispatch_elec_pie.png")
+
+    if all_regions & single_region:
+        title1 = f"Stromversorgung je Technologie {region_label} im Gemeindeverbund"
+        title2 = f"Stromversorgung je Technologie {region_label} im Gemeindeverbund"
+    elif not all_regions & single_region:
+        title1 = f"Stromversorgung je Technologie {region_label} als Einzelregion"
+        title2 = f"Stromversorgung je Technologie {region_label} als Einzelregion"
+    else:
+        title1 = f"Stromversorgung je Technologie {region_label}"
+        title2 = f"Stromversorgung je Technologie {region_label}"
 
 
     barplot_e(df_dispatch_elec,
               unit="GWh",
-              title=f"Stromversorgung je Technologie {region_label}",
+              title=title1,
               filename=filename1)
 
     plot_pie_2(labels=df_dispatch_elec.name.tolist(),
                values=df_dispatch_elec.var_value.tolist(),
-               title=f"Anteil pro Technologie an Stromversorgung {region_label}",
+               title=title2,
                filename=filename)
 
 
-def import_pie(region):
+def import_pie(region, all_regions=False, single_region=False):
     df_dispatch_elec = dispatch_elec(region)
     # df Eigenerzeugung
     df_gen_elec = df_dispatch_elec[~df_dispatch_elec["name"].str.contains("Stromimport|Batteriespeicher", case=False)]
@@ -136,15 +154,23 @@ def import_pie(region):
     name_map = getattr(region, "region_name_map", {})
     region_label = name_map.get(key, default_label)
 
+    # plot settings
     filename = region.get_results_path(filename=f"{key}_pie_import.png")
+
+    if all_regions & single_region:
+        title = f"Eigenerzeugung/Stromimporte {region_label} im Gemeindeverbund"
+    elif not all_regions & single_region:
+        title = f"Eigenerzeugung/Stromimporte {region_label} als Einzelregion"
+    else:
+        title = f"Eigenerzeugung/Stromimporte {region_label}"
 
     plot_pie(labels=df_summary.index.tolist(),
              values=df_summary["var_value"].tolist(),
-             title=f"Eigenerzeugung/Stromimporte {region_label}",
+             title=title,
              filename=filename)
 
 
-def generation_heat_high(region):
+def generation_heat_high(region, all_regions=False, single_region=False):
     df_dispatch_heat_high = region.scalars[region.scalars.var_name == "flow_out_heat_high"]
     df_dispatch_heat_high = df_dispatch_heat_high[df_dispatch_heat_high.var_value != 0]
 
@@ -153,22 +179,34 @@ def generation_heat_high(region):
     name_map = getattr(region, "region_name_map", {})
     region_label = name_map.get(key, default_label)
 
+    # plot settings
+
     filename1 = region.get_results_path(filename=f"{key}_heat_high_bar.png")
     filename = region.get_results_path(filename=f"{key}_heat_high_pie.png")
 
+    if all_regions & single_region:
+        title1 = f"Wärmeversorgung (hoch) pro Technologie: {region_label} im Gemeindeverbund"
+        title2 = f"Wärmeversorgung (hoch) pro Technologie: {region_label} im Gemeindeverbund"
+    elif not all_regions & single_region:
+        title1 = f"Wärmeversorgung (hoch) pro Technologie: {region_label} als Einzelregion"
+        title2 = f"Wärmeversorgung (hoch) pro Technologie: {region_label} als Einzelregion"
+    else:
+        title1 = f"Wärmeversorgung (hoch) pro Technologie: {region_label}"
+        title2 = f"Wärmeversorgung (hoch) pro Technologie: {region_label}"
+
     barplot_e(df_dispatch_heat_high,
               unit="MWh_th",
-              title=f"Wärmeversorgung (hoch) pro Technologie: {region_label}",
+              title=title1,
               filename=filename1)
 
     plot_pie_2(labels=df_dispatch_heat_high.name.tolist(),
                values=df_dispatch_heat_high.var_value.tolist(),
                unit="MWh_th",
-               title=f"Anteil an Wärmeversorgung (hoch) pro Technologie: {region_label}",
+               title=title2,
                filename=filename)
 
 
-def generation_heat_low_central(region):
+def generation_heat_low_central(region, all_regions=False, single_region=False):
     df_dispatch = region.scalars[region.scalars.var_name == "flow_out_heat_low_central"]
     df_dispatch = df_dispatch[df_dispatch.var_value != 0]
 
@@ -177,22 +215,34 @@ def generation_heat_low_central(region):
     name_map = getattr(region, "region_name_map", {})
     region_label = name_map.get(key, default_label)
 
+    # plot settings
+
     filename1 = region.get_results_path(filename=f"{key}_heat_low_central_bar.png")
     filename = region.get_results_path(filename=f"{key}_heat_low_central_pie.png")
 
+    if all_regions & single_region:
+        title1 = f"Wärmeversorgung (niedrig, zentral) pro Technologie: {region_label} im Gemeindeverbund"
+        title2 = f"Wärmeversorgung (niedrig, zentral) pro Technologie: {region_label} im Gemeindeverbund"
+    elif not all_regions & single_region:
+        title1 = f"Wärmeversorgung (niedrig, zentral) pro Technologie: {region_label} als Einzelregion"
+        title2 = f"Wärmeversorgung (niedrig, zentral) pro Technologie: {region_label} als Einzelregion"
+    else:
+        title1 = f"Wärmeversorgung (niedrig, zentral) pro Technologie: {region_label}"
+        title2 = f"Wärmeversorgung (niedrig, zentral) pro Technologie: {region_label}"
+
     barplot_e(df_dispatch,
               unit="MWh_th",
-              title=f"Wärmeversorgung (niedrig, zentral) pro Technologie: {region_label}",
+              title=title1,
               filename=filename1)
 
     plot_pie_2(labels=df_dispatch.name.tolist(),
                values=df_dispatch.var_value.tolist(),
                unit="MWh_th",
-               title=f"Anteil an Wärmeversorgung (niedrig, zentral) pro Technologie: {region_label}",
+               title=title2,
                filename=filename)
 
 
-def generation_heat_low_decentral(region):
+def generation_heat_low_decentral(region, all_regions=False, single_region=False):
     df_dispatch = region.scalars[region.scalars.var_name == "flow_out_heat_low_decentral"]
     df_dispatch = df_dispatch[df_dispatch.var_value != 0]
 
@@ -201,18 +251,30 @@ def generation_heat_low_decentral(region):
     name_map = getattr(region, "region_name_map", {})
     region_label = name_map.get(key, default_label)
 
+    # plot settings
+
     filename1 = region.get_results_path(filename=f"{key}_heat_low_decentral_bar.png")
     filename = region.get_results_path(filename=f"{key}_heat_low_decentral_pie.png")
 
+    if all_regions & single_region:
+        title1 = f"Wärmeversorgung (niedrig, dezentral) pro Technologie: {region_label} im Gemeindeverbund"
+        title2 = f"Wärmeversorgung (niedrig, dezentral) pro Technologie: {region_label} im Gemeindeverbund"
+    elif not all_regions & single_region:
+        title1 = f"Wärmeversorgung (niedrig, dezentral) pro Technologie: {region_label} als Einzelregion"
+        title2 = f"Wärmeversorgung (niedrig, dezentral) pro Technologie: {region_label} als Einzelregion"
+    else:
+        title1 = f"Wärmeversorgung (niedrig, dezentral) pro Technologie: {region_label}"
+        title2 = f"Wärmeversorgung (niedrig, dezentral) pro Technologie: {region_label}"
+
     barplot_e(df_dispatch,
               unit="MWh_th",
-              title=f"Wärmeversorgung (niedrig, dezentral) pro Technologie: {region_label}",
+              title=title1,
               filename=filename1)
 
     plot_pie_2(labels=df_dispatch.name.tolist(),
                values=df_dispatch.var_value.tolist(),
                unit="MWh_th",
-               title=f"Anteil an Wärmeversorgung (niedrig, dezentral) pro Technologie: {region_label}",
+               title=title2,
                filename=filename)
 
 def read_csv_auto_sep(path):

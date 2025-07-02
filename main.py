@@ -20,7 +20,7 @@ args = {
     "all_capacities": False, # activate all considered Technologies in Capacity-plot
 }
 
-def calculate_single_regions(args, region_id, all_regions=False):
+def calculate_single_regions(args, region_id, all_regions=False, single_region=True):
 
     if all_regions:
         region_folder = f'input_data/01_ALL_REGIONS/2045_scenario/postprocessed/scalars.csv'
@@ -31,13 +31,13 @@ def calculate_single_regions(args, region_id, all_regions=False):
 
     region_1.region_name_map = args.get("region_id_dict", {})
 
-    region_1.cap_opt_bar(df_potentials=df_potentials_region)
+    region_1.cap_opt_bar(df_potentials=df_potentials_region, all_regions=all_regions, single_region=single_region)
     region_1.techs_none()
-    region_1.dispatch_bar()
-    region_1.import_pie()
-    region_1.generation_heat_high()
-    region_1.generation_heat_low_central()
-    region_1.generation_heat_low_decentral()
+    region_1.dispatch_bar(all_regions=all_regions, single_region=single_region)
+    region_1.import_pie(all_regions=all_regions, single_region=single_region)
+    region_1.generation_heat_high(all_regions=all_regions, single_region=single_region)
+    region_1.generation_heat_low_central(all_regions=all_regions, single_region=single_region)
+    region_1.generation_heat_low_decentral(all_regions=all_regions, single_region=single_region)
 
 def calculate_aggregated_results():
     # 1. ALL_REGIONS aggregieren
@@ -90,11 +90,11 @@ if __name__ == "__main__":
 
     # calcualte results from single-solutions
     for region_id in args["region_id_dict"]:
-        calculate_single_regions(args, region_id, all_regions=False)
+        calculate_single_regions(args, region_id, all_regions=False, single_region=True)
 
     # calcualte results from combined-solution
     for region_id in args["region_id_dict"]:
-        calculate_single_regions(args, region_id, all_regions=True)
+        calculate_single_regions(args, region_id, all_regions=True, single_region=True)
 
     # calculate aggregated results
-    calculate_aggregated_results()
+    #calculate_aggregated_results()
