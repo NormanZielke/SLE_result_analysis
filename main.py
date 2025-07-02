@@ -37,7 +37,7 @@ def calculate_single_regions(args, region_id, all_regions=False):
 def calculate_aggregated_results():
     # 1. ALL_REGIONS aggregieren
     agg_all = aggregated_region(
-        region_id="ALL_REGIONS",
+        region_id="Gemeindeverbund",
         csv_paths="input_data/01_ALL_REGIONS/2045_scenario/postprocessed/scalars.csv",
         output_folder="results/01_ALL_REGIONS_aggregated/"
     )
@@ -57,7 +57,7 @@ def calculate_aggregated_results():
     ]
 
     agg_single = aggregated_region(
-        region_id="Single_Regions",
+        region_id="Einzelregionen",
         csv_paths=csv_paths,
         output_folder="results/Single_Region_aggregated/"
     )
