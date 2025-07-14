@@ -15,7 +15,7 @@ args = {
     },
     "csv_paths":{
         "aggregated_ALL_REGION_solution": "input_data/01_ALL_REGIONS/2045_scenario/postprocessed/scalars.csv",
-        "aggregated_ALL_REGION_solution_permutation": "input_data/01_ALL_REGIONS/2045_scenario/robust_results/cost/26/2045_scenario/postprocessed"
+        "aggregated_ALL_REGION_solution_permutation": "input_data/01_ALL_REGIONS/2045_scenario/robust_results/cost/102/2045_scenario/postprocessed/scalars.csv"
     },
     "all_capacities": False, # activate all considered Technologies in Capacity-plot
 }
@@ -78,7 +78,6 @@ def calculate_aggregated_results():
     agg_single.generation_heat_low_decentral()
 
 
-
 if __name__ == "__main__":
     # collect renewable potentials and create .csv for regions and overall
     collect_renewable_potentials(
@@ -97,4 +96,7 @@ if __name__ == "__main__":
         calculate_single_regions(args, region_id, all_regions=True, single_region=True)
 
     # calculate aggregated results
-    #calculate_aggregated_results()
+    calculate_aggregated_results()
+
+    # calculate Pertubations
+    #calculate_perturbation_results()

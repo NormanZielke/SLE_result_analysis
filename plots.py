@@ -35,7 +35,7 @@ def barplot_c_old(df, unit="MW", title="Kapazitäten", filename=None):
     plt.close()
 
 def barplot_c(df, unit="MW", title="Kapazitäten", filename=None, potential_data=None):
-    fig, ax = plt.subplots(figsize=(12, 8))
+    fig, ax = plt.subplots(figsize=(12, 10))
     bars = ax.bar(df["name"], df["var_value"])
 
     ax.set_ylabel(unit)

@@ -20,6 +20,15 @@ def capacities_opt(region):
     if not region.all_caps:
         df_cap = df_all[df_all["var_value"] != 0]
 
+    # for heat storage (central & decentral) take var_name = invest
+    df_hs =  region.scalars[region.scalars["var_name"] == "invest"].copy()
+    hs_list = ["Wärmespeicher (niedrig, zentral)","Wärmespeicher (niedrig, dezentral)"]
+    df_hs = df_hs[df_hs["name"].isin(hs_list)]
+
+    # overwrite heatstore techs in df_cap
+    df_cap = df_cap[~df_cap["name"].isin(hs_list)]
+    df_cap = pd.concat([df_cap, df_hs], ignore_index=True)
+
     # Spezifisch prüfen: fehlt Solarkollektor (dezentral)?
     if "Solarkollektor (dezentral)" not in df_cap["name"].values:
         df_solar = df_all[df_all["name"] == "Solarkollektor (dezentral)"]
@@ -87,10 +96,10 @@ def cap_opt_bar(region, df_potentials=None, all_regions=False, single_region=Fal
         )
 
     # plot settings
-    filename = region.get_results_path(filename=f"{key}_capacities_opt.png")
-    if all_regions & single_region:
+    filename = region.get_results_path(filename=f"{key}_capacities_opt.svg")
+    if all_regions and single_region:
         title = f"Optimierte Kapazitäten {region_label} im Gemeindeverbund"
-    elif not all_regions & single_region:
+    elif not all_regions and single_region:
         title = f"Optimierte Kapazitäten {region_label} als Einzelregion"
     else:
         title = f"Optimierte Kapazitäten {region_label}"
