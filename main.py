@@ -17,7 +17,7 @@ args = {
         "aggregated_ALL_REGION_solution": "input_data/01_ALL_REGIONS/2045_scenario/postprocessed/scalars.csv",
         "aggregated_ALL_REGION_solution_permutation": "input_data/01_ALL_REGIONS/2045_scenario/robust_results/cost/102/2045_scenario/postprocessed/scalars.csv"
     },
-    "all_capacities": False, # activate all considered Technologies in Capacity-plot
+    "all_capacities": True, # activate all considered Technologies in Capacity-plot
 }
 
 def calculate_single_regions(args, region_id, all_regions=False, single_region=True):

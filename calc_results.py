@@ -121,8 +121,8 @@ def dispatch_bar(region, all_regions=False, single_region=False):
     region_label = name_map.get(key, default_label)
 
     # plot settings
-    filename1 = region.get_results_path(filename=f"{key}_dispatch_elec_bar.png")
-    filename = region.get_results_path(filename=f"{key}_dispatch_elec_pie.png")
+    filename1 = region.get_results_path(filename=f"{key}_dispatch_elec_bar.svg")
+    filename = region.get_results_path(filename=f"{key}_dispatch_elec_pie.svg")
 
     if all_regions & single_region:
         title1 = f"Stromversorgung je Technologie {region_label} im Gemeindeverbund"
@@ -164,7 +164,7 @@ def import_pie(region, all_regions=False, single_region=False):
     region_label = name_map.get(key, default_label)
 
     # plot settings
-    filename = region.get_results_path(filename=f"{key}_pie_import.png")
+    filename = region.get_results_path(filename=f"{key}_pie_import.svg")
 
     if all_regions & single_region:
         title = f"Eigenerzeugung/Stromimporte {region_label} im Gemeindeverbund"
@@ -190,8 +190,8 @@ def generation_heat_high(region, all_regions=False, single_region=False):
 
     # plot settings
 
-    filename1 = region.get_results_path(filename=f"{key}_heat_high_bar.png")
-    filename = region.get_results_path(filename=f"{key}_heat_high_pie.png")
+    filename1 = region.get_results_path(filename=f"{key}_heat_high_bar.svg")
+    filename = region.get_results_path(filename=f"{key}_heat_high_pie.svg")
 
     if all_regions & single_region:
         title1 = f"Wärmeversorgung (hoch) pro Technologie: {region_label} im Gemeindeverbund"
@@ -226,8 +226,8 @@ def generation_heat_low_central(region, all_regions=False, single_region=False):
 
     # plot settings
 
-    filename1 = region.get_results_path(filename=f"{key}_heat_low_central_bar.png")
-    filename = region.get_results_path(filename=f"{key}_heat_low_central_pie.png")
+    filename1 = region.get_results_path(filename=f"{key}_heat_low_central_bar.svg")
+    filename = region.get_results_path(filename=f"{key}_heat_low_central_pie.svg")
 
     if all_regions & single_region:
         title1 = f"Wärmeversorgung (niedrig, zentral) pro Technologie: {region_label} im Gemeindeverbund"
@@ -262,8 +262,8 @@ def generation_heat_low_decentral(region, all_regions=False, single_region=False
 
     # plot settings
 
-    filename1 = region.get_results_path(filename=f"{key}_heat_low_decentral_bar.png")
-    filename = region.get_results_path(filename=f"{key}_heat_low_decentral_pie.png")
+    filename1 = region.get_results_path(filename=f"{key}_heat_low_decentral_bar.svg")
+    filename = region.get_results_path(filename=f"{key}_heat_low_decentral_pie.svg")
 
     if all_regions & single_region:
         title1 = f"Wärmeversorgung (niedrig, dezentral) pro Technologie: {region_label} im Gemeindeverbund"
