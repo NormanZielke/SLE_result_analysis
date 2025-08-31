@@ -131,16 +131,6 @@ class region:
     scalars : pandas.DataFrame
         Cleaned scalar results with columns (at least) ``name``, ``var_name``,
         and ``var_value`` after prefix removal and label mapping.
-    region_name_map : dict, optional
-        Optional mapping ``{region_id: human_readable_name}`` that can be set
-        by the caller to control plot titles and labels.
-
-    Notes
-    -----
-    - This class *does not* perform any unit conversions. Units are expected
-      to be consistent with the upstream modeling outputs.
-    - Plotting and aggregation logic is delegated to functions imported
-      from ``calc_results`` (bound as instance methods below).
     """
 
     def __init__(self, args, csv_folder=None, region_id=None, from_combined_file=False):

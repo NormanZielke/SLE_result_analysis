@@ -13,6 +13,7 @@ args = {
         "r120670124124": "Erkner",
         "r120670201201": "Grünheide",
     },
+    # Input - Directories
     "renewables_pot_csv_directory": "input_data/01_ALL_REGIONS/2045_scenario/preprocessed/data/elements", # directory of csv's with renewable potentials
     #"csv_paths":{
     #    "aggregated_ALL_REGION_solution": "input_data/01_ALL_REGIONS/2045_scenario/postprocessed/scalars.csv",
