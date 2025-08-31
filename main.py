@@ -13,10 +13,10 @@ args = {
         "r120670124124": "Erkner",
         "r120670201201": "Grünheide",
     },
-    "csv_paths":{
-        "aggregated_ALL_REGION_solution": "input_data/01_ALL_REGIONS/2045_scenario/postprocessed/scalars.csv",
-        "aggregated_ALL_REGION_solution_permutation": "input_data/01_ALL_REGIONS/2045_scenario/robust_results/cost/102/2045_scenario/postprocessed/scalars.csv"
-    },
+    "renewables_pot_csv_directory": "input_data/01_ALL_REGIONS/2045_scenario/preprocessed/data/elements", # directory of csv's with renewable potentials
+    #"csv_paths":{
+    #    "aggregated_ALL_REGION_solution": "input_data/01_ALL_REGIONS/2045_scenario/postprocessed/scalars.csv",
+    #},
     "all_capacities": True, # activate all considered Technologies in Capacity-plot
 }
 
@@ -81,7 +81,7 @@ def calculate_aggregated_results():
 if __name__ == "__main__":
     # collect renewable potentials and create .csv for regions and overall
     collect_renewable_potentials(
-        base_path="input_data/01_ALL_REGIONS/2045_scenario/preprocessed/data/elements")
+        base_path=args["renewables_pot_csv_directory"])
 
     # ✅ Potenziale aus CSV einlesen
     df_potentials_region = read_csv_auto_sep("results/potentials.csv")

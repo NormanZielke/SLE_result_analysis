@@ -6,6 +6,7 @@ from plots import(
 )
 import os
 import pandas as pd
+import yaml
 
 def capacities_opt_old(region):
     df_cap_opt = region.scalars[region.scalars["var_name"].str.startswith("invest_out")]
@@ -287,26 +288,71 @@ def generation_heat_low_decentral(region, all_regions=False, single_region=False
                filename=filename)
 
 def read_csv_auto_sep(path):
+    """
+    Read a CSV file with automatic separator detection.
 
-    with open(path, 'r') as f:
+    This function inspects the first line of the file to determine whether
+    the delimiter is a semicolon (``;``) or a comma (`,`), and then reads
+    the file into a pandas DataFrame.
+
+    Parameters
+    ----------
+    path : str
+        Path to the CSV file.
+
+    Returns
+    -------
+    pandas.DataFrame
+        DataFrame containing the parsed CSV data.
+
+    Raises
+    ------
+    ValueError
+        If the delimiter cannot be determined from the first line.
+    """
+    # detect delimiter from first line
+    with open(path, "r") as f:
         first_line = f.readline()
         if ";" in first_line:
             sep = ";"
         elif "," in first_line:
             sep = ","
         else:
-            raise ValueError("Unbekannter CSV-Separator.")
+            raise ValueError("Unknown CSV delimiter.")
 
     return pd.read_csv(path, sep=sep)
 
+
 def collect_capacity_potentials(base_path):
     """
-    Liest alle relevanten CSV-Dateien mit Erneuerbaren-Potenzialen ein,
-    extrahiert 'region', 'tech', 'capacity_potential' und wandelt 'tech' per Mapping
-    in gelabelte Technologiebezeichnungen um.
-    """
-    import yaml
+    Collect renewable energy capacity potentials from CSV files.
 
+    This function reads multiple CSV files containing renewable
+    potentials, extracts the columns 'region', 'tech', and
+    'capacity_potential', and applies a label mapping to transform
+    technology codes into human-readable names.
+
+    Parameters
+    ----------
+    base_path : str
+        Path to the folder containing the CSV files.
+
+    Returns
+    -------
+    pandas.DataFrame
+        DataFrame with columns:
+        - region : str
+            Region identifier
+        - tech : str
+            Technology label (after mapping)
+        - capacity_potential : float
+            Installed capacity potential in MW
+
+    Raises
+    ------
+    ValueError
+        If no potential data files are found in the given path.
+    """
     def load_label_mapping(yaml_path="de.yml"):
         with open(yaml_path, "r", encoding="utf-8") as f:
             return yaml.safe_load(f)
@@ -315,6 +361,7 @@ def collect_capacity_potentials(base_path):
         df[column] = df[column].map(mapping).fillna(df[column])
         return df
 
+    # list of technologies to read
     technologies = [
         "electricity-pv_agri_horizontal",
         "electricity-pv_agri_vertical",
@@ -331,17 +378,19 @@ def collect_capacity_potentials(base_path):
     for tech in technologies:
         file_path = os.path.join(base_path, f"{tech}.csv")
         if not os.path.exists(file_path):
-            print(f"WARNUNG: Datei nicht gefunden: {file_path}")
+            print(f"⚠️ WARNING: File not found: {file_path}")
             continue
 
         df = read_csv_auto_sep(file_path)
+        # split 'name' into region and technology
         df[["region", "tech"]] = df["name"].str.split("-", n=1, expand=True)
         df = df.loc[:, ["region", "tech", "capacity_potential"]]
-        df = apply_label_mapping(df, mapping, column="tech")  # 🆕 Mapping anwenden
+        # apply mapping to technology names
+        df = apply_label_mapping(df, mapping, column="tech")
         df_list.append(df)
 
     if not df_list:
-        raise ValueError("Keine Potenzialdaten gefunden. Bitte Dateipfade prüfen.")
+        raise ValueError("No potential data found. Please check the file paths.")
 
     df_all = pd.concat(df_list, ignore_index=True)
     return df_all
@@ -349,10 +398,32 @@ def collect_capacity_potentials(base_path):
 
 def collect_renewable_potentials(base_path="input_data/01_ALL_REGIONS/2045_scenario/preprocessed/data/elements"):
     """
-    Creates two files:
-    1. results/potentials.csv: Potentials per region and technology
-    2. results/potentials_overall.csv: Total potential per technology
+    Collect and aggregate renewables potentials.
+
+    This function loads regional renewable energy potentials from CSV files,
+    stores them in two output files, and returns the results as DataFrames.
+
+    The outputs are:
+    - ``results/potentials.csv``: potentials per region and technology
+    - ``results/potentials_overall.csv``: aggregated total potentials per technology
+
+    Parameters
+    ----------
+    base_path : str, optional
+        Path to the folder containing the input CSV files.
+        Default is ``"input_data/01_ALL_REGIONS/2045_scenario/preprocessed/data/elements"``.
+
+    Returns
+    -------
+    tuple of pandas.DataFrame
+        - df_potentials_regions : DataFrame
+            Potentials per region and technology with columns
+            [region, tech, capacity_potential].
+        - df_potentials_overall : DataFrame
+            Aggregated potentials per technology with columns
+            [tech, capacity_potential]
     """
+
     # make sure results folder exists
     os.makedirs("results", exist_ok=True)
 
