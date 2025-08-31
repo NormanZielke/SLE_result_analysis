@@ -349,17 +349,20 @@ def collect_capacity_potentials(base_path):
 
 def collect_renewable_potentials(base_path="input_data/01_ALL_REGIONS/2045_scenario/preprocessed/data/elements"):
     """
-    Erstellt zwei Dateien:
-    1. potentials.csv: Potenziale je Region und Technologie
-    2. potentials_overall.csv: Gesamtpotenzial je Technologie
+    Creates two files:
+    1. results/potentials.csv: Potentials per region and technology
+    2. results/potentials_overall.csv: Total potential per technology
     """
+    # make sure results folder exists
+    os.makedirs("results", exist_ok=True)
+
     df_potentials_regions = collect_capacity_potentials(base_path)
 
-    # Speichern aller Potenziale pro Region
+    # save all potentials per region
     df_potentials_regions.to_csv("results/potentials.csv", index=False)
-    print("✅ Potenziale je Region gespeichert unter: results/potentials.csv")
+    print("✅ Potentials per region saved at: results/potentials.csv")
 
-    # 🔁 Aggregation: summiere nach Technologie
+    # aggregate by technology
     df_potentials_overall = (
         df_potentials_regions
         .groupby("tech", as_index=False)["capacity_potential"]
@@ -367,6 +370,6 @@ def collect_renewable_potentials(base_path="input_data/01_ALL_REGIONS/2045_scena
     )
 
     df_potentials_overall.to_csv("results/potentials_overall.csv", index=False)
-    print("✅ Gesamtpotenziale gespeichert unter: results/potentials_overall.csv")
+    print("✅ Total potentials saved at: results/potentials_overall.csv")
 
     return df_potentials_regions, df_potentials_overall

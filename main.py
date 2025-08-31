@@ -97,6 +97,3 @@ if __name__ == "__main__":
 
     # calculate aggregated results
     calculate_aggregated_results()
-
-    # calculate Pertubations
-    #calculate_perturbation_results()
