@@ -181,7 +181,7 @@ class region:
         base_folder = "01_ALL_REGIONS" if self.from_combined_file else "Single_Regions"
         return os.path.join("results", base_folder, self.region_id, filename)
 
-    # Bind analysis/plotting utilities from `calc_results` as instance methods
+    # Add functions
     capacities_opt = capacities_opt
     cap_opt_bar = cap_opt_bar
     dispatch_bar = dispatch_bar
