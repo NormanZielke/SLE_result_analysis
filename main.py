@@ -15,7 +15,9 @@ from class_region import region
 from class_aggregated_region import aggregated_region
 from calc_results import (
     collect_renewable_potentials,
-    read_csv_auto_sep,
+)
+from helpers import (
+    read_csv_auto_sep
 )
 
 # Configuration

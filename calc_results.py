@@ -1,12 +1,17 @@
+import os
+import pandas as pd
+import yaml
+
 from plots import (
     barplot_c,
     barplot_e,
     plot_pie,
     plot_pie_2,
 )
-import os
-import pandas as pd
-import yaml
+
+from helpers import (
+    read_csv_auto_sep
+)
 
 
 def capacities_opt(region):
@@ -467,42 +472,6 @@ def generation_heat_low_decentral(region, all_regions=False, single_region=False
         title=title2,
         filename=filename,
     )
-
-
-def read_csv_auto_sep(path):
-    """
-    Read a CSV file with automatic delimiter detection.
-
-    The function inspects the first line of the file to determine whether
-    the delimiter is a semicolon (``;``) or a comma (`,`), and then reads
-    the file into a pandas DataFrame.
-
-    Parameters
-    ----------
-    path : str
-        Path to the CSV file.
-
-    Returns
-    -------
-    pandas.DataFrame
-        DataFrame containing the parsed CSV data.
-
-    Raises
-    ------
-    ValueError
-        If the delimiter cannot be determined from the first line.
-    """
-    # Detect delimiter from the first line only (fast and robust for our inputs)
-    with open(path, "r") as f:
-        first_line = f.readline()
-        if ";" in first_line:
-            sep = ";"
-        elif "," in first_line:
-            sep = ","
-        else:
-            raise ValueError("Unknown CSV delimiter.")
-
-    return pd.read_csv(path, sep=sep)
 
 
 def collect_capacity_potentials(base_path):
