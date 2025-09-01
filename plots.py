@@ -6,7 +6,12 @@ import os
 plt.style.use("bmh")
 
 
-def barplot_c(df, unit="MW", title="Kapazitäten", filename=None, potential_data=None):
+def barplot_c(df,
+              unit="Optimierte Kapazität in MW",
+              title="Kapazitäten",
+              filename=None,
+              potential_data=None
+              ):
     """
     Create a capacity bar plot with optional potential markers.
 
@@ -42,7 +47,7 @@ def barplot_c(df, unit="MW", title="Kapazitäten", filename=None, potential_data
     bars = ax.bar(df["name"], df["var_value"])
 
     ax.set_ylabel(unit)
-    ax.set_xlabel("Technologie / Komponente")
+    ax.set_xlabel("Komponente")
     ax.set_title(title)
 
     # Annotate bar heights
@@ -55,7 +60,7 @@ def barplot_c(df, unit="MW", title="Kapazitäten", filename=None, potential_data
             textcoords="offset points",
             ha="center",
             va="bottom",
-            fontsize=8,
+            fontsize=10,
         )
 
     # Draw potential markers, if provided
@@ -81,7 +86,7 @@ def barplot_c(df, unit="MW", title="Kapazitäten", filename=None, potential_data
     if potentials_set:
         ax.legend(["Potenzial"], loc="upper right", fontsize="small")
 
-    plt.xticks(rotation=45, ha="right")
+    plt.xticks(rotation=45, ha="right", fontsize=10)
     plt.tight_layout()
 
     if filename:

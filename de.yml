@@ -67,10 +67,10 @@ residual_waste-bpchp_heat_high: Restmüll-KWK (hoch)
 residual_waste-bpchp_heat_low_central: Restmüll-KWK (niedrig, zentral)
 
 # Gegendruck-KWK
-biomass_solid-bpchp_heat_low_decentral: Biomasse-Gegendruck-KWK (fest, niedrig, dezentral)
-biomass_solid-bpchp_heat_low_central: Biomasse-Gegendruck-KWK (fest, niedrig, zentral)
-biomass_gas-bpchp_heat_low_decentral: Biogas-Gegendruck-KWK (niedrig, dezentral)
-biomass_gas-bpchp_heat_low_central: Biogas-Gegendruck-KWK (niedrig, zentral)
+biomass_solid-bpchp_heat_low_decentral: Biomasse-KWK (fest, niedrig, dezentral)
+biomass_solid-bpchp_heat_low_central: Biomasse-KWK (fest, niedrig, zentral)
+biomass_gas-bpchp_heat_low_decentral: Biogas-KWK (niedrig, dezentral)
+biomass_gas-bpchp_heat_low_central: Biogas-KWK (niedrig, zentral)
 
 # Speicher
 heat_low_decentral-storage: Wärmespeicher (niedrig, dezentral)

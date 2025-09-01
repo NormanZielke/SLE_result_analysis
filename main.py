@@ -32,7 +32,7 @@ args = {
     # Directory with CSVs that contain renewable capacity potentials
     "renewables_pot_csv_directory": "input_data/01_ALL_REGIONS/2045_scenario/preprocessed/data/elements",
     "all_capacities": True, # If True, keep technologies with zero capacity in capacity plots
-    "results_dir": "results_2", # central folder/directory for all output paths
+    "results_dir": "results", # central folder/directory for all output paths
 }
 
 

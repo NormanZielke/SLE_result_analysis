@@ -171,7 +171,7 @@ def cap_opt_bar(region, df_potentials=None, all_regions=False, single_region=Fal
         )
 
     # Configure title and output path
-    filename = region.get_results_path(filename=f"{key}_capacities_opt.svg")
+    filename = region.get_results_path(filename=f"{key}_capacities_opt.png")
     if all_regions and single_region:
         title = f"Optimierte Kapazitäten {region_label} im Gemeindeverbund"
     elif not all_regions and single_region:
@@ -181,7 +181,7 @@ def cap_opt_bar(region, df_potentials=None, all_regions=False, single_region=Fal
 
     barplot_c(
         df_cap_opt,
-        title=title,
+        title=None,
         filename=filename,
         potential_data=df_cap_opt[["name", "capacity_potential"]] if "capacity_potential" in df_cap_opt else None,
     )
