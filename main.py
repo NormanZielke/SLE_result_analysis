@@ -154,8 +154,8 @@ if __name__ == "__main__":
     )
 
     # Load the generated potentials for later overlay/aggregation
-    df_potentials_region = read_csv_auto_sep("results/potentials.csv")
-    df_potentials_overall = read_csv_auto_sep("results/potentials_overall.csv")
+    df_potentials_region = read_csv_auto_sep(f"{args['results_dir']}/potentials.csv")
+    df_potentials_overall = read_csv_auto_sep(f"{args['results_dir']}/potentials_overall.csv")
 
     # Compute regional results
     #   a) Single-region runs (per region)
