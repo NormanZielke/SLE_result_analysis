@@ -145,7 +145,7 @@ def cap_opt_bar(region, df_potentials=None, all_regions=False, single_region=Fal
     Returns
     -------
     None
-        Saves an ``.svg`` plot to the region's results folder.
+        Saves an ``.png`` plot to the region's results folder.
     """
     df_cap_opt = capacities_opt(region)
 
@@ -206,7 +206,7 @@ def dispatch_bar(region, all_regions=False, single_region=False):
     Returns
     -------
     None
-        Saves ``*_dispatch_elec_bar.svg`` and ``*_dispatch_elec_pie.svg``.
+        Saves ``*_dispatch_elec_bar.png`` and ``*_dispatch_elec_pie.png``.
     """
 
     df_dispatch_elec = dispatch_elec(region)
@@ -217,8 +217,8 @@ def dispatch_bar(region, all_regions=False, single_region=False):
     name_map = getattr(region, "region_name_map", {})
     region_label = name_map.get(key, default_label)
 
-    filename1 = region.get_results_path(filename=f"{key}_dispatch_elec_bar.svg")
-    filename = region.get_results_path(filename=f"{key}_dispatch_elec_pie.svg")
+    filename1 = region.get_results_path(filename=f"{key}_dispatch_elec_bar.png")
+    filename = region.get_results_path(filename=f"{key}_dispatch_elec_pie.png")
 
     if all_regions & single_region:
         title1 = f"Stromversorgung je Technologie {region_label} im Gemeindeverbund"
@@ -263,7 +263,7 @@ def import_pie(region, all_regions=False, single_region=False):
     Returns
     -------
     None
-        Saves a ``*_pie_import.svg`` pie chart.
+        Saves a ``*_pie_import.png`` pie chart.
     """
 
     df_dispatch_elec = dispatch_elec(region)
@@ -284,7 +284,7 @@ def import_pie(region, all_regions=False, single_region=False):
     name_map = getattr(region, "region_name_map", {})
     region_label = name_map.get(key, default_label)
 
-    filename = region.get_results_path(filename=f"{key}_pie_import.svg")
+    filename = region.get_results_path(filename=f"{key}_pie_import.png")
 
     if all_regions & single_region:
         title = f"Eigenerzeugung/Stromimporte {region_label} im Gemeindeverbund"
@@ -319,7 +319,7 @@ def generation_heat_high(region, all_regions=False, single_region=False):
     Returns
     -------
     None
-        Saves ``*_heat_high_bar.svg`` and ``*_heat_high_pie.svg``.
+        Saves ``*_heat_high_bar.png`` and ``*_heat_high_pie.png``.
     """
     df_dispatch_heat_high = region.scalars[region.scalars.var_name == "flow_out_heat_high"]
     df_dispatch_heat_high = df_dispatch_heat_high[df_dispatch_heat_high.var_value != 0]
@@ -329,8 +329,8 @@ def generation_heat_high(region, all_regions=False, single_region=False):
     name_map = getattr(region, "region_name_map", {})
     region_label = name_map.get(key, default_label)
 
-    filename1 = region.get_results_path(filename=f"{key}_heat_high_bar.svg")
-    filename = region.get_results_path(filename=f"{key}_heat_high_pie.svg")
+    filename1 = region.get_results_path(filename=f"{key}_heat_high_bar.png")
+    filename = region.get_results_path(filename=f"{key}_heat_high_pie.png")
 
     if all_regions & single_region:
         title1 = f"Wärmeversorgung (hoch) pro Technologie: {region_label} im Gemeindeverbund"
@@ -376,7 +376,7 @@ def generation_heat_low_central(region, all_regions=False, single_region=False):
     Returns
     -------
     None
-        Saves ``*_heat_low_central_bar.svg`` and ``*_heat_low_central_pie.svg``.
+        Saves ``*_heat_low_central_bar.png`` and ``*_heat_low_central_pie.png``.
     """
 
     df_dispatch = region.scalars[region.scalars.var_name == "flow_out_heat_low_central"]
@@ -387,8 +387,8 @@ def generation_heat_low_central(region, all_regions=False, single_region=False):
     name_map = getattr(region, "region_name_map", {})
     region_label = name_map.get(key, default_label)
 
-    filename1 = region.get_results_path(filename=f"{key}_heat_low_central_bar.svg")
-    filename = region.get_results_path(filename=f"{key}_heat_low_central_pie.svg")
+    filename1 = region.get_results_path(filename=f"{key}_heat_low_central_bar.png")
+    filename = region.get_results_path(filename=f"{key}_heat_low_central_pie.png")
 
     if all_regions & single_region:
         title1 = f"Wärmeversorgung (niedrig, zentral) pro Technologie: {region_label} im Gemeindeverbund"
@@ -434,7 +434,7 @@ def generation_heat_low_decentral(region, all_regions=False, single_region=False
     Returns
     -------
     None
-        Saves ``*_heat_low_decentral_bar.svg`` and ``*_heat_low_decentral_pie.svg``.
+        Saves ``*_heat_low_decentral_bar.png`` and ``*_heat_low_decentral_pie.png``.
     """
 
     df_dispatch = region.scalars[region.scalars.var_name == "flow_out_heat_low_decentral"]
@@ -445,8 +445,8 @@ def generation_heat_low_decentral(region, all_regions=False, single_region=False
     name_map = getattr(region, "region_name_map", {})
     region_label = name_map.get(key, default_label)
 
-    filename1 = region.get_results_path(filename=f"{key}_heat_low_decentral_bar.svg")
-    filename = region.get_results_path(filename=f"{key}_heat_low_decentral_pie.svg")
+    filename1 = region.get_results_path(filename=f"{key}_heat_low_decentral_bar.png")
+    filename = region.get_results_path(filename=f"{key}_heat_low_decentral_pie.png")
 
     if all_regions & single_region:
         title1 = f"Wärmeversorgung (niedrig, dezentral) pro Technologie: {region_label} im Gemeindeverbund"
