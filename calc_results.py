@@ -547,7 +547,10 @@ def collect_capacity_potentials(base_path):
     return df_all
 
 
-def collect_renewable_potentials(base_path="input_data/01_ALL_REGIONS/2045_scenario/preprocessed/data/elements"):
+def collect_renewable_potentials(
+        base_path="input_data/01_ALL_REGIONS/2045_scenario/preprocessed/data/elements",
+        results_path="results",
+):
     """
     Collect and aggregate renewable capacity potentials.
 
@@ -561,9 +564,13 @@ def collect_renewable_potentials(base_path="input_data/01_ALL_REGIONS/2045_scena
 
     Parameters
     ----------
-    base_path : str, optional
+    base_path : str
         Path to the folder containing the input CSV files.
         Default is ``"input_data/01_ALL_REGIONS/2045_scenario/preprocessed/data/elements"``.
+
+    results_path: str
+        Path to the folder containing the results CSV files.
+        Default is "results"
 
     Returns
     -------
@@ -574,13 +581,13 @@ def collect_renewable_potentials(base_path="input_data/01_ALL_REGIONS/2045_scena
           ``[tech, capacity_potential]`` (aggregated sum across regions).
     """
     # Ensure output directory exists
-    os.makedirs("results", exist_ok=True)
+    os.makedirs(results_path, exist_ok=True)
 
     # Load potentials per region + technology
     df_potentials_regions = collect_capacity_potentials(base_path)
 
     # Save per-region potentials
-    df_potentials_regions.to_csv("results/potentials.csv", index=False)
+    df_potentials_regions.to_csv(f"{results_path}/potentials.csv", index=False)
     print("✅ Potentials per region saved at: results/potentials.csv")
 
     # Aggregate over regions by technology
@@ -588,7 +595,7 @@ def collect_renewable_potentials(base_path="input_data/01_ALL_REGIONS/2045_scena
         df_potentials_regions.groupby("tech", as_index=False)["capacity_potential"].sum()
     )
 
-    df_potentials_overall.to_csv("results/potentials_overall.csv", index=False)
+    df_potentials_overall.to_csv(f"{results_path}/potentials_overall.csv", index=False)
     print("✅ Total potentials saved at: results/potentials_overall.csv")
 
     return df_potentials_regions, df_potentials_overall

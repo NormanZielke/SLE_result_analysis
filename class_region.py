@@ -66,6 +66,7 @@ class region:
         self.all_caps = args["all_capacities"]
         self.region_id = region_id
         self.from_combined_file = from_combined_file
+        self.args = args
 
         # Normalize `name` by removing the region prefix.
         # - If `from_combined_file` is True, filter rows for this region first.
@@ -105,7 +106,7 @@ class region:
             Full file system path to the target output file.
         """
         base_folder = "01_ALL_REGIONS" if self.from_combined_file else "Single_Regions"
-        return os.path.join("results", base_folder, self.region_id, filename)
+        return os.path.join(self.args["results_dir"], base_folder, self.region_id, filename)
 
 
     # Add functions

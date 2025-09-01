@@ -31,8 +31,8 @@ args = {
     },
     # Directory with CSVs that contain renewable capacity potentials
     "renewables_pot_csv_directory": "input_data/01_ALL_REGIONS/2045_scenario/preprocessed/data/elements",
-    # If True, keep technologies with zero capacity in capacity plots
-    "all_capacities": True,
+    "all_capacities": True, # If True, keep technologies with zero capacity in capacity plots
+    "results_dir": "results_2", # central folder/directory for all output paths
 }
 
 
@@ -56,6 +56,7 @@ def calculate_single_regions(args, region_id, all_regions=False, single_region=T
     all_regions : bool, optional
         If ``True``, use the combined ALL_REGIONS scalars file and filter
         rows for this region, by default ``False``.
+        If ``False``, use the single solution for this region, by default
     single_region : bool, optional
         Title context to indicate single-region view in plots, by default ``True``.
 
@@ -103,12 +104,15 @@ def calculate_aggregated_results():
         - ``results/01_ALL_REGIONS_aggregated/``
         - ``results/Single_Region_aggregated/``
     """
+
+    out_base = args["results_dir"]
+
     # Aggregation over ALL_REGIONS (single combined file)
     agg_all = aggregated_region(
         args,
         region_id="Gemeindeverbund",
         csv_paths="input_data/01_ALL_REGIONS/2045_scenario/postprocessed/scalars.csv",
-        output_folder="results/01_ALL_REGIONS_aggregated/",
+        output_folder=f"{out_base}/01_ALL_REGIONS_aggregated/",
     )
 
     agg_all.cap_opt_bar(df_potentials=df_potentials_overall)
@@ -129,7 +133,7 @@ def calculate_aggregated_results():
         args,
         region_id="Einzelregionen",
         csv_paths=csv_paths,
-        output_folder="results/Single_Region_aggregated/",
+        output_folder=f"{out_base}/Single_Region_aggregated/",
     )
 
     agg_single.cap_opt_bar(df_potentials=df_potentials_overall)
@@ -144,7 +148,10 @@ def calculate_aggregated_results():
 if __name__ == "__main__":
 
     # Collect renewable potentials and create helper CSVs
-    collect_renewable_potentials(base_path=args["renewables_pot_csv_directory"])
+    collect_renewable_potentials(
+        base_path=args["renewables_pot_csv_directory"],
+        results_path=args["results_dir"],
+    )
 
     # Load the generated potentials for later overlay/aggregation
     df_potentials_region = read_csv_auto_sep("results/potentials.csv")
