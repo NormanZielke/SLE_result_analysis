@@ -1,6 +1,6 @@
 # Regional Energy System Post-Processing
 
-Dieses Projekt dient der **Auswertung und Visualisierung** von Energiesystem-Modellergebnissen (z. B. aus [oemof](https://oemof.org/) oder [eTraGo](https://github.com/openego/eTraGo)).  
+Dieses Projekt dient der **Auswertung und Visualisierung** von Energiesystem-Modellergebnissen (z. B. aus [oemof](https://oemof.org/)  
 Es werden **regionale** und **aggregierte** Ergebnisse verarbeitet, u. a.:
 
 - Optimierte Kapazitäten (inkl. Potenzialvergleich)  
