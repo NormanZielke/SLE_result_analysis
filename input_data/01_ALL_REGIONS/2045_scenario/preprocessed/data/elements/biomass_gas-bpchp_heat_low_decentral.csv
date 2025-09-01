@@ -1,0 +1,5 @@
+name;capacity;capacity_cost;carrier;carrier_cost;electric_efficiency;electricity_bus;expandable;fuel_bus;heat_bus;marginal_cost;region;tech;thermal_efficiency;type
+r120640428428-biomass_gas-bpchp_heat_low_decentral;0.0;67629.89840529014;biomass_gas;0.0;0.445;r120640428428-electricity;true;r120640428428-biomass_gas;r120640428428-heat_low_decentral;6.6138;r120640428428;bpchp_heat_low_decentral;0.4541;backpressure
+r120640472472-biomass_gas-bpchp_heat_low_decentral;0.0;67629.89840529014;biomass_gas;0.0;0.445;r120640472472-electricity;true;r120640472472-biomass_gas;r120640472472-heat_low_decentral;6.6138;r120640472472;bpchp_heat_low_decentral;0.4541;backpressure
+r120670124124-biomass_gas-bpchp_heat_low_decentral;0.0;67629.89840529014;biomass_gas;0.0;0.445;r120670124124-electricity;true;r120670124124-biomass_gas;r120670124124-heat_low_decentral;6.6138;r120670124124;bpchp_heat_low_decentral;0.4541;backpressure
+r120670201201-biomass_gas-bpchp_heat_low_decentral;0.0;67629.89840529014;biomass_gas;0.0;0.445;r120670201201-electricity;true;r120670201201-biomass_gas;r120670201201-heat_low_decentral;6.6138;r120670201201;bpchp_heat_low_decentral;0.4541;backpressure

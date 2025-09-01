@@ -1,0 +1,2 @@
+name;bus;capacity;capacity_cost;capacity_potential;carrier;expandable;marginal_cost;output_parameters;profile;region;tech;type
+r120670201201-electricity-pv_ground;r120670201201-electricity;0.0;23159.664243948777;1.40616137818839;electricity;true;0.0;{};r120670201201-electricity-pv_ground-profile;r120670201201;pv_ground;volatile

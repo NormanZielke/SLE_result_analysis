@@ -1,0 +1,5 @@
+name;capacity;capacity_cost;capacity_potential;carrier;carrier_cost;efficiency;expandable;from_bus;marginal_cost;output_parameters;region;tech;to_bus;type
+r120640428428-electricity-heatpump_decentral;0.0;108377.5229273683;;electricity;0.0;r120640428428-electricity-heatpump_decentral-profile;true;r120640428428-electricity;0.0;{};r120640428428;heatpump_decentral;r120640428428-heat_low_decentral;conversion
+r120640472472-electricity-heatpump_decentral;0.0;108377.5229273683;;electricity;0.0;r120640472472-electricity-heatpump_decentral-profile;true;r120640472472-electricity;0.0;{};r120640472472;heatpump_decentral;r120640472472-heat_low_decentral;conversion
+r120670124124-electricity-heatpump_decentral;0.0;108377.5229273683;;electricity;0.0;r120670124124-electricity-heatpump_decentral-profile;true;r120670124124-electricity;0.0;{};r120670124124;heatpump_decentral;r120670124124-heat_low_decentral;conversion
+r120670201201-electricity-heatpump_decentral;0.0;108377.5229273683;;electricity;0.0;r120670201201-electricity-heatpump_decentral-profile;true;r120670201201-electricity;0.0;{};r120670201201;heatpump_decentral;r120670201201-heat_low_decentral;conversion

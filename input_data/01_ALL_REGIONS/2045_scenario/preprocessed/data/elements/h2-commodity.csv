@@ -1,0 +1,5 @@
+name;bus;capacity;carrier;marginal_cost;output_parameters;region;tech;type
+r120640428428-h2-commodity;r120640428428-h2;550.0;h2;76.0;"{""full_load_time_max"":6500.0}";r120640428428;commodity;shortage
+r120640472472-h2-commodity;r120640472472-h2;0.0;h2;76.0;{};r120640472472;commodity;shortage
+r120670124124-h2-commodity;r120670124124-h2;0.0;h2;76.0;{};r120670124124;commodity;shortage
+r120670201201-h2-commodity;r120670201201-h2;0.0;h2;76.0;{};r120670201201;commodity;shortage

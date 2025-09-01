@@ -1,0 +1,5 @@
+name;amount;bus;carrier;profile;region;tech;type
+r120640428428-electricity-demand_mob;11885.291485921;r120640428428-electricity;electricity;r120640428428-electricity-demand_mob-profile;r120640428428;demand_mob;load
+r120640472472-electricity-demand_mob;20289.635045688;r120640472472-electricity;electricity;r120640472472-electricity-demand_mob-profile;r120640472472;demand_mob;load
+r120670124124-electricity-demand_mob;8444.81117721321;r120670124124-electricity;electricity;r120670124124-electricity-demand_mob-profile;r120670124124;demand_mob;load
+r120670201201-electricity-demand_mob;6231.09211909189;r120670201201-electricity;electricity;r120670201201-electricity-demand_mob-profile;r120670201201;demand_mob;load

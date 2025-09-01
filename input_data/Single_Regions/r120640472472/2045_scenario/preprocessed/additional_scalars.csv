@@ -1,0 +1,5 @@
+id_scal;scenario_key;name;var_name;carrier;region;tech;type;var_value;var_unit;source;comment
+0;2045_scenario;TOTAL-emission-constraint;emission_reduction_factor;emission;TOTAL;constraint;limit;1.0;;;100 % of GHG reduction in 2045
+1;2045_scenario;TOTAL-emission-constraint;emissions_1990;emission;TOTAL;constraint;limit;0.0;kg_CO2_eq/MWh;;Zero
+2;2045_scenario;TOTAL-emission-constraint;emissions_not_modeled;emission;TOTAL;constraint;limit;0.0;kg_CO2_eq/MWh;;No fossils in 2045 in the modelled sectors.
+3;ALL;;emission_limit;emission;;;;0.0;kg_CO2_eq;;

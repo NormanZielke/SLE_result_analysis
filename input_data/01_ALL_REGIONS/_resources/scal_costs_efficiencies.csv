@@ -1,0 +1,462 @@
+id_scal;scenario_key;name;var_name;carrier;region;tech;type;var_value;var_unit;source;comment
+0;2045_scenario;r120640428428-biomass_gas-bpchp_heat_high;capacity;biomass_gas;r120640428428;bpchp_heat_high;backpressure;0.0;MW;;Zero
+1;2045_scenario;r120640472472-biomass_gas-bpchp_heat_high;capacity;biomass_gas;r120640472472;bpchp_heat_high;backpressure;0.0;MW;;Zero
+2;2045_scenario;r120670124124-biomass_gas-bpchp_heat_high;capacity;biomass_gas;r120670124124;bpchp_heat_high;backpressure;0.0;MW;;Zero
+3;2045_scenario;r120670201201-biomass_gas-bpchp_heat_high;capacity;biomass_gas;r120670201201;bpchp_heat_high;backpressure;0.0;MW;;Zero
+4;2045_scenario;;capacity_cost;biomass_gas;ALL;bpchp_heat_high;backpressure;42005.981393227295;;;
+5;2045_scenario;;carrier_cost;biomass_gas;ALL;bpchp_heat_high;backpressure;0.0;Eur/MWh;From original raw_cost_eff:;Zero
+6;2045_scenario;;electric_efficiency;biomass_gas;ALL;bpchp_heat_high;backpressure;0.3;;"PyPSA: Danish Energy Agency; technology_data_for_el_and_dh.xlsx";
+7;2045_scenario;;expandable;biomass_gas;ALL;bpchp_heat_high;backpressure;true;;;
+8;2045_scenario;;marginal_cost;biomass_gas;ALL;bpchp_heat_high;backpressure;2.222;EUR/MWh_e;"PyPSA: Danish Energy Agency; technology_data_for_el_and_dh.xlsx";"09c Straw; Large; 40 degree:  Variable O&M"
+9;2045_scenario;;thermal_efficiency;biomass_gas;ALL;bpchp_heat_high;backpressure;0.71;;"PyPSA: Danish Energy Agency; technology_data_for_el_and_dh.xlsx";"S.42 Table 12:BHKW (Erdgas;Biomasse)"
+10;2045_scenario;r120640428428-biomass_gas-bpchp_heat_low_central;capacity;biomass_gas;r120640428428;bpchp_heat_low_central;backpressure;0.0;MW;;Zero
+11;2045_scenario;r120640472472-biomass_gas-bpchp_heat_low_central;capacity;biomass_gas;r120640472472;bpchp_heat_low_central;backpressure;0.0;MW;;Zero
+12;2045_scenario;r120670124124-biomass_gas-bpchp_heat_low_central;capacity;biomass_gas;r120670124124;bpchp_heat_low_central;backpressure;0.0;MW;;Zero
+13;2045_scenario;r120670201201-biomass_gas-bpchp_heat_low_central;capacity;biomass_gas;r120670201201;bpchp_heat_low_central;backpressure;0.0;MW;;Zero
+14;2045_scenario;;capacity_cost;biomass_gas;ALL;bpchp_heat_low_central;backpressure;67629.89840529014;;;
+15;2045_scenario;;carrier_cost;biomass_gas;ALL;bpchp_heat_low_central;backpressure;0.0;Eur/MWh;From original raw_cost_eff:;Zero
+16;2045_scenario;;electric_efficiency;biomass_gas;ALL;bpchp_heat_low_central;backpressure;0.445;;"Digiplan-Empowerplan: technology_data_for_el_and_dh.xlsx; 06 Gas engines; biogas";"(0;43+((0;45-0;43)*(2045-2030)/(2050-2030)))"
+17;2045_scenario;;expandable;biomass_gas;ALL;bpchp_heat_low_central;backpressure;true;;;
+18;2045_scenario;;marginal_cost;biomass_gas;ALL;bpchp_heat_low_central;backpressure;6.6138;EUR/MWh;"Digiplan-Empowerplan: technology_data_for_el_and_dh.xlsx; 06 Gas engines; biogas";"(7+((6-7)*(2045-2030)/(2050-2030)))*1;0582"
+19;2045_scenario;;thermal_efficiency;biomass_gas;ALL;bpchp_heat_low_central;backpressure;0.4541;;"Digiplan-Empowerplan: technology_data_for_el_and_dh.xlsx; 06 Gas engines; biogas; thermal_efficiency = eletric_effiency/(cb_coefficient+cv_coefficient)";"(0;43+((0;45-0;43)*(2045-2030)/(2050-2030)))/(0;92+((1-0;92)*(2045-2030)/(2050-2030)))"
+20;2045_scenario;r120640428428-biomass_gas-bpchp_heat_low_decentral;capacity;biomass_gas;r120640428428;bpchp_heat_low_decentral;backpressure;0.0;MW;;Zero
+21;2045_scenario;r120640472472-biomass_gas-bpchp_heat_low_decentral;capacity;biomass_gas;r120640472472;bpchp_heat_low_decentral;backpressure;0.0;MW;;Zero
+22;2045_scenario;r120670124124-biomass_gas-bpchp_heat_low_decentral;capacity;biomass_gas;r120670124124;bpchp_heat_low_decentral;backpressure;0.0;MW;;Zero
+23;2045_scenario;r120670201201-biomass_gas-bpchp_heat_low_decentral;capacity;biomass_gas;r120670201201;bpchp_heat_low_decentral;backpressure;0.0;MW;;Zero
+24;2045_scenario;;capacity_cost;biomass_gas;ALL;bpchp_heat_low_decentral;backpressure;67629.89840529014;;;
+25;2045_scenario;;carrier_cost;biomass_gas;ALL;bpchp_heat_low_decentral;backpressure;0.0;Eur/MWh;From original raw_cost_eff:;Zero
+26;2045_scenario;;electric_efficiency;biomass_gas;ALL;bpchp_heat_low_decentral;backpressure;0.445;;"Digiplan-Empowerplan: technology_data_for_el_and_dh.xlsx; 06 Gas engines; biogas";"(0;43+((0;45-0;43)*(2045-2030)/(2050-2030)))"
+27;2045_scenario;;expandable;biomass_gas;ALL;bpchp_heat_low_decentral;backpressure;true;;;
+28;2045_scenario;;marginal_cost;biomass_gas;ALL;bpchp_heat_low_decentral;backpressure;6.6138;EUR/MWh;"Digiplan-Empowerplan: technology_data_for_el_and_dh.xlsx; 06 Gas engines; biogas";"(7+((6-7)*(2045-2030)/(2050-2030)))*1;0582"
+29;2045_scenario;;thermal_efficiency;biomass_gas;ALL;bpchp_heat_low_decentral;backpressure;0.4541;;"Digiplan-Empowerplan: technology_data_for_el_and_dh.xlsx; 06 Gas engines; biogas; thermal_efficiency = eletric_effiency/(cb_coefficient+cv_coefficient)";"(0;43+((0;45-0;43)*(2045-2030)/(2050-2030)))/(0;92+((1-0;92)*(2045-2030)/(2050-2030)))"
+30;2045_scenario;r120640428428-biomass_gas-commodity;capacity;biomass_gas;r120640428428;commodity;shortage;20079.9464072303;MW;;No limit for import
+31;2045_scenario;r120640472472-biomass_gas-commodity;capacity;biomass_gas;r120640472472;commodity;shortage;11493.1727838518;MW;;No limit for import
+32;2045_scenario;r120670124124-biomass_gas-commodity;capacity;biomass_gas;r120670124124;commodity;shortage;4340.26469925214;MW;;No limit for import
+33;2045_scenario;r120670201201-biomass_gas-commodity;capacity;biomass_gas;r120670201201;commodity;shortage;64564.05708597;MW;;No limit for import
+34;2045_scenario;;marginal_cost;biomass_gas;ALL;commodity;shortage;69.0;EUR/MWh;https://www.kea-bw.de/waermewende/wissensportal/kommunale-waermeplanung/einfuehrung-in-den-technikkatalog#c7393-content-2 1.2 Preisentwicklungen_2020_30_40_v1.1.3.xlsx;2045
+35;2045_scenario;r120640428428-biomass_solid-boiler_heat_high;capacity;biomass_solid;r120640428428;boiler_heat_high;conversion;0.0;MW;;Zero
+36;2045_scenario;r120640472472-biomass_solid-boiler_heat_high;capacity;biomass_solid;r120640472472;boiler_heat_high;conversion;0.0;MW;;Zero
+37;2045_scenario;r120670124124-biomass_solid-boiler_heat_high;capacity;biomass_solid;r120670124124;boiler_heat_high;conversion;0.0;MW;;Zero
+38;2045_scenario;r120670201201-biomass_solid-boiler_heat_high;capacity;biomass_solid;r120670201201;boiler_heat_high;conversion;0.0;MW;;Zero
+39;2045_scenario;;capacity_cost;biomass_solid;ALL;boiler_heat_high;conversion;22166.494570326577;;;
+40;2045_scenario;r120640428428-biomass_solid-boiler_heat_high;capacity_potential;biomass_solid;r120640428428;boiler_heat_high;conversion;;MW;;Empty
+41;2045_scenario;r120640472472-biomass_solid-boiler_heat_high;capacity_potential;biomass_solid;r120640472472;boiler_heat_high;conversion;;MW;;Empty
+42;2045_scenario;r120670124124-biomass_solid-boiler_heat_high;capacity_potential;biomass_solid;r120670124124;boiler_heat_high;conversion;;MW;;Empty
+43;2045_scenario;r120670201201-biomass_solid-boiler_heat_high;capacity_potential;biomass_solid;r120670201201;boiler_heat_high;conversion;;MW;;Empty
+44;2045_scenario;;carrier_cost;biomass_solid;ALL;boiler_heat_high;conversion;0.0;Eur/MWh;From original raw_cost_eff:;Zero
+45;2045_scenario;;efficiency;biomass_solid;ALL;boiler_heat_high;conversion;0.85;;https://energiesysteme-zukunft.de/fileadmin/user_upload/Publikationen/PDFs/ESYS_Analyse_IntEv.pdf;Table 19 S.206
+46;2045_scenario;;expandable;biomass_solid;ALL;boiler_heat_high;conversion;true;;;
+47;2045_scenario;;marginal_cost;biomass_solid;ALL;boiler_heat_high;conversion;1.0582;EUR/MWh;"From original raw_cost_eff: technology_data_for_el_and_dh.xlsx; 44 Natural Gas DH Only";"1*1;0582 Dummy value"
+48;2045_scenario;r120640428428-biomass_solid-bpchp_heat_high;capacity;biomass_solid;r120640428428;bpchp_heat_high;backpressure;0.0;MW;;Zero
+49;2045_scenario;r120640472472-biomass_solid-bpchp_heat_high;capacity;biomass_solid;r120640472472;bpchp_heat_high;backpressure;0.0;MW;;Zero
+50;2045_scenario;r120670124124-biomass_solid-bpchp_heat_high;capacity;biomass_solid;r120670124124;bpchp_heat_high;backpressure;0.0;MW;;Zero
+51;2045_scenario;r120670201201-biomass_solid-bpchp_heat_high;capacity;biomass_solid;r120670201201;bpchp_heat_high;backpressure;0.0;MW;;Zero
+52;2045_scenario;;capacity_cost;biomass_solid;ALL;bpchp_heat_high;backpressure;42005.981393227295;;;
+53;2045_scenario;;carrier_cost;biomass_solid;ALL;bpchp_heat_high;backpressure;0.0;Eur/MWh;From original raw_cost_eff:;Zero
+54;2045_scenario;;electric_efficiency;biomass_solid;ALL;bpchp_heat_high;backpressure;0.27;;"PyPSA: Danish Energy Agency; technology_data_for_el_and_dh.xlsx";
+55;2045_scenario;;expandable;biomass_solid;ALL;bpchp_heat_high;backpressure;true;;;
+56;2045_scenario;;marginal_cost;biomass_solid;ALL;bpchp_heat_high;backpressure;4.9173;EUR/MWh_e;"PyPSA: Danish Energy Agency; technology_data_for_el_and_dh.xlsx";"S.42 Table 12:BHKW (Erdgas;Biomasse)"
+57;2045_scenario;;thermal_efficiency;biomass_solid;ALL;bpchp_heat_high;backpressure;0.41;;https://langfristszenarien.de/enertile-explorer-wAssets/docs/LFS3_T45-Bericht_Szenarien_Industrie_final.pdf;"S.42 Table 12:BHKW (Erdgas;Biomasse)"
+58;2045_scenario;r120640428428-biomass_solid-bpchp_heat_low_central;capacity;biomass_solid;r120640428428;bpchp_heat_low_central;backpressure;0.0;MW;;Zero
+59;2045_scenario;r120640472472-biomass_solid-bpchp_heat_low_central;capacity;biomass_solid;r120640472472;bpchp_heat_low_central;backpressure;0.0;MW;;Zero
+60;2045_scenario;r120670124124-biomass_solid-bpchp_heat_low_central;capacity;biomass_solid;r120670124124;bpchp_heat_low_central;backpressure;0.0;MW;;Zero
+61;2045_scenario;r120670201201-biomass_solid-bpchp_heat_low_central;capacity;biomass_solid;r120670201201;bpchp_heat_low_central;backpressure;0.0;MW;;Zero
+62;2045_scenario;;capacity_cost;biomass_solid;ALL;bpchp_heat_low_central;backpressure;293837.723893955;;;
+63;2045_scenario;;carrier_cost;biomass_solid;ALL;bpchp_heat_low_central;backpressure;0.0;Eur/MWh;From original raw_cost_eff:;Zero
+64;2045_scenario;;electric_efficiency;biomass_solid;ALL;bpchp_heat_low_central;backpressure;0.29;;"Danish Energy Agency; technology_data_for_el_and_dh.xlsx";"09a Wood Chips; Large 40 degree"
+65;2045_scenario;;expandable;biomass_solid;ALL;bpchp_heat_low_central;backpressure;true;;;
+66;2045_scenario;;marginal_cost;biomass_solid;ALL;bpchp_heat_low_central;backpressure;4.05;EUR/MWh;From original raw_cost_eff:;Dummy value
+67;2045_scenario;;thermal_efficiency;biomass_solid;ALL;bpchp_heat_low_central;backpressure;0.83;;"Danish Energy Agency; technology_data_for_el_and_dh.xlsx";"09a Wood Chips; Large 40 degree"
+68;2045_scenario;r120640428428-biomass_solid-bpchp_heat_low_decentral;capacity;biomass_solid;r120640428428;bpchp_heat_low_decentral;backpressure;0.0;MW;;Zero
+69;2045_scenario;r120640472472-biomass_solid-bpchp_heat_low_decentral;capacity;biomass_solid;r120640472472;bpchp_heat_low_decentral;backpressure;0.0;MW;;Zero
+70;2045_scenario;r120670124124-biomass_solid-bpchp_heat_low_decentral;capacity;biomass_solid;r120670124124;bpchp_heat_low_decentral;backpressure;0.0;MW;;Zero
+71;2045_scenario;r120670201201-biomass_solid-bpchp_heat_low_decentral;capacity;biomass_solid;r120670201201;bpchp_heat_low_decentral;backpressure;0.0;MW;;Zero
+72;2045_scenario;;capacity_cost;biomass_solid;ALL;bpchp_heat_low_decentral;backpressure;685938.9934674953;;;
+73;2045_scenario;;carrier_cost;biomass_solid;ALL;bpchp_heat_low_decentral;backpressure;0.0;Eur/MWh;From original raw_cost_eff:;Zero
+74;2045_scenario;;electric_efficiency;biomass_solid;ALL;bpchp_heat_low_decentral;backpressure;0.14;;"Danish Energy Agency; technology_data_for_el_and_dh.xlsx";"09a Wood Chips; Small"
+75;2045_scenario;;expandable;biomass_solid;ALL;bpchp_heat_low_decentral;backpressure;true;;;
+76;2045_scenario;;marginal_cost;biomass_solid;ALL;bpchp_heat_low_decentral;backpressure;4.05;EUR/MWh;From original raw_cost_eff:;Dummy value
+77;2045_scenario;;thermal_efficiency;biomass_solid;ALL;bpchp_heat_low_decentral;backpressure;0.9747;;"Danish Energy Agency; technology_data_for_el_and_dh.xlsx";"09a Wood Chips; Small; gerundet:(0.97+((2045-2030)/(2050-2030))*(0.98-0.97))*10^6"
+78;2045_scenario;r120640428428-biomass_solid-commodity;capacity;biomass_solid;r120640428428;commodity;shortage;87013.1010979979;MW;;No limit for import
+79;2045_scenario;r120640472472-biomass_solid-commodity;capacity;biomass_solid;r120640472472;commodity;shortage;49803.7487300244;MW;;No limit for import
+80;2045_scenario;r120670124124-biomass_solid-commodity;capacity;biomass_solid;r120670124124;commodity;shortage;18807.8136967593;MW;;No limit for import
+81;2045_scenario;r120670201201-biomass_solid-commodity;capacity;biomass_solid;r120670201201;commodity;shortage;279777.58070587;MW;;No limit for import
+82;2045_scenario;;marginal_cost;biomass_solid;ALL;commodity;shortage;36.16;EUR/MWh;https://www.kea-bw.de/waermewende/wissensportal/kommunale-waermeplanung/einfuehrung-in-den-technikkatalog#c7393-content-2 1.2 Preisentwicklungen_2020_30_40_v1.1.3.xlsx;"average of straw; Hackschnitzel and pellets; 2045 (interpolation)"
+83;2045_scenario;r120640428428-electricity-boiler_heat_high;capacity;electricity;r120640428428;boiler_heat_high;conversion;0.0;MW;;Zero
+84;2045_scenario;r120640472472-electricity-boiler_heat_high;capacity;electricity;r120640472472;boiler_heat_high;conversion;0.0;MW;;Zero
+85;2045_scenario;r120670124124-electricity-boiler_heat_high;capacity;electricity;r120670124124;boiler_heat_high;conversion;0.0;MW;;Zero
+86;2045_scenario;r120670201201-electricity-boiler_heat_high;capacity;electricity;r120670201201;boiler_heat_high;conversion;0.0;MW;;Zero
+87;2045_scenario;;capacity_cost;electricity;ALL;boiler_heat_high;conversion;5463.823256817183;;;
+88;2045_scenario;r120640428428-electricity-boiler_heat_high;capacity_potential;electricity;r120640428428;boiler_heat_high;conversion;;MW;;Empty
+89;2045_scenario;r120640472472-electricity-boiler_heat_high;capacity_potential;electricity;r120640472472;boiler_heat_high;conversion;;MW;;Empty
+90;2045_scenario;r120670124124-electricity-boiler_heat_high;capacity_potential;electricity;r120670124124;boiler_heat_high;conversion;;MW;;Empty
+91;2045_scenario;r120670201201-electricity-boiler_heat_high;capacity_potential;electricity;r120670201201;boiler_heat_high;conversion;;MW;;Empty
+92;2045_scenario;;carrier_cost;electricity;ALL;boiler_heat_high;conversion;0.0;Eur/MWh;From original raw_cost_eff:;Zero
+93;2045_scenario;;efficiency;electricity;ALL;boiler_heat_high;conversion;0.99;per unit;"PyPSA: Danish Energy Agency; technology_data_for_industrial_process_heat.xlsx";"310.1 Electric boiler steam  :  Total efficiency; net; annual average"
+94;2045_scenario;;expandable;electricity;ALL;boiler_heat_high;conversion;true;;;
+95;2045_scenario;;marginal_cost;electricity;ALL;boiler_heat_high;conversion;0.7855;EUR/MWh;"PyPSA: Danish Energy Agency; technology_data_for_industrial_process_heat.xlsx";310.1 Electric boiler steam  :  Variable O&M
+96;2045_scenario;r120640428428-electricity-demand_cts;amount;electricity;r120640428428;demand_cts;load;28295.79;MWh/a;;Zero
+97;2045_scenario;r120640472472-electricity-demand_cts;amount;electricity;r120640472472;demand_cts;load;39842.1472578646;MWh/a;;Zero
+98;2045_scenario;r120670124124-electricity-demand_cts;amount;electricity;r120670124124;demand_cts;load;9565.24090296921;MWh/a;;Zero
+99;2045_scenario;r120670201201-electricity-demand_cts;amount;electricity;r120670201201;demand_cts;load;49826.9950025415;MWh/a;;Zero
+100;2045_scenario;r120640428428-electricity-demand_hh;amount;electricity;r120640428428;demand_hh;load;15578.02;MWh/a;;Zero
+101;2045_scenario;r120640472472-electricity-demand_hh;amount;electricity;r120640472472;demand_hh;load;26599.9676893529;MWh/a;;Zero
+102;2045_scenario;r120670124124-electricity-demand_hh;amount;electricity;r120670124124;demand_hh;load;11573.2108240958;MWh/a;;Zero
+103;2045_scenario;r120670201201-electricity-demand_hh;amount;electricity;r120670201201;demand_hh;load;8848.36142539557;MWh/a;;Zero
+104;2045_scenario;r120640428428-electricity-demand_ind;amount;electricity;r120640428428;demand_ind;load;222309.37;MWh/a;;Zero
+105;2045_scenario;r120640472472-electricity-demand_ind;amount;electricity;r120640472472;demand_ind;load;33173.4638725242;MWh/a;;Zero
+106;2045_scenario;r120670124124-electricity-demand_ind;amount;electricity;r120670124124;demand_ind;load;10737.7847669009;MWh/a;;Zero
+107;2045_scenario;r120670201201-electricity-demand_ind;amount;electricity;r120670201201;demand_ind;load;867381.877454026;MWh/a;;Zero
+108;2045_scenario;r120640428428-electricity-demand_mob;amount;electricity;r120640428428;demand_mob;load;11885.291485921;MWh/a;;Sum of profile für region Ruedersdorf
+109;2045_scenario;r120640472472-electricity-demand_mob;amount;electricity;r120640472472;demand_mob;load;20289.635045688;MWh/a;;Dummy Value: Sum of profile für region Ruedersdorf
+110;2045_scenario;r120670124124-electricity-demand_mob;amount;electricity;r120670124124;demand_mob;load;8444.81117721321;MWh/a;;Dummy Value: Sum of profile für region Ruedersdorf
+111;2045_scenario;r120670201201-electricity-demand_mob;amount;electricity;r120670201201;demand_mob;load;6231.09211909189;MWh/a;;Dummy Value: Sum of profile für region Ruedersdorf
+112;2045_scenario;r120640428428-electricity-electrolyzer;capacity;electricity;r120640428428;electrolyzer;conversion;0.0;MW;;Zero
+113;2045_scenario;r120640472472-electricity-electrolyzer;capacity;electricity;r120640472472;electrolyzer;conversion;0.0;MW;;Zero
+114;2045_scenario;r120670124124-electricity-electrolyzer;capacity;electricity;r120670124124;electrolyzer;conversion;0.0;MW;;Zero
+115;2045_scenario;r120670201201-electricity-electrolyzer;capacity;electricity;r120670201201;electrolyzer;conversion;0.0;MW;;Zero
+116;2045_scenario;;capacity_cost;electricity;ALL;electrolyzer;conversion;31353.28976627501;;;
+117;2045_scenario;r120640428428-electricity-electrolyzer;capacity_potential;electricity;r120640428428;electrolyzer;conversion;;MW;;Empty
+118;2045_scenario;r120640472472-electricity-electrolyzer;capacity_potential;electricity;r120640472472;electrolyzer;conversion;;MW;;Empty
+119;2045_scenario;r120670124124-electricity-electrolyzer;capacity_potential;electricity;r120670124124;electrolyzer;conversion;;MW;;Empty
+120;2045_scenario;r120670201201-electricity-electrolyzer;capacity_potential;electricity;r120670201201;electrolyzer;conversion;;MW;;Empty
+121;2045_scenario;;carrier_cost;electricity;ALL;electrolyzer;conversion;0.0;Eur/MWh;From original raw_cost_eff:;Zero
+122;2045_scenario;;efficiency;electricity;ALL;electrolyzer;conversion;0.73;p.u.;data_sheets_for_renewable_fuels;
+123;2045_scenario;;expandable;electricity;ALL;electrolyzer;conversion;true;;;
+124;2045_scenario;;marginal_cost;electricity;ALL;electrolyzer;conversion;0.0;EUR/MWh;From original raw_cost_eff:;Dummy value
+125;2045_scenario;r120640428428-electricity-export;capacity;electricity;r120640428428;export;excess;;MW;;Empty
+126;2045_scenario;r120640472472-electricity-export;capacity;electricity;r120640472472;export;excess;;MW;;Empty
+127;2045_scenario;r120670124124-electricity-export;capacity;electricity;r120670124124;export;excess;;MW;;Empty
+128;2045_scenario;r120670201201-electricity-export;capacity;electricity;r120670201201;export;excess;;MW;;Empty
+129;2045_scenario;;marginal_cost;electricity;ALL;export;excess;0.0;Eur/MWh;own assumption;
+130;2045_scenario;r120640428428-electricity-heatpump_central;capacity;electricity;r120640428428;heatpump_central;conversion;0.0;MW;;Zero
+131;2045_scenario;r120640472472-electricity-heatpump_central;capacity;electricity;r120640472472;heatpump_central;conversion;0.0;MW;;Zero
+132;2045_scenario;r120670124124-electricity-heatpump_central;capacity;electricity;r120670124124;heatpump_central;conversion;0.0;MW;;Zero
+133;2045_scenario;r120670201201-electricity-heatpump_central;capacity;electricity;r120670201201;heatpump_central;conversion;0.0;MW;;Zero
+134;2045_scenario;;capacity_cost;electricity;ALL;heatpump_central;conversion;53596.46885567595;;;
+135;2045_scenario;r120640428428-electricity-heatpump_central;capacity_potential;electricity;r120640428428;heatpump_central;conversion;;MW;;Empty
+136;2045_scenario;r120640472472-electricity-heatpump_central;capacity_potential;electricity;r120640472472;heatpump_central;conversion;;MW;;Empty
+137;2045_scenario;r120670124124-electricity-heatpump_central;capacity_potential;electricity;r120670124124;heatpump_central;conversion;;MW;;Empty
+138;2045_scenario;r120670201201-electricity-heatpump_central;capacity_potential;electricity;r120670201201;heatpump_central;conversion;;MW;;Empty
+139;2045_scenario;;carrier_cost;electricity;ALL;heatpump_central;conversion;0.0;Eur/MWh;From original raw_cost_eff:;Zero
+140;2045_scenario;;expandable;electricity;ALL;heatpump_central;conversion;true;;;
+141;2045_scenario;;marginal_cost;electricity;ALL;heatpump_central;conversion;1.79;EUR/MWh;"Digiplan-Empowerplan: technology_data_for_el_and_dh.xlsx; 40 Comp. hp; airsource 10 MW";"1;69*1;0582"
+142;2045_scenario;r120640428428-electricity-heatpump_decentral;capacity;electricity;r120640428428;heatpump_decentral;conversion;0.0;MW;;Zero
+143;2045_scenario;r120640472472-electricity-heatpump_decentral;capacity;electricity;r120640472472;heatpump_decentral;conversion;0.0;MW;;Zero
+144;2045_scenario;r120670124124-electricity-heatpump_decentral;capacity;electricity;r120670124124;heatpump_decentral;conversion;0.0;MW;;Zero
+145;2045_scenario;r120670201201-electricity-heatpump_decentral;capacity;electricity;r120670201201;heatpump_decentral;conversion;0.0;MW;;Zero
+146;2045_scenario;;capacity_cost;electricity;ALL;heatpump_decentral;conversion;108377.5229273683;;;
+147;2045_scenario;r120640428428-electricity-heatpump_decentral;capacity_potential;electricity;r120640428428;heatpump_decentral;conversion;;MW;;Empty
+148;2045_scenario;r120640472472-electricity-heatpump_decentral;capacity_potential;electricity;r120640472472;heatpump_decentral;conversion;;MW;;Empty
+149;2045_scenario;r120670124124-electricity-heatpump_decentral;capacity_potential;electricity;r120670124124;heatpump_decentral;conversion;;MW;;Empty
+150;2045_scenario;r120670201201-electricity-heatpump_decentral;capacity_potential;electricity;r120670201201;heatpump_decentral;conversion;;MW;;Empty
+151;2045_scenario;;carrier_cost;electricity;ALL;heatpump_decentral;conversion;0.0;Eur/MWh;From original raw_cost_eff:;Zero
+152;2045_scenario;;expandable;electricity;ALL;heatpump_decentral;conversion;true;;;
+153;2045_scenario;;marginal_cost;electricity;ALL;heatpump_decentral;conversion;0.0;EUR/MWh;"Digiplan-Empowerplan: technologie_data_heating_installations_-_0003.xlsx; 207";siehe heatpump_small_script
+154;2045_scenario;r120640428428-electricity-heatpump_heat_high;capacity;electricity;r120640428428;heatpump_heat_high;conversion;0.0;MW;;Zero
+155;2045_scenario;r120640472472-electricity-heatpump_heat_high;capacity;electricity;r120640472472;heatpump_heat_high;conversion;0.0;MW;;Zero
+156;2045_scenario;r120670124124-electricity-heatpump_heat_high;capacity;electricity;r120670124124;heatpump_heat_high;conversion;0.0;MW;;Zero
+157;2045_scenario;r120670201201-electricity-heatpump_heat_high;capacity;electricity;r120670201201;heatpump_heat_high;conversion;0.0;MW;;Zero
+158;2045_scenario;;capacity_cost;electricity;ALL;heatpump_heat_high;conversion;53744.59814536441;;;
+159;2045_scenario;r120640428428-electricity-heatpump_heat_high;capacity_potential;electricity;r120640428428;heatpump_heat_high;conversion;;MW;;Empty
+160;2045_scenario;r120640472472-electricity-heatpump_heat_high;capacity_potential;electricity;r120640472472;heatpump_heat_high;conversion;;MW;;Empty
+161;2045_scenario;r120670124124-electricity-heatpump_heat_high;capacity_potential;electricity;r120670124124;heatpump_heat_high;conversion;;MW;;Empty
+162;2045_scenario;r120670201201-electricity-heatpump_heat_high;capacity_potential;electricity;r120670201201;heatpump_heat_high;conversion;;MW;;Empty
+163;2045_scenario;;carrier_cost;electricity;ALL;heatpump_heat_high;conversion;0.0;Eur/MWh;From original raw_cost_eff:;Zero
+164;2045_scenario;;expandable;electricity;ALL;heatpump_heat_high;conversion;true;;;
+165;2045_scenario;;marginal_cost;electricity;ALL;heatpump_heat_high;conversion;3.1922;EUR/MWh;"PyPSA: Danish Energy Agency; technology_data_for_industrial_process_heat.xlsx";302.a High temp. hp Up to 125 C:  Variable O&M
+166;2045_scenario;r120640428428-electricity-import;capacity;electricity;r120640428428;import;shortage;100000000.0;MW;;No limit for import
+167;2045_scenario;r120640472472-electricity-import;capacity;electricity;r120640472472;import;shortage;100000000.0;MW;;No limit for import
+168;2045_scenario;r120670124124-electricity-import;capacity;electricity;r120670124124;import;shortage;100000000.0;MW;;No limit for import
+169;2045_scenario;r120670201201-electricity-import;capacity;electricity;r120670201201;import;shortage;100000000.0;MW;;No limit for import
+170;2045_scenario;;marginal_cost;electricity;ALL;import;shortage;73.0;Eur/MWh;vbw/Prognos Strompreisprogonose 2024 https://www.vbw-bayern.de/Redaktion/Frei-zugaengliche-Medien/Abteilungen-GS/Wirtschaftspolitik/2024/Downloads/Strompreisprognose_2024_v4-(002).pdf;Folie 15 von 17
+171;2045_scenario;r120640428428-electricity-large_battery_storage;capacity;electricity;r120640428428;large_battery_storage;storage;0.0;MW;;Zero
+172;2045_scenario;r120640472472-electricity-large_battery_storage;capacity;electricity;r120640472472;large_battery_storage;storage;0.0;MW;;Zero
+173;2045_scenario;r120670124124-electricity-large_battery_storage;capacity;electricity;r120670124124;large_battery_storage;storage;0.0;MW;;Zero
+174;2045_scenario;r120670201201-electricity-large_battery_storage;capacity;electricity;r120670201201;large_battery_storage;storage;0.0;MW;;Zero
+175;2045_scenario;;capacity_cost;electricity;ALL;large_battery_storage;storage;571.4257830099133;;;
+176;2045_scenario;r120640428428-electricity-large_battery_storage;capacity_potential;electricity;r120640428428;large_battery_storage;storage;;MW;;Empty
+177;2045_scenario;r120640472472-electricity-large_battery_storage;capacity_potential;electricity;r120640472472;large_battery_storage;storage;;MW;;Empty
+178;2045_scenario;r120670124124-electricity-large_battery_storage;capacity_potential;electricity;r120670124124;large_battery_storage;storage;;MW;;Empty
+179;2045_scenario;r120670201201-electricity-large_battery_storage;capacity_potential;electricity;r120670201201;large_battery_storage;storage;;MW;;Empty
+180;2045_scenario;;efficiency;electricity;ALL;large_battery_storage;storage;0.92;;"Digiplan-Empowerplan: technology_data_catalogue_for_energy_and_storage.xlsx; 180 Lithium Ion Battery";
+181;2045_scenario;;expandable;electricity;ALL;large_battery_storage;storage;true;;;
+182;2045_scenario;r120640428428-electricity-large_battery_storage;input_parameters;electricity;r120640428428;large_battery_storage;storage;"{""variable_costs"": 0.1}";;;Own assumption to prevent hidden curtailment
+183;2045_scenario;r120640472472-electricity-large_battery_storage;input_parameters;electricity;r120640472472;large_battery_storage;storage;"{""variable_costs"": 0.1}";;;Own assumption to prevent hidden curtailment
+184;2045_scenario;r120670124124-electricity-large_battery_storage;input_parameters;electricity;r120670124124;large_battery_storage;storage;"{""variable_costs"": 0.1}";;;Own assumption to prevent hidden curtailment
+185;2045_scenario;r120670201201-electricity-large_battery_storage;input_parameters;electricity;r120670201201;large_battery_storage;storage;"{""variable_costs"": 0.1}";;;Own assumption to prevent hidden curtailment
+186;2045_scenario;;loss_rate;electricity;ALL;large_battery_storage;storage;0.1;1/h;own assumption;
+187;2045_scenario;;marginal_cost;electricity;ALL;large_battery_storage;storage;1.75;EUR/MWh;"Digiplan-Empowerplan: technology_data_catalogue_for_energy_and_storage.xlsx; 180 Lithium Ion Battery";"(1;7+((1;6-1;7)*(2045-2040)/(2050-2040)))*1;0582"
+188;2045_scenario;r120640428428-electricity-large_battery_storage;storage_capacity;electricity;r120640428428;large_battery_storage;storage;0.0;MWh;;Zero
+189;2045_scenario;r120640472472-electricity-large_battery_storage;storage_capacity;electricity;r120640472472;large_battery_storage;storage;0.0;MWh;;Zero
+190;2045_scenario;r120670124124-electricity-large_battery_storage;storage_capacity;electricity;r120670124124;large_battery_storage;storage;0.0;MWh;;Zero
+191;2045_scenario;r120670201201-electricity-large_battery_storage;storage_capacity;electricity;r120670201201;large_battery_storage;storage;0.0;MWh;;Zero
+192;2045_scenario;;storage_capacity_cost;electricity;ALL;large_battery_storage;storage;21574.976421111423;;;
+193;2045_scenario;r120640428428-electricity-large_battery_storage;storage_capacity_potential;electricity;r120640428428;large_battery_storage;storage;;MWh;;Empty
+194;2045_scenario;r120640472472-electricity-large_battery_storage;storage_capacity_potential;electricity;r120640472472;large_battery_storage;storage;;MWh;;Empty
+195;2045_scenario;r120670124124-electricity-large_battery_storage;storage_capacity_potential;electricity;r120670124124;large_battery_storage;storage;;MWh;;Empty
+196;2045_scenario;r120670201201-electricity-large_battery_storage;storage_capacity_potential;electricity;r120670201201;large_battery_storage;storage;;MWh;;Empty
+197;2045_scenario;r120640428428-electricity-pv_agri_horizontal;capacity;electricity;r120640428428;pv_agri_horizontal;volatile;0.0;MW;;Zero
+198;2045_scenario;r120640472472-electricity-pv_agri_horizontal;capacity;electricity;r120640472472;pv_agri_horizontal;volatile;0.0;MW;;Zero
+199;2045_scenario;r120670124124-electricity-pv_agri_horizontal;capacity;electricity;r120670124124;pv_agri_horizontal;volatile;0.0;MW;;Zero
+200;2045_scenario;r120670201201-electricity-pv_agri_horizontal;capacity;electricity;r120670201201;pv_agri_horizontal;volatile;0.0;MW;;Zero
+201;2045_scenario;;capacity_cost;electricity;ALL;pv_agri_horizontal;volatile;27813.439748989036;;;
+202;2045_scenario;r120640428428-electricity-pv_agri_horizontal;capacity_potential;electricity;r120640428428;pv_agri_horizontal;volatile;0.240107872178303;MW;;Empty
+203;2045_scenario;r120640472472-electricity-pv_agri_horizontal;capacity_potential;electricity;r120640472472;pv_agri_horizontal;volatile;0.590755364865029;MW;;Empty
+204;2045_scenario;r120670124124-electricity-pv_agri_horizontal;capacity_potential;electricity;r120670124124;pv_agri_horizontal;volatile;0.0;MW;;kein PV-agri Potential in Erkner
+205;2045_scenario;r120670201201-electricity-pv_agri_horizontal;capacity_potential;electricity;r120670201201;pv_agri_horizontal;volatile;0.0;MW;;kein PV-agri Potential in Grünheide
+206;2045_scenario;;expandable;electricity;ALL;pv_agri_horizontal;volatile;true;;;
+207;2045_scenario;r120640428428-electricity-pv_agri_vertical;capacity;electricity;r120640428428;pv_agri_vertical;volatile;0.0;MW;;Zero
+208;2045_scenario;r120640472472-electricity-pv_agri_vertical;capacity;electricity;r120640472472;pv_agri_vertical;volatile;0.0;MW;;Zero
+209;2045_scenario;r120670124124-electricity-pv_agri_vertical;capacity;electricity;r120670124124;pv_agri_vertical;volatile;0.0;MW;;Zero
+210;2045_scenario;r120670201201-electricity-pv_agri_vertical;capacity;electricity;r120670201201;pv_agri_vertical;volatile;0.0;MW;;Zero
+211;2045_scenario;;capacity_cost;electricity;ALL;pv_agri_vertical;volatile;27813.439748989036;;;
+212;2045_scenario;r120640428428-electricity-pv_agri_vertical;capacity_potential;electricity;r120640428428;pv_agri_vertical;volatile;2.97133809586662;MW;;Empty
+213;2045_scenario;r120640472472-electricity-pv_agri_vertical;capacity_potential;electricity;r120640472472;pv_agri_vertical;volatile;3.40595926698852;MW;;Empty
+214;2045_scenario;r120670124124-electricity-pv_agri_vertical;capacity_potential;electricity;r120670124124;pv_agri_vertical;volatile;0.0;MW;;kein PV-agri Potential in Erkner
+215;2045_scenario;r120670201201-electricity-pv_agri_vertical;capacity_potential;electricity;r120670201201;pv_agri_vertical;volatile;0.77023739554857;MW;;Empty
+216;2045_scenario;;expandable;electricity;ALL;pv_agri_vertical;volatile;true;;;
+217;2045_scenario;r120640428428-electricity-pv_ground;capacity;electricity;r120640428428;pv_ground;volatile;0.0;MW;;Zero
+218;2045_scenario;r120640472472-electricity-pv_ground;capacity;electricity;r120640472472;pv_ground;volatile;0.0;MW;;Zero
+219;2045_scenario;r120670124124-electricity-pv_ground;capacity;electricity;r120670124124;pv_ground;volatile;0.0;MW;;Zero
+220;2045_scenario;r120670201201-electricity-pv_ground;capacity;electricity;r120670201201;pv_ground;volatile;0.0;MW;;Zero
+221;2045_scenario;;capacity_cost;electricity;ALL;pv_ground;volatile;23159.664243948777;;;
+222;2045_scenario;r120640428428-electricity-pv_ground;capacity_potential;electricity;r120640428428;pv_ground;volatile;14.0571443990255;MW;;Empty
+223;2045_scenario;r120640472472-electricity-pv_ground;capacity_potential;electricity;r120640472472;pv_ground;volatile;5.9071230446957;MW;;Empty
+224;2045_scenario;r120670124124-electricity-pv_ground;capacity_potential;electricity;r120670124124;pv_ground;volatile;0.0;MW;;kein PV-ground Potential in Erkner
+225;2045_scenario;r120670201201-electricity-pv_ground;capacity_potential;electricity;r120670201201;pv_ground;volatile;1.40616137818839;MW;;Empty
+226;2045_scenario;;expandable;electricity;ALL;pv_ground;volatile;true;;;
+227;2045_scenario;r120640428428-electricity-pv_rooftop;capacity;electricity;r120640428428;pv_rooftop;volatile;0.0;MW;;Zero
+228;2045_scenario;r120640472472-electricity-pv_rooftop;capacity;electricity;r120640472472;pv_rooftop;volatile;0.0;MW;;Zero
+229;2045_scenario;r120670124124-electricity-pv_rooftop;capacity;electricity;r120670124124;pv_rooftop;volatile;0.0;MW;;Zero
+230;2045_scenario;r120670201201-electricity-pv_rooftop;capacity;electricity;r120670201201;pv_rooftop;volatile;0.0;MW;;Zero
+231;2045_scenario;;capacity_cost;electricity;ALL;pv_rooftop;volatile;39700.5834021078;;;
+232;2045_scenario;r120640428428-electricity-pv_rooftop;capacity_potential;electricity;r120640428428;pv_rooftop;volatile;92.582;MW;;Empty
+233;2045_scenario;r120640472472-electricity-pv_rooftop;capacity_potential;electricity;r120640472472;pv_rooftop;volatile;94.9223099918723;MW;;Empty
+234;2045_scenario;r120670124124-electricity-pv_rooftop;capacity_potential;electricity;r120670124124;pv_rooftop;volatile;34.3904399727463;MW;;Empty
+235;2045_scenario;r120670201201-electricity-pv_rooftop;capacity_potential;electricity;r120670201201;pv_rooftop;volatile;54.526079940319;MW;;Empty
+236;2045_scenario;;expandable;electricity;ALL;pv_rooftop;volatile;true;;;
+237;2045_scenario;r120640428428-electricity-small_battery_storage;capacity;electricity;r120640428428;small_battery_storage;storage;64.8074;MW;;"""nominal_power_per_storage_capacity"": 0.7"
+238;2045_scenario;r120640472472-electricity-small_battery_storage;capacity;electricity;r120640472472;small_battery_storage;storage;66.4456169943106;MW;;"""nominal_power_per_storage_capacity"": 0.7"
+239;2045_scenario;r120670124124-electricity-small_battery_storage;capacity;electricity;r120670124124;small_battery_storage;storage;24.0733079809224;MW;;"""nominal_power_per_storage_capacity"": 0.7"
+240;2045_scenario;r120670201201-electricity-small_battery_storage;capacity;electricity;r120670201201;small_battery_storage;storage;38.1682559582233;MW;;"""nominal_power_per_storage_capacity"": 0.7"
+241;2045_scenario;;capacity_cost;electricity;ALL;small_battery_storage;storage;0.008994110037097316;;;
+242;2045_scenario;r120640428428-electricity-small_battery_storage;capacity_potential;electricity;r120640428428;small_battery_storage;storage;;MW;;Empty
+243;2045_scenario;r120640472472-electricity-small_battery_storage;capacity_potential;electricity;r120640472472;small_battery_storage;storage;;MW;;Empty
+244;2045_scenario;r120670124124-electricity-small_battery_storage;capacity_potential;electricity;r120670124124;small_battery_storage;storage;;MW;;Empty
+245;2045_scenario;r120670201201-electricity-small_battery_storage;capacity_potential;electricity;r120670201201;small_battery_storage;storage;;MW;;Empty
+246;2045_scenario;;efficiency;electricity;ALL;small_battery_storage;storage;0.95;;"Digiplan-Empowerplan: fluri-2019-wirtschaftlichkeit-dez-stromspeicher.pdf; S. 91";
+247;2045_scenario;;expandable;electricity;ALL;small_battery_storage;storage;true;;;
+248;2045_scenario;r120640428428-electricity-small_battery_storage;input_parameters;electricity;r120640428428;small_battery_storage;storage;"{""variable_costs"": 0.1}";;;Own assumption to prevent hidden curtailment
+249;2045_scenario;r120640472472-electricity-small_battery_storage;input_parameters;electricity;r120640472472;small_battery_storage;storage;"{""variable_costs"": 0.1}";;;Own assumption to prevent hidden curtailment
+250;2045_scenario;r120670124124-electricity-small_battery_storage;input_parameters;electricity;r120670124124;small_battery_storage;storage;"{""variable_costs"": 0.1}";;;Own assumption to prevent hidden curtailment
+251;2045_scenario;r120670201201-electricity-small_battery_storage;input_parameters;electricity;r120670201201;small_battery_storage;storage;"{""variable_costs"": 0.1}";;;Own assumption to prevent hidden curtailment
+252;2045_scenario;;loss_rate;electricity;ALL;small_battery_storage;storage;0.1;1/h;own assumption;
+253;2045_scenario;;marginal_cost;electricity;ALL;small_battery_storage;storage;0.0;EUR/MWh;Digiplan-Empowerplan:;
+254;2045_scenario;r120640428428-electricity-small_battery_storage;storage_capacity;electricity;r120640428428;small_battery_storage;storage;92.582;MWh;;"""storage_capacity_per_pv_power"": 1"
+255;2045_scenario;r120640472472-electricity-small_battery_storage;storage_capacity;electricity;r120640472472;small_battery_storage;storage;94.9223099918723;MWh;;"""storage_capacity_per_pv_power"": 1"
+256;2045_scenario;r120670124124-electricity-small_battery_storage;storage_capacity;electricity;r120670124124;small_battery_storage;storage;34.3904399727463;MWh;;"""storage_capacity_per_pv_power"": 1"
+257;2045_scenario;r120670201201-electricity-small_battery_storage;storage_capacity;electricity;r120670201201;small_battery_storage;storage;54.526079940319;MWh;;"""storage_capacity_per_pv_power"": 1"
+258;2045_scenario;;storage_capacity_cost;electricity;ALL;small_battery_storage;storage;77750.52431161744;;;
+259;2045_scenario;r120640428428-electricity-small_battery_storage;storage_capacity_potential;electricity;r120640428428;small_battery_storage;storage;;MWh;;Empty
+260;2045_scenario;r120640472472-electricity-small_battery_storage;storage_capacity_potential;electricity;r120640472472;small_battery_storage;storage;;MWh;;Empty
+261;2045_scenario;r120670124124-electricity-small_battery_storage;storage_capacity_potential;electricity;r120670124124;small_battery_storage;storage;;MWh;;Empty
+262;2045_scenario;r120670201201-electricity-small_battery_storage;storage_capacity_potential;electricity;r120670201201;small_battery_storage;storage;;MWh;;Empty
+263;2045_scenario;;capacity_cost;electricity;ALL;transmission;link;96.01794417968188;;;
+264;2045_scenario;;expandable;electricity;ALL;transmission;link;false;;;
+265;2045_scenario;r120640428428-r120640472472-electricity-transmission;from_to_capacity;electricity;r120640428428_r120640472472;transmission;link;1000.0;MW;;No limit for import
+266;2045_scenario;r120640428428-r120670124124-electricity-transmission;from_to_capacity;electricity;r120640428428_r120670124124;transmission;link;1000.0;MW;;No limit for import
+267;2045_scenario;r120640428428-r120670201201-electricity-transmission;from_to_capacity;electricity;r120640428428_r120670201201;transmission;link;1000.0;MW;;No limit for import
+268;2045_scenario;r120640472472-r120670124124-electricity-transmission;from_to_capacity;electricity;r120640472472_r120670124124;transmission;link;1000.0;MW;;No limit for import
+269;2045_scenario;r120640472472-r120670201201-electricity-transmission;from_to_capacity;electricity;r120640472472_r120670201201;transmission;link;1000.0;MW;;No limit for import
+270;2045_scenario;r120670124124-r120670201201-electricity-transmission;from_to_capacity;electricity;r120670124124_r120670201201;transmission;link;1000.0;MW;;No limit for import
+271;2045_scenario;r120640428428-r120640472472-electricity-transmission;loss;electricity;r120640428428_r120640472472;transmission;link;0.01;;;Zero
+272;2045_scenario;r120640428428-r120670124124-electricity-transmission;loss;electricity;r120640428428_r120670124124;transmission;link;0.01;;;Zero
+273;2045_scenario;r120640428428-r120670201201-electricity-transmission;loss;electricity;r120640428428_r120670201201;transmission;link;0.01;;;Zero
+274;2045_scenario;r120640472472-r120670124124-electricity-transmission;loss;electricity;r120640472472_r120670124124;transmission;link;0.01;;;Zero
+275;2045_scenario;r120640472472-r120670201201-electricity-transmission;loss;electricity;r120640472472_r120670201201;transmission;link;0.01;;;Zero
+276;2045_scenario;r120670124124-r120670201201-electricity-transmission;loss;electricity;r120670124124_r120670201201;transmission;link;0.01;;;Zero
+277;2045_scenario;r120640428428-r120640472472-electricity-transmission;to_from_capacity;electricity;r120640428428_r120640472472;transmission;link;1000.0;MW;;No limit for import
+278;2045_scenario;r120640428428-r120670124124-electricity-transmission;to_from_capacity;electricity;r120640428428_r120670124124;transmission;link;1000.0;MW;;No limit for import
+279;2045_scenario;r120640428428-r120670201201-electricity-transmission;to_from_capacity;electricity;r120640428428_r120670201201;transmission;link;1000.0;MW;;No limit for import
+280;2045_scenario;r120640472472-r120670124124-electricity-transmission;to_from_capacity;electricity;r120640472472_r120670124124;transmission;link;1000.0;MW;;No limit for import
+281;2045_scenario;r120640472472-r120670201201-electricity-transmission;to_from_capacity;electricity;r120640472472_r120670201201;transmission;link;1000.0;MW;;No limit for import
+282;2045_scenario;r120670124124-r120670201201-electricity-transmission;to_from_capacity;electricity;r120670124124_r120670201201;transmission;link;1000.0;MW;;No limit for import
+283;2045_scenario;r120640428428-electricity-wind;capacity;electricity;r120640428428;wind;volatile;0.0;MW;;Zero
+284;2045_scenario;r120640472472-electricity-wind;capacity;electricity;r120640472472;wind;volatile;0.0;MW;;Zero
+285;2045_scenario;r120670124124-electricity-wind;capacity;electricity;r120670124124;wind;volatile;0.0;MW;;Zero
+286;2045_scenario;r120670201201-electricity-wind;capacity;electricity;r120670201201;wind;volatile;0.0;MW;;Zero
+287;2045_scenario;;capacity_cost;electricity;ALL;wind;volatile;68717.7981423247;;;
+288;2045_scenario;r120640428428-electricity-wind;capacity_potential;electricity;r120640428428;wind;volatile;0.0;MW;;Empty
+289;2045_scenario;r120640472472-electricity-wind;capacity_potential;electricity;r120640472472;wind;volatile;0.0;MW;;Empty
+290;2045_scenario;r120670124124-electricity-wind;capacity_potential;electricity;r120670124124;wind;volatile;0.0;MW;;Empty
+291;2045_scenario;r120670201201-electricity-wind;capacity_potential;electricity;r120670201201;wind;volatile;92.0395900328712;MW;;Empty
+292;2045_scenario;;expandable;electricity;ALL;wind;volatile;true;;;
+293;2045_scenario;r120640428428-h2-boiler_heat_high;capacity;h2;r120640428428;boiler_heat_high;conversion;0.0;MW;;Zero
+294;2045_scenario;r120640472472-h2-boiler_heat_high;capacity;h2;r120640472472;boiler_heat_high;conversion;0.0;MW;;Zero
+295;2045_scenario;r120670124124-h2-boiler_heat_high;capacity;h2;r120670124124;boiler_heat_high;conversion;0.0;MW;;Zero
+296;2045_scenario;r120670201201-h2-boiler_heat_high;capacity;h2;r120670201201;boiler_heat_high;conversion;0.0;MW;;Zero
+297;2045_scenario;;capacity_cost;h2;ALL;boiler_heat_high;conversion;12727.118044693523;;;
+298;2045_scenario;r120640428428-h2-boiler_heat_high;capacity_potential;h2;r120640428428;boiler_heat_high;conversion;;MW;;Empty
+299;2045_scenario;r120640472472-h2-boiler_heat_high;capacity_potential;h2;r120640472472;boiler_heat_high;conversion;;MW;;Empty
+300;2045_scenario;r120670124124-h2-boiler_heat_high;capacity_potential;h2;r120670124124;boiler_heat_high;conversion;;MW;;Empty
+301;2045_scenario;r120670201201-h2-boiler_heat_high;capacity_potential;h2;r120670201201;boiler_heat_high;conversion;;MW;;Empty
+302;2045_scenario;;carrier_cost;h2;ALL;boiler_heat_high;conversion;0.0;Eur/MWh;From original raw_cost_eff:;Zero
+303;2045_scenario;;efficiency;h2;ALL;boiler_heat_high;conversion;0.92;;https://energiesysteme-zukunft.de/fileadmin/user_upload/Publikationen/PDFs/ESYS_Analyse_IntEv.pdf;Table 19 S.206
+304;2045_scenario;;expandable;h2;ALL;boiler_heat_high;conversion;true;;;
+305;2045_scenario;;marginal_cost;h2;ALL;boiler_heat_high;conversion;1.0582;EUR/MWh;"From original raw_cost_eff: technology_data_for_el_and_dh.xlsx; 44 Natural Gas DH Only";"1*1;0582 Dummy value"
+306;2045_scenario;r120640428428-h2-bpchp_heat_high;capacity;h2;r120640428428;bpchp_heat_high;backpressure;0.0;MW;;Zero
+307;2045_scenario;r120640472472-h2-bpchp_heat_high;capacity;h2;r120640472472;bpchp_heat_high;backpressure;0.0;MW;;Zero
+308;2045_scenario;r120670124124-h2-bpchp_heat_high;capacity;h2;r120670124124;bpchp_heat_high;backpressure;0.0;MW;;Zero
+309;2045_scenario;r120670201201-h2-bpchp_heat_high;capacity;h2;r120670201201;bpchp_heat_high;backpressure;0.0;MW;;Zero
+310;2045_scenario;;capacity_cost;h2;ALL;bpchp_heat_high;backpressure;160457.68782772945;;;
+311;2045_scenario;;carrier_cost;h2;ALL;bpchp_heat_high;backpressure;0.0;Eur/MWh;From original raw_cost_eff:;Zero
+312;2045_scenario;;electric_efficiency;h2;ALL;bpchp_heat_high;backpressure;0.36;;Technikkatalog_Wärmeplanung_Version_1.1_August24;H2-BHKW
+313;2045_scenario;;expandable;h2;ALL;bpchp_heat_high;backpressure;true;;;
+314;2045_scenario;;marginal_cost;h2;ALL;bpchp_heat_high;backpressure;4.05;EUR/MWh;From original raw_cost_eff:;Dummy value
+315;2045_scenario;;thermal_efficiency;h2;ALL;bpchp_heat_high;backpressure;0.56;;Technikkatalog_Wärmeplanung_Version_1.1_August24;H2-BHKW
+316;2045_scenario;r120640428428-h2-commodity;capacity;h2;r120640428428;commodity;shortage;550.0;MW;;No limit for import
+317;2045_scenario;r120640472472-h2-commodity;capacity;h2;r120640472472;commodity;shortage;0.0;MW;;No limit for import
+318;2045_scenario;r120670124124-h2-commodity;capacity;h2;r120670124124;commodity;shortage;0.0;MW;;No limit for import
+319;2045_scenario;r120670201201-h2-commodity;capacity;h2;r120670201201;commodity;shortage;0.0;MW;;No limit for import
+320;2045_scenario;;marginal_cost;h2;ALL;commodity;shortage;76.0;EUR/MWh;SLE research: https://epub.wupperinst.org/frontdoor/deliver/index/docId/8344/file/8344_Wasserstoffkosten.pdf;Figure 4-3: [DVGW] average value of german production between 6.7 and 8.5 ct/ kWhH2
+321;2045_scenario;r120640428428-h2-export;capacity;h2;r120640428428;export;excess;;MW;;Empty
+322;2045_scenario;r120640472472-h2-export;capacity;h2;r120640472472;export;excess;;MW;;Empty
+323;2045_scenario;r120670124124-h2-export;capacity;h2;r120670124124;export;excess;;MW;;Empty
+324;2045_scenario;r120670201201-h2-export;capacity;h2;r120670201201;export;excess;;MW;;Empty
+325;2045_scenario;;marginal_cost;h2;ALL;export;excess;0.0;EUR/MWh;own assumption;
+326;2045_scenario;;capacity_cost;h2;ALL;transmission;link;96.01794417968188;;;
+327;2045_scenario;;expandable;h2;ALL;transmission;link;false;;;
+328;2045_scenario;r120640428428-r120640472472-h2-transmission;from_to_capacity;h2;r120640428428_r120640472472;transmission;link;1000.0;MW;;No limit for import
+329;2045_scenario;r120640428428-r120670124124-h2-transmission;from_to_capacity;h2;r120640428428_r120670124124;transmission;link;1000.0;MW;;No limit for import
+330;2045_scenario;r120640428428-r120670201201-h2-transmission;from_to_capacity;h2;r120640428428_r120670201201;transmission;link;1000.0;MW;;No limit for import
+331;2045_scenario;r120640472472-r120670124124-h2-transmission;from_to_capacity;h2;r120640472472_r120670124124;transmission;link;1000.0;MW;;No limit for import
+332;2045_scenario;r120640472472-r120670201201-h2-transmission;from_to_capacity;h2;r120640472472_r120670201201;transmission;link;1000.0;MW;;No limit for import
+333;2045_scenario;r120670124124-r120670201201-h2-transmission;from_to_capacity;h2;r120670124124_r120670201201;transmission;link;1000.0;MW;;No limit for import
+334;2045_scenario;r120640428428-r120640472472-h2-transmission;loss;h2;r120640428428_r120640472472;transmission;link;0.01;;;Zero
+335;2045_scenario;r120640428428-r120670124124-h2-transmission;loss;h2;r120640428428_r120670124124;transmission;link;0.01;;;Zero
+336;2045_scenario;r120640428428-r120670201201-h2-transmission;loss;h2;r120640428428_r120670201201;transmission;link;0.01;;;Zero
+337;2045_scenario;r120640472472-r120670124124-h2-transmission;loss;h2;r120640472472_r120670124124;transmission;link;0.01;;;Zero
+338;2045_scenario;r120640472472-r120670201201-h2-transmission;loss;h2;r120640472472_r120670201201;transmission;link;0.01;;;Zero
+339;2045_scenario;r120670124124-r120670201201-h2-transmission;loss;h2;r120670124124_r120670201201;transmission;link;0.01;;;Zero
+340;2045_scenario;r120640428428-r120640472472-h2-transmission;to_from_capacity;h2;r120640428428_r120640472472;transmission;link;1000.0;MW;;No limit for import
+341;2045_scenario;r120640428428-r120670124124-h2-transmission;to_from_capacity;h2;r120640428428_r120670124124;transmission;link;1000.0;MW;;No limit for import
+342;2045_scenario;r120640428428-r120670201201-h2-transmission;to_from_capacity;h2;r120640428428_r120670201201;transmission;link;1000.0;MW;;No limit for import
+343;2045_scenario;r120640472472-r120670124124-h2-transmission;to_from_capacity;h2;r120640472472_r120670124124;transmission;link;1000.0;MW;;No limit for import
+344;2045_scenario;r120640472472-r120670201201-h2-transmission;to_from_capacity;h2;r120640472472_r120670201201;transmission;link;1000.0;MW;;No limit for import
+345;2045_scenario;r120670124124-r120670201201-h2-transmission;to_from_capacity;h2;r120670124124_r120670201201;transmission;link;1000.0;MW;;No limit for import
+346;2045_scenario;r120640428428-heat_high-demand_ind;amount;heat_high;r120640428428;demand_ind;load;4637.30710333747;MWh/a;;Zero
+347;2045_scenario;r120640472472-heat_high-demand_ind;amount;heat_high;r120640472472;demand_ind;load;3927.52607390062;MWh/a;;Zero
+348;2045_scenario;r120670124124-heat_high-demand_ind;amount;heat_high;r120670124124;demand_ind;load;2727.75764443695;MWh/a;;Zero
+349;2045_scenario;r120670201201-heat_high-demand_ind;amount;heat_high;r120670201201;demand_ind;load;79110.2636932186;MWh/a;;Zero
+350;2045_scenario;r120640428428-heat_low_central-demand_cts;amount;heat_low_central;r120640428428;demand_cts;load;254.304819122836;MWh/a;;Zero
+351;2045_scenario;r120640472472-heat_low_central-demand_cts;amount;heat_low_central;r120640472472;demand_cts;load;4332.12231816783;MWh/a;;Zero
+352;2045_scenario;r120670124124-heat_low_central-demand_cts;amount;heat_low_central;r120670124124;demand_cts;load;6.37862121270531;MWh/a;;Zero
+353;2045_scenario;r120670201201-heat_low_central-demand_cts;amount;heat_low_central;r120670201201;demand_cts;load;715.192010156989;MWh/a;;Zero
+354;2045_scenario;r120640428428-heat_low_central-demand_hh;amount;heat_low_central;r120640428428;demand_hh;load;801.719966183287;MWh/a;;Zero
+355;2045_scenario;r120640472472-heat_low_central-demand_hh;amount;heat_low_central;r120640472472;demand_hh;load;12376.4771738823;MWh/a;;Zero
+356;2045_scenario;r120670124124-heat_low_central-demand_hh;amount;heat_low_central;r120670124124;demand_hh;load;31.3521171781915;MWh/a;;Zero
+357;2045_scenario;r120670201201-heat_low_central-demand_hh;amount;heat_low_central;r120670201201;demand_hh;load;3839.42501055121;MWh/a;;Zero
+358;2045_scenario;r120640428428-heat_low_central-demand_ind;amount;heat_low_central;r120640428428;demand_ind;load;24.0996399380302;MWh/a;;Zero
+359;2045_scenario;r120640472472-heat_low_central-demand_ind;amount;heat_low_central;r120640472472;demand_ind;load;245.823991595994;MWh/a;;Zero
+360;2045_scenario;r120670124124-heat_low_central-demand_ind;amount;heat_low_central;r120670124124;demand_ind;load;0.899432910980652;MWh/a;;Zero
+361;2045_scenario;r120670201201-heat_low_central-demand_ind;amount;heat_low_central;r120670201201;demand_ind;load;2006.60066307136;MWh/a;;Zero
+362;2045_scenario;r120640428428-heat_low_central-storage;capacity;heat_low_central;r120640428428;storage;storage;0.0;MW;;Zero
+363;2045_scenario;r120640472472-heat_low_central-storage;capacity;heat_low_central;r120640472472;storage;storage;0.0;MW;;Zero
+364;2045_scenario;r120670124124-heat_low_central-storage;capacity;heat_low_central;r120670124124;storage;storage;0.0;MW;;Zero
+365;2045_scenario;r120670201201-heat_low_central-storage;capacity;heat_low_central;r120670201201;storage;storage;0.0;MW;;Zero
+366;2045_scenario;;capacity_cost;heat_low_central;ALL;storage;storage;9.105052348932443;;;
+367;2045_scenario;r120640428428-heat_low_central-storage;capacity_potential;heat_low_central;r120640428428;storage;storage;;MW;;Empty
+368;2045_scenario;r120640472472-heat_low_central-storage;capacity_potential;heat_low_central;r120640472472;storage;storage;;MW;;Empty
+369;2045_scenario;r120670124124-heat_low_central-storage;capacity_potential;heat_low_central;r120670124124;storage;storage;;MW;;Empty
+370;2045_scenario;r120670201201-heat_low_central-storage;capacity_potential;heat_low_central;r120670201201;storage;storage;;MW;;Empty
+371;2045_scenario;;efficiency;heat_low_central;ALL;storage;storage;0.98;;"Digiplan-Empowerplan: technology_data_for_energy_and_storage.xlsx; 141 Large hot water tank";
+372;2045_scenario;;expandable;heat_low_central;ALL;storage;storage;true;;;
+373;2045_scenario;r120640428428-heat_low_central-storage;input_parameters;heat_low_central;r120640428428;storage;storage;"{""variable_costs"": 0.1}";;;Own assumption to prevent hidden curtailment
+374;2045_scenario;r120640472472-heat_low_central-storage;input_parameters;heat_low_central;r120640472472;storage;storage;"{""variable_costs"": 0.1}";;;Own assumption to prevent hidden curtailment
+375;2045_scenario;r120670124124-heat_low_central-storage;input_parameters;heat_low_central;r120670124124;storage;storage;"{""variable_costs"": 0.1}";;;Own assumption to prevent hidden curtailment
+376;2045_scenario;r120670201201-heat_low_central-storage;input_parameters;heat_low_central;r120670201201;storage;storage;"{""variable_costs"": 0.1}";;;Own assumption to prevent hidden curtailment
+377;2045_scenario;;loss_rate;heat_low_central;ALL;storage;storage;0.1;1/h;own assumption;
+378;2045_scenario;;marginal_cost;heat_low_central;ALL;storage;storage;0.0;EUR/MWh;"Digiplan-Empowerplan: technology_data_for_energy_and_storage.xlsx; 141 Large hot water tank";
+379;2045_scenario;r120640428428-heat_low_central-storage;storage_capacity;heat_low_central;r120640428428;storage;storage;0.0;MWh;;Zero
+380;2045_scenario;r120640472472-heat_low_central-storage;storage_capacity;heat_low_central;r120640472472;storage;storage;0.0;MWh;;Zero
+381;2045_scenario;r120670124124-heat_low_central-storage;storage_capacity;heat_low_central;r120670124124;storage;storage;0.0;MWh;;Zero
+382;2045_scenario;r120670201201-heat_low_central-storage;storage_capacity;heat_low_central;r120670201201;storage;storage;0.0;MWh;;Zero
+383;2045_scenario;;storage_capacity_cost;heat_low_central;ALL;storage;storage;169.5120786050405;;;
+384;2045_scenario;r120640428428-heat_low_central-storage;storage_capacity_potential;heat_low_central;r120640428428;storage;storage;;MWh;;Empty
+385;2045_scenario;r120640472472-heat_low_central-storage;storage_capacity_potential;heat_low_central;r120640472472;storage;storage;;MWh;;Empty
+386;2045_scenario;r120670124124-heat_low_central-storage;storage_capacity_potential;heat_low_central;r120670124124;storage;storage;;MWh;;Empty
+387;2045_scenario;r120670201201-heat_low_central-storage;storage_capacity_potential;heat_low_central;r120670201201;storage;storage;;MWh;;Empty
+388;2045_scenario;r120640428428-heat_low_decentral-demand_cts;amount;heat_low_decentral;r120640428428;demand_cts;load;11979.1719793242;MWh/a;;Zero
+389;2045_scenario;r120640472472-heat_low_decentral-demand_cts;amount;heat_low_decentral;r120640472472;demand_cts;load;12971.4403339816;MWh/a;;Zero
+390;2045_scenario;r120670124124-heat_low_decentral-demand_cts;amount;heat_low_decentral;r120670124124;demand_cts;load;4829.81665291678;MWh/a;;Zero
+391;2045_scenario;r120670201201-heat_low_decentral-demand_cts;amount;heat_low_decentral;r120670201201;demand_cts;load;6333.92214046342;MWh/a;;Zero
+392;2045_scenario;r120640428428-heat_low_decentral-demand_hh;amount;heat_low_decentral;r120640428428;demand_hh;load;37765.4713241144;MWh/a;;Zero
+393;2045_scenario;r120640472472-heat_low_decentral-demand_hh;amount;heat_low_decentral;r120640472472;demand_hh;load;37058.2184470261;MWh/a;;Zero
+394;2045_scenario;r120670124124-heat_low_decentral-demand_hh;amount;heat_low_decentral;r120670124124;demand_hh;load;23739.4528695027;MWh/a;;Zero
+395;2045_scenario;r120670201201-heat_low_decentral-demand_hh;amount;heat_low_decentral;r120670201201;demand_hh;load;34002.9233207474;MWh/a;;Zero
+396;2045_scenario;r120640428428-heat_low_decentral-demand_ind;amount;heat_low_decentral;r120640428428;demand_ind;load;1135.22713589634;MWh/a;;Zero
+397;2045_scenario;r120640472472-heat_low_decentral-demand_ind;amount;heat_low_decentral;r120640472472;demand_ind;load;736.057526879162;MWh/a;;Zero
+398;2045_scenario;r120670124124-heat_low_decentral-demand_ind;amount;heat_low_decentral;r120670124124;demand_ind;load;681.039978198258;MWh/a;;Zero
+399;2045_scenario;r120670201201-heat_low_decentral-demand_ind;amount;heat_low_decentral;r120670201201;demand_ind;load;17770.9652602333;MWh/a;;Zero
+400;2045_scenario;r120640428428-heat_low_decentral-solarthermal_plant;capacity;heat_low_decentral;r120640428428;solarthermal_plant;volatile;0.0;MW;;Zero
+401;2045_scenario;r120640472472-heat_low_decentral-solarthermal_plant;capacity;heat_low_decentral;r120640472472;solarthermal_plant;volatile;0.0;MW;;Zero
+402;2045_scenario;r120670124124-heat_low_decentral-solarthermal_plant;capacity;heat_low_decentral;r120670124124;solarthermal_plant;volatile;0.0;MW;;Zero
+403;2045_scenario;r120670201201-heat_low_decentral-solarthermal_plant;capacity;heat_low_decentral;r120670201201;solarthermal_plant;volatile;0.0;MW;;Zero
+404;2045_scenario;;capacity_cost;heat_low_decentral;ALL;solarthermal_plant;volatile;48641.64065072932;;;
+405;2045_scenario;r120640428428-heat_low_decentral-solarthermal_plant;capacity_potential;heat_low_decentral;r120640428428;solarthermal_plant;volatile;39.678;MW;;Empty
+406;2045_scenario;r120640472472-heat_low_decentral-solarthermal_plant;capacity_potential;heat_low_decentral;r120640472472;solarthermal_plant;volatile;40.6809899965167;MW;;Empty
+407;2045_scenario;r120670124124-heat_low_decentral-solarthermal_plant;capacity_potential;heat_low_decentral;r120670124124;solarthermal_plant;volatile;14.7387599883199;MW;;Empty
+408;2045_scenario;r120670201201-heat_low_decentral-solarthermal_plant;capacity_potential;heat_low_decentral;r120670201201;solarthermal_plant;volatile;23.3683199744224;MW;;Empty
+409;2045_scenario;;expandable;heat_low_decentral;ALL;solarthermal_plant;volatile;true;;;
+410;2045_scenario;r120640428428-heat_low_decentral-storage;capacity;heat_low_decentral;r120640428428;storage;storage;0.0;MW;;Zero
+411;2045_scenario;r120640472472-heat_low_decentral-storage;capacity;heat_low_decentral;r120640472472;storage;storage;0.0;MW;;Zero
+412;2045_scenario;r120670124124-heat_low_decentral-storage;capacity;heat_low_decentral;r120670124124;storage;storage;0.0;MW;;Zero
+413;2045_scenario;r120670201201-heat_low_decentral-storage;capacity;heat_low_decentral;r120670201201;storage;storage;0.0;MW;;Zero
+414;2045_scenario;;capacity_cost;heat_low_decentral;ALL;storage;storage;4338.715783009913;;;
+415;2045_scenario;r120640428428-heat_low_decentral-storage;capacity_potential;heat_low_decentral;r120640428428;storage;storage;;MW;;Empty
+416;2045_scenario;r120640472472-heat_low_decentral-storage;capacity_potential;heat_low_decentral;r120640472472;storage;storage;;MW;;Empty
+417;2045_scenario;r120670124124-heat_low_decentral-storage;capacity_potential;heat_low_decentral;r120670124124;storage;storage;;MW;;Empty
+418;2045_scenario;r120670201201-heat_low_decentral-storage;capacity_potential;heat_low_decentral;r120670201201;storage;storage;;MW;;Empty
+419;2045_scenario;;efficiency;heat_low_decentral;ALL;storage;storage;1.0;;"Digiplan-Empowerplan: technology_data_for_energy_and_storage.xlsx; 142 small scale hot water tank";
+420;2045_scenario;;expandable;heat_low_decentral;ALL;storage;storage;true;;;
+421;2045_scenario;r120640428428-heat_low_decentral-storage;input_parameters;heat_low_decentral;r120640428428;storage;storage;"{""variable_costs"": 0.1}";;;Own assumption to prevent hidden curtailment
+422;2045_scenario;r120640472472-heat_low_decentral-storage;input_parameters;heat_low_decentral;r120640472472;storage;storage;"{""variable_costs"": 0.1}";;;Own assumption to prevent hidden curtailment
+423;2045_scenario;r120670124124-heat_low_decentral-storage;input_parameters;heat_low_decentral;r120670124124;storage;storage;"{""variable_costs"": 0.1}";;;Own assumption to prevent hidden curtailment
+424;2045_scenario;r120670201201-heat_low_decentral-storage;input_parameters;heat_low_decentral;r120670201201;storage;storage;"{""variable_costs"": 0.1}";;;Own assumption to prevent hidden curtailment
+425;2045_scenario;;loss_rate;heat_low_decentral;ALL;storage;storage;0.021;1/h;"Digiplan-Empowerplan: technology_data_for_energy_and_storage.xlsx; 142 small scale hot water tank";"2;1/100"
+426;2045_scenario;;marginal_cost;heat_low_decentral;ALL;storage;storage;1.27;EUR/MWh;"Digiplan-Empowerplan: technology_data_for_energy_and_storage.xlsx; 142 small scale hot water tank";"1;2*1;0582"
+427;2045_scenario;r120640428428-heat_low_decentral-storage;storage_capacity;heat_low_decentral;r120640428428;storage;storage;0.0;MWh;;Zero
+428;2045_scenario;r120640472472-heat_low_decentral-storage;storage_capacity;heat_low_decentral;r120640472472;storage;storage;0.0;MWh;;Zero
+429;2045_scenario;r120670124124-heat_low_decentral-storage;storage_capacity;heat_low_decentral;r120670124124;storage;storage;0.0;MWh;;Zero
+430;2045_scenario;r120670201201-heat_low_decentral-storage;storage_capacity;heat_low_decentral;r120670201201;storage;storage;0.0;MWh;;Zero
+431;2045_scenario;;storage_capacity_cost;heat_low_decentral;ALL;storage;storage;42726.952470328564;;;
+432;2045_scenario;r120640428428-heat_low_decentral-storage;storage_capacity_potential;heat_low_decentral;r120640428428;storage;storage;;MWh;;Empty
+433;2045_scenario;r120640472472-heat_low_decentral-storage;storage_capacity_potential;heat_low_decentral;r120640472472;storage;storage;;MWh;;Empty
+434;2045_scenario;r120670124124-heat_low_decentral-storage;storage_capacity_potential;heat_low_decentral;r120670124124;storage;storage;;MWh;;Empty
+435;2045_scenario;r120670201201-heat_low_decentral-storage;storage_capacity_potential;heat_low_decentral;r120670201201;storage;storage;;MWh;;Empty
+436;2045_scenario;r120640428428-residual_waste-bpchp_heat_high;capacity;residual_waste;r120640428428;bpchp_heat_high;backpressure;0.0;MW;;Zero
+437;2045_scenario;r120640472472-residual_waste-bpchp_heat_high;capacity;residual_waste;r120640472472;bpchp_heat_high;backpressure;0.0;MW;;Zero
+438;2045_scenario;r120670124124-residual_waste-bpchp_heat_high;capacity;residual_waste;r120670124124;bpchp_heat_high;backpressure;0.0;MW;;Zero
+439;2045_scenario;r120670201201-residual_waste-bpchp_heat_high;capacity;residual_waste;r120670201201;bpchp_heat_high;backpressure;0.0;MW;;Zero
+440;2045_scenario;;capacity_cost;residual_waste;ALL;bpchp_heat_high;backpressure;675577.0459946925;;;
+441;2045_scenario;;carrier_cost;residual_waste;ALL;bpchp_heat_high;backpressure;0.0;Eur/MWh;From original raw_cost_eff:;Zero
+442;2045_scenario;;electric_efficiency;residual_waste;ALL;bpchp_heat_high;backpressure;0.21;;"PyPSA: Danish Energy Agency; technology_data_for_el_and_dh.xlsx";"08 WtE CHP; Large; 50 degree:  Electricity efficiency; net; annual average"
+443;2045_scenario;;expandable;residual_waste;ALL;bpchp_heat_high;backpressure;true;;;
+444;2045_scenario;;marginal_cost;residual_waste;ALL;bpchp_heat_high;backpressure;27.2845;EUR/MWh_e;"PyPSA: Danish Energy Agency; technology_data_for_el_and_dh.xlsx";"08 WtE CHP; Large; 50 degree:  Variable O&M"
+445;2045_scenario;;thermal_efficiency;residual_waste;ALL;bpchp_heat_high;backpressure;0.76;per unit;"PyPSA: Danish Energy Agency; technology_data_for_el_and_dh.xlsx";"08 WtE CHP; Large; 50 degree:  Heat efficiency; net; annual average"
+446;2045_scenario;r120640428428-residual_waste-bpchp_heat_low_central;capacity;residual_waste;r120640428428;bpchp_heat_low_central;backpressure;0.0;MW;;Zero
+447;2045_scenario;r120640472472-residual_waste-bpchp_heat_low_central;capacity;residual_waste;r120640472472;bpchp_heat_low_central;backpressure;0.0;MW;;Zero
+448;2045_scenario;r120670124124-residual_waste-bpchp_heat_low_central;capacity;residual_waste;r120670124124;bpchp_heat_low_central;backpressure;0.0;MW;;Zero
+449;2045_scenario;r120670201201-residual_waste-bpchp_heat_low_central;capacity;residual_waste;r120670201201;bpchp_heat_low_central;backpressure;0.0;MW;;Zero
+450;2045_scenario;;capacity_cost;residual_waste;ALL;bpchp_heat_low_central;backpressure;675577.0459946925;;;
+451;2045_scenario;;carrier_cost;residual_waste;ALL;bpchp_heat_low_central;backpressure;0.0;Eur/MWh;From original raw_cost_eff:;Zero
+452;2045_scenario;;electric_efficiency;residual_waste;ALL;bpchp_heat_low_central;backpressure;0.21;;"PyPSA: Danish Energy Agency; technology_data_for_el_and_dh.xlsx";"08 WtE CHP; Large; 50 degree:  Electricity efficiency; net; annual average"
+453;2045_scenario;;expandable;residual_waste;ALL;bpchp_heat_low_central;backpressure;true;;;
+454;2045_scenario;;marginal_cost;residual_waste;ALL;bpchp_heat_low_central;backpressure;27.2845;EUR/MWh_e;"PyPSA: Danish Energy Agency; technology_data_for_el_and_dh.xlsx";"08 WtE CHP; Large; 50 degree:  Variable O&M"
+455;2045_scenario;;thermal_efficiency;residual_waste;ALL;bpchp_heat_low_central;backpressure;0.76;per unit;"PyPSA: Danish Energy Agency; technology_data_for_el_and_dh.xlsx";"08 WtE CHP; Large; 50 degree:  Heat efficiency; net; annual average"
+456;2045_scenario;r120640428428-residual_waste-commodity;capacity;residual_waste;r120640428428;commodity;shortage;132.809523809524;MW;;No limit for import
+457;2045_scenario;r120640472472-residual_waste-commodity;capacity;residual_waste;r120640472472;commodity;shortage;0.0;MW;;No limit for import
+458;2045_scenario;r120670124124-residual_waste-commodity;capacity;residual_waste;r120670124124;commodity;shortage;0.0;MW;;No limit for import
+459;2045_scenario;r120670201201-residual_waste-commodity;capacity;residual_waste;r120670201201;commodity;shortage;0.0;MW;;No limit for import
+460;2045_scenario;;marginal_cost;residual_waste;ALL;commodity;shortage;0.0;EUR/MWh;own assumption;own assumption

@@ -1,0 +1,26 @@
+2025-03-19 18:41:19,914 - data_processing - WARNING - The name you have set for some of your scalar data differs from the convention (<region>-<carrier>-<tech>). 
+We expected but could not find the following name(s): ['r120640428428_r120640472472-electricity-transmission', 'r120640428428_r120670124124-electricity-transmission', 'r120640428428_r120670201201-electricity-transmission', 'r120640472472_r120670124124-electricity-transmission', 'r120640472472_r120670201201-electricity-transmission', 'r120670124124_r120670201201-electricity-transmission', 'r120640428428_r120640472472-h2-transmission', 'r120640428428_r120670124124-h2-transmission', 'r120640428428_r120670201201-h2-transmission', 'r120640472472_r120670124124-h2-transmission', 'r120640472472_r120670201201-h2-transmission', 'r120670124124_r120670201201-h2-transmission'].
+Instead we got the name(s): ['r120640428428-r120640472472-electricity-transmission', 'r120640428428-r120670124124-electricity-transmission', 'r120640428428-r120670201201-electricity-transmission', 'r120640472472-r120670124124-electricity-transmission', 'r120640472472-r120670201201-electricity-transmission', 'r120670124124-r120670201201-electricity-transmission', 'r120640428428-r120640472472-h2-transmission', 'r120640428428-r120670124124-h2-transmission', 'r120640428428-r120670201201-h2-transmission', 'r120640472472-r120670124124-h2-transmission', 'r120640472472-r120670201201-h2-transmission', 'r120670124124-r120670201201-h2-transmission']
+2025-03-19 18:41:19,922 - data_processing - INFO - Applying set of filters no 1.
+2025-03-19 18:41:19,979 - data_processing - INFO - Updated data with data filtered by {'scenario_key': ['ALL', '2045_scenario']}
+2025-03-19 18:41:20,176 - data_processing - INFO - Applying set of filters no 1.
+2025-03-19 18:41:20,241 - data_processing - INFO - Updated data with data filtered by {'scenario_key': ['ALL', '2045_scenario']}
+2025-03-19 18:41:20,245 - build_datapackage - WARNING - Index of new data is not in the index of old data.
+2025-03-19 18:41:20,252 - build_datapackage - WARNING - Update overwrites existing data.
+2025-03-19 18:41:20,643 - build_datapackage - INFO - Updated DataPackage with timeseries from '['store/datasets/esys_raw/data/scalars/default_scalars.csv', 'store/appdata/esys/_resources/scal_costs_efficiencies.csv']'.
+2025-03-19 18:41:23,880 - build_datapackage - INFO - Updated DataPackage with timeseries from '['store/datasets/esys_raw/data/time_series/ts_efficiencies.csv', 'store/datasets/esys_raw/data/time_series/ts_feedin.csv', 'store/datasets/esys_raw/data/time_series/ts_load.csv']'.
+2025-03-19 18:41:24,888 - build_datapackage - INFO - Saved datapackage to 'store/appdata/esys/2045_scenario/preprocessed'.
+2025-03-19 18:41:24,890 - data_processing - INFO - The DataFrame has been saved to: store/appdata/esys/2045_scenario/preprocessed/additional_scalars.csv.
+2025-03-19 18:41:24,890 - build_datapackage - INFO - Saved additional scalars to 'store/appdata/esys/2045_scenario/preprocessed/additional_scalars.csv'.
+2025-03-19 18:41:24,890 - build_datapackage - INFO - Saved additional_scalars to 'store/appdata/esys/2045_scenario/preprocessed'.
+2025-03-19 18:44:18,312 - optimize - INFO - Emission limit will be set to 0.0.
+2025-03-19 18:44:18,314 - optimize - INFO - No gas electricity relation will be set.
+2025-03-19 18:44:18,315 - optimize - INFO - Created solph.EnergSystem using oemof.solph version '0.5.2dev1'.
+2025-03-19 18:45:23,068 - optimize - INFO - Created solph.Energystem. Elapsed time: 0:01:04.752441
+2025-03-19 18:45:23,069 - optimize - INFO - Creating solph.Model.
+2025-03-19 18:47:35,546 - optimize - INFO - Created solph.Model. Elapsed time: 0:02:12.477250
+2025-03-19 18:47:35,546 - optimize - INFO - Setting constraints.
+2025-03-19 18:47:35,549 - optimize - INFO - Solving with solver 'gurobi' using solve_kwargs '{'tee': True, 'keepfiles': True, 'logfile': 'store/appdata/esys/2045_scenario/2045_scenario_solver_log.log'}' 
+2025-03-19 19:10:41,692 - optimize - INFO - Solved the model. Elapsed time: 0:23:06.143404
+2025-03-19 19:10:41,693 - optimize - INFO - Model solved. Collecting results.
+2025-03-19 19:11:53,542 - optimize - INFO - Results saved to store/appdata/esys/2045_scenario/optimized.

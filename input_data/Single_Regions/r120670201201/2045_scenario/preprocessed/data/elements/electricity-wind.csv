@@ -1,0 +1,2 @@
+name;bus;capacity;capacity_cost;capacity_potential;carrier;expandable;marginal_cost;output_parameters;profile;region;tech;type
+r120670201201-electricity-wind;r120670201201-electricity;0.0;68717.7981423247;92.0395900328712;electricity;true;0.0;{};r120670201201-electricity-wind-profile;r120670201201;wind;volatile

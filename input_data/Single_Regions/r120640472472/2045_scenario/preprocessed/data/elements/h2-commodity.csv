@@ -1,0 +1,2 @@
+name;bus;capacity;carrier;marginal_cost;output_parameters;region;tech;type
+r120640472472-h2-commodity;r120640472472-h2;0.0;h2;76.0;{};r120640472472;commodity;shortage

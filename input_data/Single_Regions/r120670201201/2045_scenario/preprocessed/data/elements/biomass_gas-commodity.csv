@@ -1,0 +1,2 @@
+name;bus;capacity;carrier;marginal_cost;output_parameters;region;tech;type
+r120670201201-biomass_gas-commodity;r120670201201-biomass_gas;64564.05708597;biomass_gas;69.0;"{""full_load_time_max"":1}";r120670201201;commodity;shortage

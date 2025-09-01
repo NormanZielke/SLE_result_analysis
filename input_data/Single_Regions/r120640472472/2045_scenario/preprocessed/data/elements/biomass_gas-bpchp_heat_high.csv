@@ -1,0 +1,2 @@
+name;capacity;capacity_cost;carrier;carrier_cost;electric_efficiency;electricity_bus;expandable;fuel_bus;heat_bus;marginal_cost;region;tech;thermal_efficiency;type
+r120640472472-biomass_gas-bpchp_heat_high;0.0;42005.981393227295;biomass_gas;0.0;0.3;r120640472472-electricity;true;r120640472472-biomass_gas;r120640472472-heat_high;2.222;r120640472472;bpchp_heat_high;0.71;backpressure

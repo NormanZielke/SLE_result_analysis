@@ -1,0 +1,2 @@
+name;amount;bus;carrier;profile;region;tech;type
+r120670201201-heat_low_central-demand_hh;3839.42501055121;r120670201201-heat_low_central;heat_low_central;r120670201201-heat_low_central-demand_hh-profile;r120670201201;demand_hh;load

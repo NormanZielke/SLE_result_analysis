@@ -1,0 +1,2 @@
+name;bus;capacity;carrier;marginal_cost;output_parameters;region;tech;type
+r120670124124-biomass_solid-commodity;r120670124124-biomass_solid;18807.8136967593;biomass_solid;36.16;"{""full_load_time_max"":1}";r120670124124;commodity;shortage

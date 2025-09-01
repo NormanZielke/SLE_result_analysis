@@ -1,0 +1,2 @@
+name;bus;capacity;carrier;input_parameters;marginal_cost;region;tech;type
+r120640428428-h2-export;r120640428428-h2;;h2;{};0.0;r120640428428;export;excess

@@ -1,0 +1,23 @@
+2025-03-13 14:47:44,360 - data_processing - INFO - Applying set of filters no 1.
+2025-03-13 14:47:44,371 - data_processing - INFO - Updated data with data filtered by {'scenario_key': ['ALL', '2045_scenario']}
+2025-03-13 14:47:44,462 - data_processing - INFO - Applying set of filters no 1.
+2025-03-13 14:47:44,475 - data_processing - INFO - Updated data with data filtered by {'scenario_key': ['ALL', '2045_scenario']}
+2025-03-13 14:47:44,476 - build_datapackage - WARNING - Index of new data is not in the index of old data.
+2025-03-13 14:47:44,478 - build_datapackage - WARNING - Update overwrites existing data.
+2025-03-13 14:47:44,629 - build_datapackage - INFO - Updated DataPackage with timeseries from '['store/datasets/esys_raw/data/scalars/default_scalars.csv', 'store/appdata/esys/_resources/scal_costs_efficiencies.csv']'.
+2025-03-13 14:47:45,116 - build_datapackage - INFO - Updated DataPackage with timeseries from '['store/datasets/esys_raw/data/time_series/ts_efficiencies.csv', 'store/datasets/esys_raw/data/time_series/ts_feedin.csv', 'store/datasets/esys_raw/data/time_series/ts_load.csv']'.
+2025-03-13 14:47:45,491 - build_datapackage - INFO - Saved datapackage to 'store/appdata/esys/2045_scenario/preprocessed'.
+2025-03-13 14:47:45,492 - data_processing - INFO - The DataFrame has been saved to: store/appdata/esys/2045_scenario/preprocessed/additional_scalars.csv.
+2025-03-13 14:47:45,492 - build_datapackage - INFO - Saved additional scalars to 'store/appdata/esys/2045_scenario/preprocessed/additional_scalars.csv'.
+2025-03-13 14:47:45,492 - build_datapackage - INFO - Saved additional_scalars to 'store/appdata/esys/2045_scenario/preprocessed'.
+2025-03-13 14:51:47,768 - optimize - INFO - Emission limit will be set to 0.0.
+2025-03-13 14:51:47,770 - optimize - INFO - No gas electricity relation will be set.
+2025-03-13 14:51:47,771 - optimize - INFO - Created solph.EnergSystem using oemof.solph version '0.5.2dev1'.
+2025-03-13 14:51:56,445 - optimize - INFO - Created solph.Energystem. Elapsed time: 0:00:08.673885
+2025-03-13 14:51:56,446 - optimize - INFO - Creating solph.Model.
+2025-03-13 14:52:16,201 - optimize - INFO - Created solph.Model. Elapsed time: 0:00:19.754937
+2025-03-13 14:52:16,201 - optimize - INFO - Setting constraints.
+2025-03-13 14:52:16,203 - optimize - INFO - Solving with solver 'gurobi' using solve_kwargs '{'tee': True, 'keepfiles': True, 'logfile': 'store/appdata/esys/2045_scenario/2045_scenario_solver_log.log'}' 
+2025-03-13 14:53:37,129 - optimize - INFO - Solved the model. Elapsed time: 0:01:20.926221
+2025-03-13 14:53:37,129 - optimize - INFO - Model solved. Collecting results.
+2025-03-13 14:53:50,357 - optimize - INFO - Results saved to store/appdata/esys/2045_scenario/optimized.

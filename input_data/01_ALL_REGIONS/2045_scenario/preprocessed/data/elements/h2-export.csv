@@ -1,0 +1,5 @@
+name;bus;capacity;carrier;input_parameters;marginal_cost;region;tech;type
+r120640428428-h2-export;r120640428428-h2;;h2;{};0.0;r120640428428;export;excess
+r120640472472-h2-export;r120640472472-h2;;h2;{};0.0;r120640472472;export;excess
+r120670124124-h2-export;r120670124124-h2;;h2;{};0.0;r120670124124;export;excess
+r120670201201-h2-export;r120670201201-h2;;h2;{};0.0;r120670201201;export;excess

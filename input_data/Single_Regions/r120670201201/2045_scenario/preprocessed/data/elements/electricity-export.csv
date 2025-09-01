@@ -1,0 +1,2 @@
+name;bus;capacity;carrier;input_parameters;marginal_cost;region;tech;type
+r120670201201-electricity-export;r120670201201-electricity;;electricity;{};0.0;r120670201201;export;excess

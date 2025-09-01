@@ -1,0 +1,2 @@
+name;bus;capacity;capacity_cost;capacity_potential;carrier;expandable;marginal_cost;output_parameters;profile;region;tech;type
+r120640472472-electricity-pv_agri_horizontal;r120640472472-electricity;0.0;27813.43974898904;0.590755364865029;electricity;true;0.0;{};r120640472472-electricity-pv_agri_horizontal-profile;r120640472472;pv_agri_horizontal;volatile

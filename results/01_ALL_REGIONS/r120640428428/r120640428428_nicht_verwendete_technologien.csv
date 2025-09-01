@@ -1,0 +1,13 @@
+,techs_none_r120640428428
+0,Biogas-KWK (hoch)
+1,"Biogas-KWK (niedrig, zentral)"
+2,"Biomasse-KWK (fest, hoch)"
+3,"Biomasse-KWK (fest, niedrig, zentral)"
+4,Elektrolyseur
+5,"Wärmepumpe (niedrig, zentral)"
+6,Batteriespeicher (groß) (Strom)
+7,Batteriespeicher (klein) (Strom)
+8,Wind (onshore)
+9,Wasserstoffkessel (hohe Wärme)
+10,h2-bpchp_heat_high
+11,Solarkollektor (dezentral)

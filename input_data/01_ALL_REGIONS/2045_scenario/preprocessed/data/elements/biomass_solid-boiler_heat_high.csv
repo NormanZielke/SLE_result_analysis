@@ -1,0 +1,5 @@
+name;capacity;capacity_cost;capacity_potential;carrier;carrier_cost;efficiency;expandable;from_bus;marginal_cost;output_parameters;region;tech;to_bus;type
+r120640428428-biomass_solid-boiler_heat_high;0.0;22166.494570326577;;biomass_solid;0.0;0.85;true;r120640428428-biomass_solid;1.0582;{};r120640428428;boiler_heat_high;r120640428428-heat_high;conversion
+r120640472472-biomass_solid-boiler_heat_high;0.0;22166.494570326577;;biomass_solid;0.0;0.85;true;r120640472472-biomass_solid;1.0582;{};r120640472472;boiler_heat_high;r120640472472-heat_high;conversion
+r120670124124-biomass_solid-boiler_heat_high;0.0;22166.494570326577;;biomass_solid;0.0;0.85;true;r120670124124-biomass_solid;1.0582;{};r120670124124;boiler_heat_high;r120670124124-heat_high;conversion
+r120670201201-biomass_solid-boiler_heat_high;0.0;22166.494570326577;;biomass_solid;0.0;0.85;true;r120670201201-biomass_solid;1.0582;{};r120670201201;boiler_heat_high;r120670201201-heat_high;conversion

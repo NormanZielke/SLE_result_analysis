@@ -1,0 +1,2 @@
+name;capacity;capacity_cost;carrier;carrier_cost;electric_efficiency;electricity_bus;expandable;fuel_bus;heat_bus;marginal_cost;region;tech;thermal_efficiency;type
+r120640472472-residual_waste-bpchp_heat_high;0.0;675577.0459946925;residual_waste;0.0;0.21;r120640472472-electricity;true;r120640472472-residual_waste;r120640472472-heat_high;27.2845;r120640472472;bpchp_heat_high;0.76;backpressure

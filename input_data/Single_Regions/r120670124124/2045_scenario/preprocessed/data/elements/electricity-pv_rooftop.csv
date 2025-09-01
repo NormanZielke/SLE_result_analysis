@@ -1,0 +1,2 @@
+name;bus;capacity;capacity_cost;capacity_potential;carrier;expandable;marginal_cost;output_parameters;profile;region;tech;type
+r120670124124-electricity-pv_rooftop;r120670124124-electricity;0.0;39700.5834021078;34.3904399727463;electricity;true;0.0;{};r120670124124-electricity-pv_rooftop-profile;r120670124124;pv_rooftop;volatile

@@ -1,0 +1,2 @@
+name;bus;capacity;carrier;marginal_cost;output_parameters;region;tech;type
+r120640472472-electricity-import;r120640472472-electricity;100000000.0;electricity;73.0;{};r120640472472;import;shortage

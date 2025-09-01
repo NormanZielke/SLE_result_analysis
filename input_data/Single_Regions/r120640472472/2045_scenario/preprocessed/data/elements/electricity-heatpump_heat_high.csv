@@ -1,0 +1,2 @@
+name;capacity;capacity_cost;capacity_potential;carrier;carrier_cost;efficiency;expandable;from_bus;marginal_cost;output_parameters;region;tech;to_bus;type
+r120640472472-electricity-heatpump_heat_high;0.0;53744.59814536441;;electricity;0.0;r120640472472-electricity-heatpump_heat_high-profile;true;r120640472472-electricity;3.1922;{};r120640472472;heatpump_heat_high;r120640472472-heat_high;conversion

@@ -1,0 +1,25 @@
+region,tech,capacity_potential
+r120640428428,PV (Agrarflächen) (hor.),0.240107872178303
+r120640472472,PV (Agrarflächen) (hor.),0.590755364865029
+r120670124124,PV (Agrarflächen) (hor.),0.0
+r120670201201,PV (Agrarflächen) (hor.),0.0
+r120640428428,PV (Agrarflächen) (vert.),2.97133809586662
+r120640472472,PV (Agrarflächen) (vert.),3.40595926698852
+r120670124124,PV (Agrarflächen) (vert.),0.0
+r120670201201,PV (Agrarflächen) (vert.),0.77023739554857
+r120640428428,PV (Freifläche),14.0571443990255
+r120640472472,PV (Freifläche),5.9071230446957
+r120670124124,PV (Freifläche),0.0
+r120670201201,PV (Freifläche),1.40616137818839
+r120640428428,PV (Dachflächen),92.582
+r120640472472,PV (Dachflächen),94.9223099918723
+r120670124124,PV (Dachflächen),34.3904399727463
+r120670201201,PV (Dachflächen),54.526079940319
+r120640428428,Wind (onshore),0.0
+r120640472472,Wind (onshore),0.0
+r120670124124,Wind (onshore),0.0
+r120670201201,Wind (onshore),92.0395900328712
+r120640428428,Solarkollektor (dezentral),39.678
+r120640472472,Solarkollektor (dezentral),40.6809899965167
+r120670124124,Solarkollektor (dezentral),14.7387599883199
+r120670201201,Solarkollektor (dezentral),23.3683199744224

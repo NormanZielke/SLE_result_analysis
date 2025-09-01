@@ -1,0 +1,5 @@
+name;bus;capacity;capacity_cost;capacity_potential;carrier;efficiency;expandable;input_parameters;loss_rate;marginal_cost;output_parameters;region;storage_capacity;storage_capacity_cost;storage_capacity_potential;tech;type
+r120640428428-electricity-large_battery_storage;r120640428428-electricity;0.0;571.4257830099133;;electricity;0.92;true;"{""variable_costs"": 0.1}";0.1;1.75;{};r120640428428;0.0;21574.976421111423;;large_battery_storage;storage
+r120640472472-electricity-large_battery_storage;r120640472472-electricity;0.0;571.4257830099133;;electricity;0.92;true;"{""variable_costs"": 0.1}";0.1;1.75;{};r120640472472;0.0;21574.976421111423;;large_battery_storage;storage
+r120670124124-electricity-large_battery_storage;r120670124124-electricity;0.0;571.4257830099133;;electricity;0.92;true;"{""variable_costs"": 0.1}";0.1;1.75;{};r120670124124;0.0;21574.976421111423;;large_battery_storage;storage
+r120670201201-electricity-large_battery_storage;r120670201201-electricity;0.0;571.4257830099133;;electricity;0.92;true;"{""variable_costs"": 0.1}";0.1;1.75;{};r120670201201;0.0;21574.976421111423;;large_battery_storage;storage

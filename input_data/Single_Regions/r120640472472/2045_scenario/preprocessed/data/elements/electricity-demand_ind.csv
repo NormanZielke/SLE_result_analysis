@@ -1,0 +1,2 @@
+name;amount;bus;carrier;profile;region;tech;type
+r120640472472-electricity-demand_ind;33173.4638725242;r120640472472-electricity;electricity;r120640472472-electricity-demand_ind-profile;r120640472472;demand_ind;load

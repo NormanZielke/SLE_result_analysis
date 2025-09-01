@@ -1,0 +1,5 @@
+name;amount;bus;carrier;profile;region;tech;type
+r120640428428-heat_low_central-demand_ind;24.0996399380302;r120640428428-heat_low_central;heat_low_central;r120640428428-heat_low_central-demand_ind-profile;r120640428428;demand_ind;load
+r120640472472-heat_low_central-demand_ind;245.823991595994;r120640472472-heat_low_central;heat_low_central;r120640472472-heat_low_central-demand_ind-profile;r120640472472;demand_ind;load
+r120670124124-heat_low_central-demand_ind;0.899432910980652;r120670124124-heat_low_central;heat_low_central;r120670124124-heat_low_central-demand_ind-profile;r120670124124;demand_ind;load
+r120670201201-heat_low_central-demand_ind;2006.60066307136;r120670201201-heat_low_central;heat_low_central;r120670201201-heat_low_central-demand_ind-profile;r120670201201;demand_ind;load

@@ -1,0 +1,2 @@
+name;capacity;capacity_cost;capacity_potential;carrier;carrier_cost;efficiency;expandable;from_bus;marginal_cost;output_parameters;region;tech;to_bus;type
+r120640472472-electricity-boiler_heat_high;0.0;5463.823256817183;;electricity;0.0;0.99;true;r120640472472-electricity;0.7855;{};r120640472472;boiler_heat_high;r120640472472-heat_high;conversion

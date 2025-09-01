@@ -1,0 +1,2 @@
+name;bus;capacity;carrier;marginal_cost;output_parameters;region;tech;type
+r120670124124-residual_waste-commodity;r120670124124-residual_waste;0.0;residual_waste;0.0;{};r120670124124;commodity;shortage
