@@ -7,7 +7,7 @@
 5,Batteriespeicher (groß) (Strom)
 6,Batteriespeicher (klein) (Strom)
 7,Wasserstoffkessel (hohe Wärme)
-8,h2-bpchp_heat_high
+8,Wasserstoff-KWK (hoch)
 9,Solarkollektor (dezentral)
 10,Restmüll-KWK (hoch)
 11,"Restmüll-KWK (niedrig, zentral)"
