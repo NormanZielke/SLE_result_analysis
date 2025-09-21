@@ -60,7 +60,7 @@ def barplot_c(df,
             textcoords="offset points",
             ha="center",
             va="bottom",
-            fontsize=10,
+            fontsize=11,
         )
 
     # Draw potential markers, if provided
@@ -84,9 +84,9 @@ def barplot_c(df,
                     potentials_set = True
 
     if potentials_set:
-        ax.legend(["Potenzial"], loc="upper right", fontsize="small")
+        ax.legend(["Potenzial"], loc="upper right", fontsize=14)
 
-    plt.xticks(rotation=45, ha="right", fontsize=10)
+    plt.xticks(rotation=45, ha="right", fontsize=12)
     plt.tight_layout()
 
     if filename:
