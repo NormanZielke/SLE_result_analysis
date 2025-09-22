@@ -46,8 +46,10 @@ def barplot_c(df,
     fig, ax = plt.subplots(figsize=(12, 10))
     bars = ax.bar(df["name"], df["var_value"])
 
-    ax.set_ylabel(unit)
-    ax.set_xlabel("Komponente")
+    ax.set_ylabel(unit,
+                  fontsize=14)
+    ax.set_xlabel("Komponente",
+                  fontsize=14)
     ax.set_title(title)
 
     # Annotate bar heights
@@ -86,7 +88,8 @@ def barplot_c(df,
     if potentials_set:
         ax.legend(["Potenzial"], loc="upper right", fontsize=14)
 
-    plt.xticks(rotation=45, ha="right", fontsize=12)
+    plt.xticks(rotation=45, ha="right", fontsize=14)
+    plt.yticks(fontsize=14)
     plt.tight_layout()
 
     if filename:
